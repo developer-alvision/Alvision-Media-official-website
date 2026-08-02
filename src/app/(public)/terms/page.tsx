@@ -1,8 +1,12 @@
-'use client';
-
 import React from 'react';
+import type { Metadata } from 'next';
 import { FileText, ShieldAlert, Award, RefreshCw, Mail, MapPin } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
+
+export const metadata: Metadata = {
+  title: 'Terms & Conditions | Alvision Media',
+  description: 'Read the official Terms & Conditions of Alvision Media to understand our website usage rules, intellectual property, and agreements.',
+};
 
 export default function TermsPage() {
   const lastUpdated = "August 2, 2026";

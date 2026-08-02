@@ -35,6 +35,9 @@ export default function Footer() {
               <li><Link href="/services" className="hover:text-alvision-blue transition-colors">Services</Link></li>
               <li><Link href="/about" className="hover:text-alvision-blue transition-colors">About</Link></li>
               <li><Link href="/contact" className="hover:text-alvision-blue transition-colors">Contact</Link></li>
+              <li><Link href="/blog" className="hover:text-alvision-blue transition-colors">Blog</Link></li>
+              <li><Link href="/careers" className="hover:text-alvision-blue transition-colors">Careers</Link></li>
+              <li><Link href="/partner" className="hover:text-alvision-blue transition-colors">Partner With Us</Link></li>
             </ul>
           </div>
 
@@ -42,7 +45,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="font-manrope text-xs font-bold uppercase tracking-wider text-studio-deep-dark">Our Channels</h4>
             <ul className="space-y-2 text-xs font-inter">
-              <li><Link href="/channels" className="hover:text-alvision-blue transition-colors">Slam Book Tamli</Link></li>
+              <li><Link href="/channels" className="hover:text-alvision-blue transition-colors">Slam Book Tamil</Link></li>
               <li><Link href="/channels" className="hover:text-alvision-blue transition-colors">Jajabordiary</Link></li>
               <li><Link href="/channels" className="hover:text-alvision-blue transition-colors">Mr. Guru</Link></li>
               <li><Link href="/channels" className="hover:text-alvision-blue transition-colors">Alvision Fusion</Link></li>

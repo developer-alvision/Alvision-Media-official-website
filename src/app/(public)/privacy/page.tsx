@@ -1,8 +1,12 @@
-'use client';
-
 import React from 'react';
+import type { Metadata } from 'next';
 import { Shield, Lock, Eye, FileText, Mail, MapPin } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Alvision Media',
+  description: 'Read the official Privacy Policy of Alvision Media to understand how we safeguard your data and privacy.',
+};
 
 export default function PrivacyPage() {
   const lastUpdated = "August 2, 2026";
