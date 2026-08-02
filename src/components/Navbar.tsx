@@ -10,16 +10,9 @@ export function LogoGlyph({ className = "h-5 w-5", fill = "#0EA5E9" }) {
   return (
     <svg className={className} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path
-        d="M20 95 L55 25 C58 20 62 20 65 25 L100 95"
+        d="M 24 102 L 58.2 28 C 59 26.2 61 26.2 61.8 28 L 96 102 C 99.6 109.8 80.4 119.4 76.8 111.6 L 63 81.6 C 60.6 76.3 57.6 74.4 54 74.4"
         stroke={fill}
-        strokeWidth="16"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M85 75 H52 C45 75 40 70 40 63 C40 56 45 51 52 51 H70"
-        stroke={fill}
-        strokeWidth="12"
+        strokeWidth="14"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
