@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ShieldCheck } from 'lucide-react';
+
 import { LogoGlyph } from './Navbar';
 
 export default function Footer() {
@@ -62,9 +62,6 @@ export default function Footer() {
           <div className="flex flex-wrap gap-4 sm:gap-6 justify-center sm:justify-end items-center">
             <Link href="/privacy" className="hover:text-alvision-blue transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-alvision-blue transition-colors">Terms & Conditions</Link>
-            <Link href="/admin/login" className="hover:text-alvision-blue flex items-center gap-1 transition-colors">
-              <ShieldCheck size={11} /> Admin Console
-            </Link>
           </div>
         </div>
       </div>
