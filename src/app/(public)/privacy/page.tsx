@@ -128,8 +128,8 @@ export default function PrivacyPage() {
                 <div className="space-y-2 shrink-0">
                   <div className="flex items-center gap-2 text-xs font-semibold text-studio-deep-dark">
                     <Mail size={14} className="text-alvision-blue" />
-                    <a href="mailto:Alvisionmedia24@gmail.com" className="hover:text-alvision-blue transition-colors">
-                      Alvisionmedia24@gmail.com
+                    <a href="mailto:hello@alvisionmedia.com" className="hover:text-alvision-blue transition-colors">
+                      hello@alvisionmedia.com
                     </a>
                   </div>
                   <div className="flex items-center gap-2 text-xs text-slate-500">

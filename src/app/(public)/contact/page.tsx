@@ -99,8 +99,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <span className="text-slate-500 text-[10px] block uppercase tracking-wider font-inter">Email Us</span>
-                    <a href="mailto:Alvisionmedia24@gmail.com" className="text-sm font-manrope font-semibold hover:text-alvision-blue transition-colors text-studio-deep-dark">
-                      Alvisionmedia24@gmail.com
+                    <a href="mailto:hello@alvisionmedia.com" className="text-sm font-manrope font-semibold hover:text-alvision-blue transition-colors text-studio-deep-dark">
+                      hello@alvisionmedia.com
                     </a>
                   </div>
                 </div>
