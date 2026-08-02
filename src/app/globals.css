@@ -1,0 +1,341 @@
+@import "tailwindcss";
+
+@theme {
+  --color-alvision-blue: #0EA5E9;
+  --color-alvision-secondary: #0284C7;
+  --color-studio-dark: #1E293B;
+  --color-studio-deep-dark: #0F172A;
+  --color-studio-light: #F0F9FF;
+  --color-studio-accent: #E0F2FE;
+  
+  --font-manrope: var(--font-manrope), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+}
+
+:root {
+  /* Sky-50 light sky-blue background instead of white */
+  --background: #F0F9FF;
+  --foreground: #0F172A;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-manrope), sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+/* Premium Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F0F9FF;
+}
+::-webkit-scrollbar-thumb {
+  background: #E0F2FE;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0EA5E9;
+}
+
+/* Scrollbar Hiding Utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle Film Grain Texture simulator */
+.film-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  background-image: repeating-radial-gradient(circle at 17% 32%, white 0px, black 1px, transparent 2px);
+  opacity: 0.008;
+}
+
+/* Premium Glass/Modal Overlay with Safari support */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(14, 165, 233, 0.15);
+}
+
+/* Luxury text gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #0F172A 30%, #0EA5E9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-blue {
+  background: linear-gradient(135deg, #0284C7 0%, #0EA5E9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bg-gradient-blue {
+  background: linear-gradient(135deg, #0284C7 0%, #0EA5E9 100%);
+}
+
+/* ============================================
+   SECTION DIVIDERS - Smooth visual transitions
+   ============================================ */
+
+/* Soft gradient separator between sections */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(14, 165, 233, 0.15) 30%, rgba(14, 165, 233, 0.15) 70%, transparent 100%);
+}
+
+/* ============================================
+   SMOOTH MOTION & MICRO-ANIMATIONS
+   ============================================ */
+
+/* Floating animation for decorative elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+/* Subtle pulse glow for accent elements */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
+  50% { box-shadow: 0 0 20px 4px rgba(14, 165, 233, 0.08); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Gradient shimmer for decorative lines */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(14, 165, 233, 0.3) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Horizontal line draw animation */
+@keyframes line-draw {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.animate-line-draw {
+  animation: line-draw 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Gentle scale breathing */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+.animate-breathe {
+  animation: breathe 5s ease-in-out infinite;
+}
+
+/* Smooth entrance for hero text */
+@keyframes slide-up-hero {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+.animate-hero-entrance {
+  animation: slide-up-hero 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-hero-entrance-delay-1 {
+  animation: slide-up-hero 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+  opacity: 0;
+}
+.animate-hero-entrance-delay-2 {
+  animation: slide-up-hero 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  opacity: 0;
+}
+.animate-hero-entrance-delay-3 {
+  animation: slide-up-hero 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+  opacity: 0;
+}
+.animate-hero-entrance-delay-4 {
+  animation: slide-up-hero 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+  opacity: 0;
+}
+
+/* Smooth card hover lift */
+.card-hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(14, 165, 233, 0.12), 0 8px 16px -8px rgba(0, 0, 0, 0.04);
+}
+
+/* Rotating decorative orb */
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
+
+/* Fade in ambient blobs */
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-15px, 15px) scale(0.95); }
+}
+.animate-blob-drift {
+  animation: blob-drift 12s ease-in-out infinite;
+}
+
+/* ============================================
+   SECTION TRANSITION OVERLAYS
+   ============================================ */
+
+/* Gradient overlap between sections for seamless flow */
+.section-glow-top {
+  position: relative;
+}
+.section-glow-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(240, 249, 255, 0.8), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Subtle radial glow behind sections */
+.section-ambient {
+  position: relative;
+}
+.section-ambient::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 50%;
+  background: radial-gradient(ellipse at center, rgba(14, 165, 233, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   PREMIUM INTERACTIONS & MOTION GRAPHICS
+   ============================================ */
+
+/* Premium interactive link underline effect */
+.nav-link-hover {
+  position: relative;
+}
+.nav-link-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0EA5E9, #0284C7);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 2px;
+}
+.nav-link-hover:hover::after,
+.nav-link-hover.active::after {
+  width: 100%;
+}
+
+/* 3D tilt-like scale hover for cards */
+.card-hover-tilt {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  will-change: transform, box-shadow;
+}
+.card-hover-tilt:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 30px 60px -15px rgba(14, 165, 233, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.05);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+/* Shining button animation sweep */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: none;
+}
+.btn-shimmer:hover::after {
+  left: 120%;
+  transition: all 0.75s ease-in-out;
+}
+.btn-shimmer:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 24px -10px rgba(14, 165, 233, 0.4);
+}
+.btn-shimmer:active {
+  transform: translateY(0) scale(1);
+}
+
+/* Premium gradient dynamic background drift */
+@keyframes gradient-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradient-bg {
+  background-size: 200% 200%;
+  animation: gradient-bg 15s ease infinite;
+}
