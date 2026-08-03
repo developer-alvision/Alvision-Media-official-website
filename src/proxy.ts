@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-// Simplistic in-memory rate limiter cache for edge middleware
+// Simplistic in-memory rate limiter cache for edge proxy
 const ipCache = new Map<string, Array<number>>();
 const RATE_LIMIT_WINDOW = 60000; // 1 minute
 const MAX_REQUESTS_PER_WINDOW = 100; // Allow max 100 requests per minute per IP
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || '127.0.0.1';
 
@@ -36,19 +36,16 @@ export function middleware(request: NextRequest) {
     const sessionCookie = request.cookies.get('alvision_session');
 
     if (!sessionCookie) {
-      // Redirect to login page
       const loginUrl = new URL('/admin/login', request.url);
       return NextResponse.redirect(loginUrl);
     }
 
     try {
-      // Decode simulated cookie structure
       const session = JSON.parse(sessionCookie.value);
       if (!session || !session.role) {
         throw new Error('Invalid session');
       }
     } catch {
-      // Clear cookie and redirect to login
       const loginUrl = new URL('/admin/login', request.url);
       const response = NextResponse.redirect(loginUrl);
       response.cookies.delete('alvision_session');
@@ -56,7 +53,7 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // Set X-Frame-Options to deny clickjacking
+  // Set security headers
   const response = NextResponse.next();
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -68,14 +65,6 @@ export function middleware(request: NextRequest) {
 // Config to specify matching paths
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (except for leads/auth logs)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * - assets (brand logo assets)
-     */
     '/((?!_next/static|_next/image|favicon.ico|assets).*)',
   ],
 };

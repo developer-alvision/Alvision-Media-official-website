@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Exclude admin and internal API endpoints
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://alvisionmedia.com/sitemap.xml
