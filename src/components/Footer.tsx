@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Phone } from 'lucide-react';
-import { LogoGlyph } from './Navbar';
+import { LogoGlyph, LogoImage } from './Navbar';
 
 const socialLinks = [
   {
@@ -54,11 +54,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
           {/* Brand Col */}
           <div className="space-y-4 md:col-span-2">
-            <Link href="/" className="flex items-center space-x-2.5">
-              <LogoGlyph className="h-6 w-6" fill="#0EA5E9" />
-              <span className="font-manrope font-800 text-sm tracking-widest text-studio-deep-dark uppercase">
-                Alvision
-              </span>
+            <Link href="/" className="flex items-center group">
+              <LogoImage className="h-9 w-auto max-w-[200px]" />
             </Link>
             <p className="text-xs text-slate-500 max-w-md font-inter leading-relaxed">
               Alvision Media solves the challenges effectively for reaching and engaging target audiences, maximizing brand visibility and driving business growth through strategic planning and execution across various digital and traditional channels.

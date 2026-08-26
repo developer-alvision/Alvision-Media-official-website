@@ -46,19 +46,8 @@ const socialLinks = [
 ];
 
 
-export function LogoGlyph({ className = "h-5 w-5", fill = "#0EA5E9" }) {
-  return (
-    <svg className={className} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path
-        d="M 24 102 L 58.2 28 C 59 26.2 61 26.2 61.8 28 L 96 102 C 99.6 109.8 80.4 119.4 76.8 111.6 L 63 81.6 C 60.6 76.3 57.6 74.4 54 74.4"
-        stroke={fill}
-        strokeWidth="14"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+import Logo, { LogoGlyph, LogoImage } from './Logo';
+export { LogoGlyph, LogoImage };
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -109,12 +98,9 @@ export default function Navbar() {
           <Link 
             href="/" 
             aria-label="Alvision Media Home"
-            className="flex items-center space-x-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alvision-blue rounded-md px-1 py-0.5"
+            className="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alvision-blue rounded-md px-1 py-0.5"
           >
-            <LogoGlyph className="h-5 w-5" fill="#0EA5E9" />
-            <span className="font-manrope font-800 text-sm tracking-widest uppercase transition-colors duration-300 text-studio-deep-dark">
-              Alvision Media
-            </span>
+            <LogoImage className="h-8 md:h-9 w-auto max-w-[200px]" />
           </Link>
 
           <nav role="navigation" aria-label="Main navigation" className="hidden md:flex items-center space-x-8">

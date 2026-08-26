@@ -19,6 +19,16 @@ export const metadata: Metadata = {
   description: "Stories that travel beyond screens. We create content, campaigns, and experiences that audiences remember.",
   keywords: ["Digital Studio", "Media House", "Content Production", "Influencer Campaigns", "Social Media Strategy", "Performance Marketing"],
   authors: [{ name: "Alvision Media" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/images/alvision-media-hd-logo.png", type: "image/png" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.png", type: "image/png" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({

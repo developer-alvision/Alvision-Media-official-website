@@ -1,0 +1,38 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="alvisionPrimaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="50%" stop-color="#0EA5E9" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+    <linearGradient id="alvisionAccentGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <filter id="alvisionGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="100" height="100" rx="20" fill="#0F172A" />
+
+  <path
+    d="M 50 12 L 85 80 L 68 80 L 50 44 L 32 80 L 15 80 Z"
+    fill="url(#alvisionPrimaryGrad)"
+    opacity="0.15"
+    filter="url(#alvisionGlow)"
+  />
+
+  <path
+    d="M 50 14 C 51.5 14 52.8 14.8 53.5 16.2 L 84 76 C 85.2 78.4 83.5 81.2 80.8 81.2 L 67.5 81.2 C 66.3 81.2 65.2 80.5 64.6 79.4 L 50 50 L 35.4 79.4 C 34.8 80.5 33.7 81.2 32.5 81.2 L 19.2 81.2 C 16.5 81.2 14.8 78.4 16 76 L 46.5 16.2 C 47.2 14.8 48.5 14 50 14 Z"
+    fill="url(#alvisionPrimaryGrad)"
+  />
+
+  <path
+    d="M 31 60 C 43 51 57 51 69 60 L 63 71 C 55 64 45 64 37 71 Z"
+    fill="url(#alvisionAccentGrad)"
+  />
+
+  <circle cx="50" cy="42" r="4.5" fill="#FFFFFF" />
+</svg>
