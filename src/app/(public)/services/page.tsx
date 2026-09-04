@@ -283,13 +283,193 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  {/* Service Graphic Visual mockup */}
-                  <div className="w-full h-48 md:h-64 rounded-2xl overflow-hidden border border-sky-100/60 mb-6 bg-slate-55 shadow-sm relative group" aria-hidden="true">
-                    <img 
-                      src={services[activeTab].image} 
-                      alt="" 
-                      className="w-full h-full object-cover pointer-events-none group-hover:scale-103 transition-transform duration-700"
-                    />
+                  {/* Service Capability Visual Banner (Replacing generic stock photos) */}
+                  <div className="w-full rounded-2xl border border-sky-100/80 mb-6 bg-gradient-to-br from-slate-900 via-studio-deep-dark to-slate-900 p-6 sm:p-8 text-white shadow-lg relative overflow-hidden group">
+                    <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-alvision-blue/20 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700 pointer-events-none" aria-hidden="true" />
+                    
+                    {services[activeTab].id === 'digital-marketing' && (
+                      <div className="space-y-4">
+                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-3">
+                          <span className="text-xs font-mono text-sky-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" /> Live Performance Dashboard
+                          </span>
+                          <span className="text-[10px] bg-sky-500/20 text-sky-300 px-2.5 py-0.5 rounded-full font-inter border border-sky-400/30">GTM / GA4 Verified</span>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+                          <div className="bg-white/5 rounded-xl p-3 border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase font-inter">ROAS Target</span>
+                            <span className="text-lg font-bold font-manrope text-emerald-400">3.8x - 5.2x</span>
+                          </div>
+                          <div className="bg-white/5 rounded-xl p-3 border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase font-inter">Avg. CTR</span>
+                            <span className="text-lg font-bold font-manrope text-sky-400">4.2%</span>
+                          </div>
+                          <div className="bg-white/5 rounded-xl p-3 border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase font-inter">Conversion Lift</span>
+                            <span className="text-lg font-bold font-manrope text-indigo-300">+140%</span>
+                          </div>
+                          <div className="bg-white/5 rounded-xl p-3 border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase font-inter">Ad Channels</span>
+                            <span className="text-xs font-bold font-manrope text-white">Google & Meta</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {services[activeTab].id === 'editing' && (
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                          <span className="text-xs font-mono text-pink-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                            <Film size={14} /> High-Retention Post-Production Suite
+                          </span>
+                          <span className="text-[10px] bg-pink-500/20 text-pink-300 px-2.5 py-0.5 rounded-full font-inter border border-pink-400/30">4K 60FPS Editing</span>
+                        </div>
+                        <div className="space-y-2 pt-1">
+                          <div className="flex items-center gap-3 bg-white/5 p-2.5 rounded-xl text-xs font-mono border border-white/10">
+                            <span className="w-16 text-pink-400 font-bold text-[10px]">VIDEO V1</span>
+                            <div className="flex-1 h-3 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-md" />
+                            <span className="text-[10px] text-slate-400">Reels / Shorts</span>
+                          </div>
+                          <div className="flex items-center gap-3 bg-white/5 p-2.5 rounded-xl text-xs font-mono border border-white/10">
+                            <span className="w-16 text-sky-400 font-bold text-[10px]">AUDIO A1</span>
+                            <div className="flex-1 h-3 bg-gradient-to-r from-sky-400 to-emerald-400 rounded-md" />
+                            <span className="text-[10px] text-slate-400">Master Audio</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {services[activeTab].id === 'content-creation' && (
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                          <span className="text-xs font-mono text-amber-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                            <Sparkles size={14} /> Studio Production Suite
+                          </span>
+                          <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2.5 py-0.5 rounded-full font-inter border border-amber-400/30">Multi-Cam Rig</span>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1">
+                          <div className="bg-white/5 p-3 rounded-xl border border-white/10 text-center">
+                            <span className="text-[10px] text-slate-400 block uppercase font-inter">Pre-Production</span>
+                            <strong className="text-xs font-manrope text-amber-300 block mt-1">Script & Storyboard</strong>
+                          </div>
+                          <div className="bg-white/5 p-3 rounded-xl border border-white/10 text-center">
+                            <span className="text-[10px] text-slate-400 block uppercase font-inter">Production</span>
+                            <strong className="text-xs font-manrope text-sky-300 block mt-1">4K Studio Shoot</strong>
+                          </div>
+                          <div className="bg-white/5 p-3 rounded-xl border border-white/10 text-center col-span-2 sm:col-span-1">
+                            <span className="text-[10px] text-slate-400 block uppercase font-inter">Design Assets</span>
+                            <strong className="text-xs font-manrope text-emerald-300 block mt-1">Brand Collateral</strong>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {services[activeTab].id === 'distribution' && (
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                          <span className="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                            <Share2 size={14} /> Native Network Reach Map
+                          </span>
+                          <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded-full font-inter border border-emerald-400/30">3M+ Active Base</span>
+                        </div>
+                        <div className="flex flex-wrap gap-2 pt-1">
+                          {['Slam Book Tamil', 'Jajabordiary', 'Mr. Guru', 'Alvision Fusion', 'Alvision Tamil', 'Wild Card'].map((ch, i) => (
+                            <span key={i} className="text-xs bg-white/10 hover:bg-white/20 text-slate-200 px-3 py-1.5 rounded-lg border border-white/10 font-inter">
+                              {ch}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {services[activeTab].id === 'acquisition' && (
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                          <span className="text-xs font-mono text-purple-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                            <Zap size={14} /> Lead Acquisition Funnel
+                          </span>
+                          <span className="text-[10px] bg-purple-500/20 text-purple-300 px-2.5 py-0.5 rounded-full font-inter border border-purple-400/30">Healthcare & Enterprise</span>
+                        </div>
+                        <div className="grid grid-cols-3 gap-3 text-center pt-1">
+                          <div className="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase">1. Traffic</span>
+                            <span className="text-sm font-bold text-sky-400 font-manrope">High Intent</span>
+                          </div>
+                          <div className="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase">2. Capture</span>
+                            <span className="text-sm font-bold text-purple-300 font-manrope">Auto Scoring</span>
+                          </div>
+                          <div className="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase">3. Conversion</span>
+                            <span className="text-sm font-bold text-emerald-400 font-manrope">CRM Sync</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {services[activeTab].id === 'whatsapp' && (
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                          <span className="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                            <MessageSquare size={14} /> Meta Cloud API Automation
+                          </span>
+                          <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded-full font-inter border border-emerald-400/30">98% Open Rate</span>
+                        </div>
+                        <div className="bg-white/5 p-3.5 rounded-xl border border-white/10 flex items-center justify-between text-xs">
+                          <div>
+                            <span className="text-[10px] text-slate-400 block uppercase">Abandoned Lead Recovery</span>
+                            <strong className="text-white font-manrope">Automated Direct Checkout & Chatbot</strong>
+                          </div>
+                          <span className="text-xs font-bold text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded-md">22% Recovered</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {services[activeTab].id === 'influencer' && (
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                          <span className="text-xs font-mono text-indigo-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                            <Users size={14} /> Creator Alignment Matrix
+                          </span>
+                          <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-2.5 py-0.5 rounded-full font-inter border border-indigo-400/30">Vetted Regional Base</span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-3 text-xs pt-1">
+                          <div className="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase">Creator Match</span>
+                            <strong className="text-indigo-300 font-manrope">Niche Affinity & Vetting</strong>
+                          </div>
+                          <div className="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase">Brand Safety</span>
+                            <strong className="text-emerald-400 font-manrope">Contract & Compliance</strong>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {services[activeTab].id === 'web-dev' && (
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                          <span className="text-xs font-mono text-sky-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                            <Briefcase size={14} /> Next.js Enterprise Stack
+                          </span>
+                          <span className="text-[10px] bg-sky-500/20 text-sky-300 px-2.5 py-0.5 rounded-full font-inter border border-sky-400/30">100 Core Web Vitals</span>
+                        </div>
+                        <div className="grid grid-cols-3 gap-3 text-center pt-1">
+                          <div className="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase">Speed</span>
+                            <span className="text-base font-bold text-emerald-400 font-manrope">0.8s Load</span>
+                          </div>
+                          <div className="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase">Framework</span>
+                            <span className="text-base font-bold text-sky-300 font-manrope">Next.js React</span>
+                          </div>
+                          <div className="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <span className="text-[10px] text-slate-400 block uppercase">SEO Audit</span>
+                            <span className="text-base font-bold text-indigo-300 font-manrope">Rank #1 Target</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
 
                   <p className="text-slate-550 text-sm md:text-base leading-relaxed mb-6 font-inter max-w-3xl">
