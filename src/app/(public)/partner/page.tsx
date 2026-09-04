@@ -143,7 +143,7 @@ export default function PartnerPage() {
                       required 
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}
-                      placeholder="e.g. Sanath Pvt Ltd" 
+                      placeholder="e.g. Preetham Infra Constructions" 
                       className="w-full bg-white border border-slate-200 rounded-lg px-3.5 py-2.5 text-xs text-dark-navy placeholder-slate-gray/45 focus:outline-none focus:border-alvision-blue/50 focus:ring-2 focus:ring-alvision-blue/20 shadow-sm"
                     />
                   </div>

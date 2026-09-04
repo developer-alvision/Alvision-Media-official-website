@@ -29,10 +29,10 @@ export default function HomePage() {
       image: '/images/case_cart_recovery.png'
     },
     {
-      title: 'Sanath Tech Integration Campaign',
+      title: 'Preetham Infra & Healthcare Web Tech Campaign',
       category: 'Web Tech & Campaign Strategy',
       metric: '10M Reach',
-      detail: 'Leveraged native channels to introduce custom SaaS suites, scaling organic sign-ups by 45..',
+      detail: 'Leveraged native channels & Web Tech infrastructure to drive multi-channel lead acquisition for Preetham Infra Constructions Company & Healthcare partners.',
       image: '/images/case_skincare_web.png'
     }
   ];
@@ -89,12 +89,12 @@ export default function HomePage() {
   ];
 
   const services = [
-    { num: '01', title: 'Social Media Strategy', desc: 'Custom content calendars, script outlines, hook editing, platform scheduling, and retention metrics optimization.' },
-    { num: '02', title: 'Influencer Campaigns', desc: 'Direct access to Alvision native creator networks (3M+ base) and coordinated regional outreach campaigns.' },
-    { num: '03', title: 'Affiliate Marketing', desc: 'Setup performance commission hierarchies, legal terms, niche recruiter campaigns, and tracking portals.' },
-    { num: '04', title: 'Production', desc: 'Cinematic video shoots, multi-camera sets, podcast recording, sound engineering, and post-production suites.' },
-    { num: '05', title: 'Performance Marketing', desc: 'Google Search/Display Ads, high-intent keywords, landing page optimization, and GA4 tracking setup.' },
-    { num: '06', title: 'Brand Partnerships', desc: 'Co-branded visual stories, sponsorship integrations, product reviews, and custom campaign lifespans.' }
+    { num: '01', title: 'Digital Marketing', desc: 'Performance marketing, Meta/Google Ads, SEO, data analytics, and targeted campaign strategies.' },
+    { num: '02', title: 'Editing', desc: 'High-retention video editing for Reels/Shorts, color grading, sound engineering, and cinematic cuts.' },
+    { num: '03', title: 'Content Creation', desc: 'Cinematic shoots, creative scripting, brand visual assets, and digital campaign packages.' },
+    { num: '04', title: 'Distribution', desc: 'Multi-platform broadcasting across Alvision native media networks (3M+ base) and partner channels.' },
+    { num: '05', title: 'Acquisition', desc: 'High-intent lead capture, healthcare & enterprise acquisition funnels, and CRM automated scoring.' },
+    { num: '06', title: 'Web Development', desc: 'Custom Next.js corporate websites, Web Tech & Campaign Strategy integration, and SEO optimization.' }
   ];
 
   const testimonials = [

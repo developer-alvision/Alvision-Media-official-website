@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { 
   MessageSquare, Users, TrendingUp, Target, Briefcase, Film, 
-  Mail, ShoppingBag, CheckCircle, ChevronRight, ArrowRight 
+  Sparkles, Share2, Zap, CheckCircle, ChevronRight, ArrowRight, Building2, Stethoscope 
 } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -17,12 +17,98 @@ export default function ServicesPage() {
 
   const services = [
     {
+      id: 'digital-marketing',
+      title: 'Digital Marketing',
+      icon: Target,
+      short: 'Performance marketing, paid ads, SEO optimization & conversion strategy.',
+      desc: 'Drive scalable growth with data-backed digital marketing. We craft targeted search, social, and display campaigns aligned with precise audience segmentations to maximize ROI, elevate brand visibility, and lower acquisition costs.',
+      features: [
+        'Search Engine Optimization (SEO)',
+        'Performance Marketing (Meta & Google Ads)',
+        'Data Analytics & GTM/GA4 Tracking Setup',
+        'Campaign Strategy & Funnel Architecture',
+        'Conversion Rate Optimization (CRO)'
+      ],
+      deliverable: 'Multi-channel ad strategy, conversion tracking dashboards, weekly ROI reports, performance metrics.',
+      image: '/images/service_google_ads.png'
+    },
+    {
+      id: 'editing',
+      title: 'Editing',
+      icon: Film,
+      short: 'High-retention video post-production, Reels, Shorts & cinematic cuts.',
+      desc: 'Transform raw footage into captivating visual narratives. Our editing studio specializes in fast-paced, high-retention video editing for Shorts, Reels, YouTube long-form, corporate brand films, and commercials.',
+      features: [
+        'High-Retention Short-Form Editing (Reels/Shorts)',
+        'Professional Color Grading & Sound Design',
+        'Dynamic Motion Graphics & Kinetic Typography',
+        'Storyboarding & Narrative Pacing',
+        'A/B Thumbnail & Hook Optimization'
+      ],
+      deliverable: 'Ready-to-publish video assets in multiple ratios (9:16, 16:9), master audio tracks, graphic overlay kits.',
+      image: '/images/service_social.png'
+    },
+    {
+      id: 'content-creation',
+      title: 'Content Creation',
+      icon: Sparkles,
+      short: 'Cinematic video shoots, studio scripting, brand identity assets & copy.',
+      desc: 'Create memorable content that connects deeply with your target audience. From creative conceptualization and scriptwriting to full-scale studio video shoots and graphic design, we turn brand ideas into high-impact visual assets.',
+      features: [
+        'Creative Scriptwriting & Storyboarding',
+        'Full-Scale Studio & On-Location Shoots',
+        'Brand Visual Assets & Graphic Design',
+        'Social Media Content Calendars & Reels',
+        'Corporate Brochure & Digital Campaign Design'
+      ],
+      deliverable: 'High-resolution video footage, master graphics package, content production calendar, template kits.',
+      image: '/images/service_design.png'
+    },
+    {
+      id: 'distribution',
+      title: 'Distribution',
+      icon: Share2,
+      short: 'Multi-channel broadcasting, native creator networks & audience reach.',
+      desc: 'Amplify your message across our high-reach native media network (including Slam Book Tamil, Jajabordiary, Mr. Guru, Alvision Fusion, Alvision Tamil, Wild Card) and regional partner channels reaching millions of active viewers.',
+      features: [
+        'Native Channel Content Placement (3M+ base)',
+        'Regional Creator Network Amplification',
+        'Cross-Platform Syndication Strategy',
+        'Audience Engagement & Retention Audits',
+        'Multi-Tier Distribution Workflows'
+      ],
+      deliverable: 'Syndicated content placement, campaign reach analytics, impression reports, brand lift metrics.',
+      image: '/images/service_influencer.png'
+    },
+    {
+      id: 'acquisition',
+      title: 'Acquisition',
+      icon: Zap,
+      short: 'High-intent lead generation, client acquisition & conversion funnels.',
+      desc: 'Streamline customer acquisition for healthcare, real estate, construction, and enterprise brands. We design high-converting landing pages, lead capture workflows, and targeted acquisition campaigns that generate qualified clients.',
+      features: [
+        'High-Intent Lead Capture & Nurturing',
+        'Healthcare & Enterprise Acquisition Funnels',
+        'Automated Lead Scoring & CRM Integration',
+        'Retargeting & Remarketing Workflows',
+        'Customer Lifetime Value (LTV) Optimization'
+      ],
+      deliverable: 'Fully integrated lead generation funnel, CRM connection setup, weekly lead acquisition reports, conversion rate logs.',
+      image: '/images/case_cart_recovery.png'
+    },
+    {
       id: 'whatsapp',
       title: 'WhatsApp Marketing',
       icon: MessageSquare,
-      short: 'API integrations, broadcast messages, auto cart recovery.',
-      desc: 'Unlock direct engagement with an average 98% open rate. We build custom WhatsApp notification campaigns that integrate directly with Shopify/WooCommerce to recover abandoned carts and deliver personalized support.',
-      features: ['Campaign Strategy & Opt-in Design', 'Automated Cart Recovery Sequences', 'Meta Cloud API Integrations', 'Interactive Chatbot Flow Builder', 'Advanced Broadcasting Analytics'],
+      short: 'API integrations, broadcast messages, auto cart & lead recovery.',
+      desc: 'Unlock direct engagement with an average 98% open rate. We build custom WhatsApp notification campaigns that integrate directly with Shopify/WooCommerce and corporate CRMs to recover abandoned checkouts and nurture leads.',
+      features: [
+        'Campaign Strategy & Opt-in Design',
+        'Automated Lead & Cart Recovery Sequences',
+        'Meta Cloud API Integrations',
+        'Interactive Chatbot Flow Builder',
+        'Advanced Broadcasting Analytics'
+      ],
       deliverable: 'Custom automated chatbot, opt-in popups, campaign dashboard access, weekly performance reports.',
       image: '/images/service_whatsapp.png'
     },
@@ -30,71 +116,60 @@ export default function ServicesPage() {
       id: 'influencer',
       title: 'Influencer Marketing',
       icon: Users,
-      short: 'Native distribution channels and curated regional creator alignments.',
-      desc: 'Leverage our native media network (including Slam Book Tamil, Jajabordiary, etc.) and an extensive database of vetted regional creators to place your brand directly in front of active buyers with high trust.',
-      features: ['Creator Discovery & Vetting', 'Content Co-creation & Guidelines', 'Campaign Contracts & Compliance', 'Native Channel Integrations (3M+ base)', 'Engagement & Conversion Audits'],
+      short: 'Regional creator alignments & native network placements.',
+      desc: 'Leverage our native media network and extensive database of vetted regional creators to place your brand directly in front of active buyers with high trust and proven engagement.',
+      features: [
+        'Creator Discovery & Vetting',
+        'Content Co-creation & Guidelines',
+        'Campaign Contracts & Compliance',
+        'Native Channel Integrations (3M+ base)',
+        'Engagement & Conversion Audits'
+      ],
       deliverable: 'Curated influencer list, content assets, reach & impression reports, brand lift metrics.',
       image: '/images/service_influencer.png'
-    },
-    {
-      id: 'social-media',
-      title: 'Social Media Marketing',
-      icon: TrendingUp,
-      short: 'Daily creative content, audience building, growth analytics.',
-      desc: 'Build a loyal, high-affinity community around your brand. We handle the entire social funnel: scripting, short-form video editing, content calendars, platform algorithms, and direct follower engagement.',
-      features: ['Weekly Scripting & Visual Planning', 'High-Retention Video Editing (Shorts/Reels)', 'Cross-Platform Community Management', 'A/B Thumbnail & Caption Testing', 'Growth and Competitor Tracking'],
-      deliverable: 'Monthly content calendar, 15-20 reels/shorts assets, weekly community engagement logs, audience growth reports.',
-      image: '/images/service_social.png'
-    },
-    {
-      id: 'google-ads',
-      title: 'Google Ads & Paid Search',
-      icon: Target,
-      short: 'High-intent search, shopping ads, performance max models.',
-      desc: 'Drive immediate, high-intent traffic to your product or service pages. We configure semantic Search Ads, visual Display Ads, dynamic Shopping campaigns, and AI-driven Performance Max setups with conversion tracking.',
-      features: ['In-Depth Keyword Search & Bidding', 'High-CTR Ad Copywriting', 'Performance Max Optimization', 'Competitor Budget & Share Analysis', 'Advanced Conversion Tracking (GTM/GA4)'],
-      deliverable: 'Configured Google Ads account, custom search/display ad copy, bi-weekly performance reviews, ROI attribution logs.',
-      image: '/images/service_google_ads.png'
     },
     {
       id: 'web-dev',
       title: 'Web Development',
       icon: Briefcase,
-      short: 'Next.js corporate webs, high-speed landing pages, SaaS frontends.',
-      desc: 'Ensure your web presence loads instantly, ranks on Google, and converts visitors into leads. We specialize in custom headless frameworks (Next.js, React) optimized for SEO and Core Web Vitals.',
-      features: ['Next.js App Router Architecture', 'Fully Responsive UX/UI Designs', 'Headless CMS Integrations', 'Figma to High-Fidelity React Conversion', 'PageSpeed & SEO Core Performance Maxing'],
+      short: 'Corporate websites, high-speed landing pages, Web Tech architecture.',
+      desc: 'Ensure your web presence loads instantly, ranks on Google, and converts visitors into leads. We specialize in custom headless frameworks (Next.js, React) optimized for SEO, speed, and Core Web Vitals.',
+      features: [
+        'Next.js App Router Architecture',
+        'Fully Responsive UX/UI Designs',
+        'Web Tech & Campaign Strategy Integration',
+        'Figma to High-Fidelity React Conversion',
+        'PageSpeed & SEO Core Performance Maxing'
+      ],
       deliverable: 'Fully coded responsive website, Git repository, hosting deployment, CMS training manual, sitemaps.',
       image: '/images/service_web.png'
+    }
+  ];
+
+  const clientsList = [
+    {
+      name: 'MLL Hospital',
+      category: 'Healthcare & Medical Services',
+      description: 'Digital patient acquisition, campaign strategy, and brand awareness across regional networks.',
+      icon: Stethoscope
     },
     {
-      id: 'graphic-design',
-      title: 'Graphic Design & Branding',
-      icon: Film,
-      short: 'High-end visual assets, posters, brand identity packs.',
-      desc: 'Make a premium visual statement. Our design studio combines traditional craft with modern generative AI pipelines to deliver outstanding branding assets, corporate posters, and social media visuals.',
-      features: ['Custom Brand Identity & Guidelines', 'Creative Ad Creatives & Banner Packs', 'Social Media Grid Styling & Templates', 'High-Production Corporate Brochures', 'AI-Assisted Fast Concept Iteration'],
-      deliverable: 'Visual guidelines book, source files (Figma/PSD), ready-to-publish image assets in multiple ratios.',
-      image: '/images/service_design.png'
+      name: 'Jyosthna Maternity Hospital',
+      category: 'Specialized Healthcare',
+      description: 'Targeted awareness campaigns and online appointment booking funnel integration.',
+      icon: Stethoscope
     },
     {
-      id: 'affiliate',
-      title: 'Affiliate Marketing',
-      icon: ShoppingBag,
-      short: 'Affiliate program setups, commission tracking, optimization.',
-      desc: 'Scale your sales on a pay-for-performance model. We establish your affiliate software tracking, draft legal terms, recruit niche promoters, and optimize commission tiers to drive organic referrals.',
-      features: ['Affiliate Dashboard & Setup', 'Tiered Commission Strategy', 'Recruitment of Niche Promoters', 'Click & Conversion Tracking Checks', 'Fraud Prevention & Optimization'],
-      deliverable: 'Affiliate tracking portal, affiliate partner contracts, monthly commission reports.',
-      image: '/images/service_affiliate.png'
+      name: 'Jyothi Dental Hospital',
+      category: 'Dental & Oral Healthcare',
+      description: 'Local search visibility, Google Ads, and patient lead generation strategies.',
+      icon: Stethoscope
     },
     {
-      id: 'email-marketing',
-      title: 'Email Marketing',
-      icon: Mail,
-      short: 'Customer newsletters, automated flows, conversion optimization.',
-      desc: 'Nurture leads and increase lifetime customer value. We configure automated welcome paths, personalized drip series, weekly content newsletters, and A/B test subject lines to maximize open rates.',
-      features: ['Automated Lead Welcome Drips', 'Behavior-Triggered Sequences', 'A/B Testing (Subject lines, layouts)', 'List Segmentation & Cleaning', 'Detailed Open/CTR Reports'],
-      deliverable: 'Email template designs, automated flows configured in ESP, bi-weekly campaign metrics, list size audit logs.',
-      image: '/images/service_email.png'
+      name: 'Preetham Infra Constructions Company',
+      category: 'Infrastructure & Real Estate',
+      description: 'Web Tech & Campaign Strategy driving multi-channel lead acquisition and 10M+ audience reach.',
+      icon: Building2
     }
   ];
 
@@ -140,7 +215,7 @@ export default function ServicesPage() {
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={200} duration={700}>
             <p className="max-w-2xl mx-auto text-slate-500 text-base md:text-lg leading-relaxed font-inter">
-              Explore our 8 specialized services. We focus on technical precision and visual excellence to build sustainable growth.
+              Explore our core service capabilities. From Digital Marketing and High-Retention Editing to Content Creation, Distribution, and Acquisition, we focus on technical precision and measurable growth.
             </p>
           </ScrollReveal>
         </div>
@@ -290,12 +365,53 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* 3. Technology Alignment statement - White Background */}
+      {/* 3. Featured Clients Showcase Section */}
+      <section className="py-12 md:py-16 relative z-10 bg-slate-50/50 border-b border-sky-100/40" aria-label="Our Trusted Clients">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal variant="fade-up" duration={600} className="text-center max-w-3xl mx-auto mb-10">
+            <span className="text-[10px] font-bold text-alvision-secondary uppercase tracking-[0.25em] block mb-3 font-inter">PROVEN TRUST</span>
+            <h2 className="font-manrope font-800 text-3xl md:text-4xl text-dark-navy mb-4">
+              Our Esteemed Clients
+            </h2>
+            <p className="text-slate-500 text-sm font-inter">
+              We work with leading healthcare institutions, infrastructure conglomerates, and growing enterprises to power digital acquisition and campaign strategies.
+            </p>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {clientsList.map((client, idx) => {
+              const ClientIcon = client.icon;
+              return (
+                <ScrollReveal key={idx} variant="fade-up" delay={idx * 100} duration={600}>
+                  <div className="bg-white border border-sky-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-alvision-blue/40 transition-all duration-300 flex flex-col justify-between h-full group">
+                    <div>
+                      <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-alvision-blue mb-4 group-hover:scale-110 transition-transform">
+                        <ClientIcon size={20} />
+                      </div>
+                      <h3 className="font-manrope font-bold text-lg text-dark-navy mb-1.5 group-hover:text-alvision-blue transition-colors">
+                        {client.name}
+                      </h3>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-inter block mb-3">
+                        {client.category}
+                      </span>
+                      <p className="text-slate-550 text-xs font-inter leading-relaxed">
+                        {client.description}
+                      </p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Technology Alignment statement - White Background */}
       <section className="py-10 text-center relative z-10 bg-white" aria-label="Technology integration standards">
         <ScrollReveal variant="fade-up" duration={600} className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="font-manrope font-bold text-xl md:text-2xl mb-4 text-dark-navy">Technology Partner Integration</h3>
+          <h3 className="font-manrope font-bold text-xl md:text-2xl mb-4 text-dark-navy">Technology & Media Integration</h3>
           <p className="text-slate-550 text-xs md:text-sm max-w-2xl mx-auto leading-relaxed mb-6 font-inter">
-            Through our partnership network (including Sanath Pvt Ltd), we deliver cutting-edge automation, machine learning filters, analytics dashboards, and lightning-fast software assets alongside creative content pipelines.
+            Through our media networks and tech infrastructure, we deliver cutting-edge automation, machine learning analytics, performance tracking dashboards, and high-conversion software assets alongside creative video pipelines.
           </p>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-sky-100 text-xs font-semibold text-slate-500 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
@@ -307,3 +423,4 @@ export default function ServicesPage() {
     </main>
   );
 }
+
