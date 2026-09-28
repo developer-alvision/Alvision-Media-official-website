@@ -176,18 +176,10 @@ export default function ServicesPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await fetch('/api/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name,
-          email,
-          phone: '',
-          company: '',
-          message: msg,
-          service: services[activeTab].title
-        })
-      });
+      const service = services[activeTab].title;
+      const text = `Hello Alvision Media, I am interested in ${service}. Name: ${name}. Email: ${email}. Message: ${msg}`;
+      const whatsappUrl = `https://wa.me/916262949423?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, '_blank');
     } catch {}
     setFormSubmitted(true);
     setName('');

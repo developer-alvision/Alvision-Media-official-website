@@ -20,30 +20,18 @@ export default function ContactPage() {
     }
 
     try {
-      const res = await fetch('/api/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name,
-          email,
-          phone: '',
-          company: '',
-          message,
-          service: subject
-        })
-      });
-      if (res.ok) {
-        setFormSubmitted(true);
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
-        setCaptchaChecked(false);
-      } else {
-        alert('Failed to register inquiry.');
-      }
-    } catch {
+      const text = `Hello Alvision Media, I am ${name}. Email: ${email}. Subject: ${subject}. Message: ${message}`;
+      const whatsappUrl = `https://wa.me/916262949423?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, '_blank');
+      
       setFormSubmitted(true);
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+      setCaptchaChecked(false);
+    } catch {
+      alert('Failed to redirect to WhatsApp.');
     }
   };
 

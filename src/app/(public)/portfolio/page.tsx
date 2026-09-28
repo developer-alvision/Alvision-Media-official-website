@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Briefcase, ArrowUpRight, TrendingUp, Sparkles, Filter, X, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import ProcessSection from '@/components/ProcessSection';
 
 interface PortfolioProject {
   id: string;
@@ -161,6 +162,11 @@ export default function PortfolioPage() {
               ))}
             </div>
           )}
+
+          {/* Integrated Alvision 9-Step Process & Growth Loop inside Portfolio Page */}
+          <div className="mt-20 pt-16 border-t border-sky-100">
+            <ProcessSection />
+          </div>
         </div>
       </section>
 

@@ -22,29 +22,17 @@ export default function PartnerPage() {
   const handlePartnerSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch('/api/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name,
-          email,
-          phone: '',
-          company,
-          message: `[Partnership Type: ${partnerType}] ${msg}`,
-          service: 'Influencer Marketing'
-        })
-      });
-      if (res.ok) {
-        setPartnerSubmitted(true);
-        setName('');
-        setEmail('');
-        setCompany('');
-        setMsg('');
-      } else {
-        alert('Failed to register request. Please try again.');
-      }
-    } catch {
+      const text = `Hello Alvision Media, I am ${name} from ${company}. Email: ${email}. Partnership Type: ${partnerType}. Message: ${msg}`;
+      const whatsappUrl = `https://wa.me/916262949423?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, '_blank');
+      
       setPartnerSubmitted(true);
+      setName('');
+      setEmail('');
+      setCompany('');
+      setMsg('');
+    } catch {
+      alert('Failed to redirect to WhatsApp. Please try again.');
     }
   };
 

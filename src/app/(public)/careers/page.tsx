@@ -40,28 +40,17 @@ export default function CareersPage() {
   const handleApplySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch('/api/careers', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          job_title: selectedJob,
-          applicant_name: name,
-          email,
-          portfolio_url: portfolio,
-          resume_url: resume
-        })
-      });
-      if (res.ok) {
-        setApplied(true);
-        setName('');
-        setEmail('');
-        setPortfolio('');
-        setResume('');
-      } else {
-        alert('Failed to submit application. Please try again.');
-      }
-    } catch {
+      const text = `Hello Alvision Media, I am applying for ${selectedJob}. Name: ${name}. Email: ${email}. Portfolio: ${portfolio}. Resume: ${resume}`;
+      const whatsappUrl = `https://wa.me/916262949423?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, '_blank');
+      
       setApplied(true);
+      setName('');
+      setEmail('');
+      setPortfolio('');
+      setResume('');
+    } catch {
+      alert('Failed to redirect to WhatsApp. Please try again.');
     }
   };
 

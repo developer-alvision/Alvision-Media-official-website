@@ -9,7 +9,7 @@ export default function PublicLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col min-h-screen bg-deep-black text-premium-white">
+    <div className="flex flex-col min-h-screen bg-[#F0F9FF] text-slate-900">
       <LiquidCursor />
       <Navbar />
       <main className="flex-grow">{children}</main>
