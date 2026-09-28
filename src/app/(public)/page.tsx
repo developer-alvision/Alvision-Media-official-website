@@ -19,6 +19,11 @@ import ScrollReveal from '@/components/ScrollReveal';
 import RevealText from '@/components/RevealText';
 import Magnetic from '@/components/Magnetic';
 import ProcessSection from '@/components/ProcessSection';
+import ScrollTextReveal from '@/components/ScrollTextReveal';
+import HorizontalGallery from '@/components/HorizontalGallery';
+import CoveringPanels from '@/components/CoveringPanels';
+import ServicesShowcase from '@/components/ServicesShowcase';
+import FAQSection from '@/components/FAQSection';
 
 export default function HomePage() {
   const [activeService, setActiveService] = useState(0);
@@ -284,6 +289,11 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================
+          01B. SCROLL-DRIVEN TEXT REVEAL (FOG EMERGE EFFECT)
+         =================================================== */}
+      <ScrollTextReveal text="Alvision transforms ambitious brands into digital experiences that attract attention, build trust, and turn every interaction into measurable growth." />
+
+      {/* ===================================================
           02. FROM IDEA TO IMPACT - 9-STEP PROCESS & GROWTH LOOP (TOP PROCESS SECTION)
          =================================================== */}
       <ProcessSection />
@@ -365,181 +375,22 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================
-          03. SERVICES SECTION
+          03B. SEQUENTIAL COVERING PANELS (10 FULL-SCREEN PANELS)
          =================================================== */}
-      <section 
-        id="services"
-        aria-label="Alvision Media Services"
-        className="py-24 md:py-32 relative bg-[#F8FAFC] border-t border-sky-100"
-      >
-        <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <ScrollReveal variant="fade-up" className="mb-14">
-            <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-600 block mb-3 font-inter">
-              Capabilities
-            </span>
-            <RevealText 
-              text="Services" 
-              className="font-manrope font-extrabold text-4xl sm:text-6xl text-slate-950" 
-              as="h2" 
-            />
-          </ScrollReveal>
+      <CoveringPanels />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            
-            {/* Interactive Service Selector List */}
-            <div className="lg:col-span-6 space-y-3">
-              {services.map((srv, idx) => {
-                const IconComponent = srv.icon;
-                const isSelected = activeService === idx;
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => setActiveService(idx)}
-                    onMouseEnter={() => setActiveService(idx)}
-                    className={`w-full text-left p-6 rounded-2xl transition-all duration-300 border flex items-center justify-between group ${
-                      isSelected 
-                        ? 'bg-white border-sky-400 shadow-md shadow-sky-500/10' 
-                        : 'bg-white/60 border-slate-200/80 hover:bg-white hover:border-sky-200'
-                    }`}
-                  >
-                    <div className="flex items-center gap-5">
-                      <span className={`text-xs font-mono font-bold ${isSelected ? 'text-sky-600' : 'text-slate-400'}`}>
-                        {srv.num}
-                      </span>
-                      <div>
-                        <h3 className={`font-manrope font-bold text-lg md:text-xl transition-colors ${isSelected ? 'text-sky-600' : 'text-slate-800'}`}>
-                          {srv.title}
-                        </h3>
-                        <span className="text-[11px] text-slate-500 font-inter block">{srv.tag}</span>
-                      </div>
-                    </div>
-
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
-                      isSelected ? 'bg-sky-500 text-white' : 'bg-slate-100 text-slate-500 group-hover:text-slate-800'
-                    }`}>
-                      <IconComponent size={18} />
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Service Active Detail Panel */}
-            <div className="lg:col-span-6 lg:sticky lg:top-28">
-              <div className="glass-panel p-8 md:p-12 rounded-3xl bg-white border border-sky-100 shadow-lg relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-sky-200/30 rounded-full blur-3xl pointer-events-none" />
-                
-                <span className="text-[10px] font-mono font-bold tracking-widest text-sky-600 uppercase block mb-2">
-                  Service / {services[activeService].num}
-                </span>
-
-                <h3 className="font-manrope font-extrabold text-2xl md:text-3xl text-slate-950 mb-4">
-                  {services[activeService].title}
-                </h3>
-
-                <p className="text-slate-600 text-sm md:text-base leading-relaxed font-inter mb-8">
-                  {services[activeService].desc}
-                </p>
-
-                <div className="space-y-3 pt-4 border-t border-slate-100 mb-8">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block font-inter">Key Components</span>
-                  {services[activeService].features.map((feat, fIdx) => (
-                    <div key={fIdx} className="flex items-center gap-2.5 text-xs text-slate-700 font-inter">
-                      <CheckCircle size={14} className="text-sky-500 shrink-0" />
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <a 
-                  href="#contact"
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white bg-sky-500 px-6 py-3 rounded-full hover:bg-sky-600 transition-colors font-manrope shadow-sm"
-                >
-                  Inquire Now <ArrowRight size={14} />
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
+      {/* ===================================================
+          04. SERVICES SHOWCASE WITH SCROLL ACTIVATION
+         =================================================== */}
+      <section id="services">
+        <ServicesShowcase />
       </section>
 
       {/* ===================================================
-          04. OUR WORK SECTION (INCLUDES PROCESS & CASE STUDIES)
+          05. HORIZONTAL PROJECT GALLERY (PINNED SCROLL)
          =================================================== */}
-      <section 
-        id="our-work"
-        aria-label="Selected Client Case Studies and Process"
-        className="py-24 md:py-32 relative bg-white border-t border-sky-100"
-      >
-        <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <ScrollReveal variant="fade-up" className="flex flex-col md:flex-row md:items-end justify-between mb-14">
-            <div>
-              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-600 block mb-3 font-inter">
-                Portfolio & Process
-              </span>
-              <RevealText 
-                text="OUR WORK" 
-                className="font-manrope font-extrabold text-4xl sm:text-6xl text-slate-950" 
-                as="h2" 
-              />
-            </div>
-          </ScrollReveal>
-
-          {/* Featured Project Showcase Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {clientWork.map((work, idx) => (
-              <ScrollReveal key={idx} variant="fade-up" delay={idx * 100}>
-                <article className="glass-panel rounded-3xl overflow-hidden bg-white border border-sky-100 shadow-sm card-hover-tilt group flex flex-col justify-between h-[480px]">
-                  
-                  {/* Image Graphic Container */}
-                  <div className="h-44 overflow-hidden relative border-b border-slate-100">
-                    <img 
-                      src={work.image} 
-                      alt={work.title} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="text-[10px] font-bold tracking-wider text-sky-800 uppercase block font-inter px-3 py-1 bg-white/90 backdrop-blur-md rounded-full border border-sky-200 shadow-sm">
-                        {work.category}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Card Content Details */}
-                  <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
-                    <div>
-                      <span className="text-[11px] font-bold tracking-widest text-sky-600 uppercase block mb-1 font-inter">
-                        {work.client}
-                      </span>
-                      <h3 className="font-manrope font-bold text-xl text-slate-900 mb-3 group-hover:text-sky-600 transition-colors">
-                        {work.title}
-                      </h3>
-                      <p className="text-slate-600 text-xs font-inter leading-relaxed line-clamp-3">
-                        {work.detail}
-                      </p>
-                    </div>
-
-                    <div className="pt-4 border-t border-slate-100 flex justify-between items-center mt-4">
-                      <div>
-                        <span className="text-[9px] text-slate-400 block uppercase tracking-wider font-inter">Metric Highlight</span>
-                        <strong className="text-slate-900 text-sm font-manrope font-bold">{work.metric}</strong>
-                      </div>
-                      <a
-                        href="#contact"
-                        className="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 group-hover:bg-sky-500 group-hover:border-sky-500 group-hover:text-white transition-all"
-                      >
-                        <ArrowRight size={14} />
-                      </a>
-                    </div>
-                  </div>
-
-                </article>
-              </ScrollReveal>
-            ))}
-          </div>
-
-        </div>
+      <section id="our-work">
+        <HorizontalGallery />
       </section>
 
       {/* ===================================================
@@ -601,6 +452,11 @@ export default function HomePage() {
 
         </div>
       </section>
+
+      {/* ===================================================
+          06B. DARK MINIMAL FAQ SECTION
+         =================================================== */}
+      <FAQSection />
 
       {/* ===================================================
           07. CONTACT & FINAL CTA SECTION
