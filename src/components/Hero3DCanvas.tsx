@@ -11,21 +11,21 @@ interface Hero3DCanvasProps {
 export default function Hero3DCanvas({ onLoaded, className = '' }: Hero3DCanvasProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [webglSupported, setWebglSupported] = useState(true);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  useEffect(() => {
-    // WebGL support check
+  const webglSupported = (() => {
+    if (typeof window === 'undefined') return true;
     try {
       const testCanvas = document.createElement('canvas');
       const gl = testCanvas.getContext('webgl') || testCanvas.getContext('experimental-webgl');
-      if (!gl) {
-        setWebglSupported(false);
-        if (onLoaded) onLoaded();
-        return;
-      }
+      return !!gl;
     } catch {
-      setWebglSupported(false);
+      return false;
+    }
+  })();
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    // WebGL support check (already done in initial state)
+    if (!webglSupported) {
       if (onLoaded) onLoaded();
       return;
     }

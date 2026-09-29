@@ -3,83 +3,22 @@
 import React, { useState } from 'react';
 import { 
   ArrowRight, 
-  Sparkles, 
-  TrendingUp, 
   MessageSquare, 
   Phone, 
   Mail, 
   MapPin, 
-  CheckCircle, 
-  ExternalLink,
-  Layers,
-  Cpu,
-  Globe
+  CheckCircle
 } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import RevealText from '@/components/RevealText';
 import Magnetic from '@/components/Magnetic';
-import ProcessSection from '@/components/ProcessSection';
 import ScrollTextReveal from '@/components/ScrollTextReveal';
 import HorizontalGallery from '@/components/HorizontalGallery';
 import CoveringPanels from '@/components/CoveringPanels';
-import ServicesShowcase from '@/components/ServicesShowcase';
 import FAQSection from '@/components/FAQSection';
 
 export default function HomePage() {
-  const [activeService, setActiveService] = useState(0);
   const [formSubmitted, setFormSubmitted] = useState(false);
-
-  // Authenticated Alvision Media Services from existing website
-  const services = [
-    { 
-      num: '01', 
-      title: 'Digital Marketing', 
-      tag: 'Performance & Growth Strategy',
-      desc: 'Performance marketing across Meta, Google Search, and Performance Max. Targeted campaign strategies, organic growth, and data analytics.',
-      icon: TrendingUp,
-      features: ['Meta & Google Search Ads', 'Targeted Campaign Strategy', 'Data Analytics', 'SEO Optimization']
-    },
-    { 
-      num: '02', 
-      title: 'Editing & Post-Production', 
-      tag: 'High-Retention Video Cuts',
-      desc: 'High-retention video editing for Reels, YouTube Shorts, and brand films. Color grading, sound engineering, and cinematic cuts.',
-      icon: Layers,
-      features: ['Reels & Shorts High-Retention Cuts', 'Color Grading', 'Sound Engineering', 'Cinematic Edits']
-    },
-    { 
-      num: '03', 
-      title: 'Content Creation', 
-      tag: 'Creative Brand Assets',
-      desc: 'Cinematic shoots, creative scripting, brand visual assets, and digital campaign packages.',
-      icon: Sparkles,
-      features: ['Creative Scriptwriting', 'Cinematic Shoots', 'Brand Visual Assets', 'Campaign Packages']
-    },
-    { 
-      num: '04', 
-      title: 'Media Distribution', 
-      tag: '3M+ Alvision Network',
-      desc: 'Multi-platform broadcasting across Alvision native media networks (3M+ subscribers) and partner channels.',
-      icon: Globe,
-      features: ['Slam Book Tamil Network', 'Mr. Guru Tech & Careers', 'Alvision Tamil Business', 'Jajabordiary Travel Channel']
-    },
-    { 
-      num: '05', 
-      title: 'Acquisition & Lead Funnels', 
-      tag: 'Healthcare & Enterprise',
-      desc: 'High-intent lead capture and automated acquisition funnels for healthcare partners and enterprise clients.',
-      icon: Cpu,
-      features: ['Healthcare Patient Funnels', 'Enterprise Lead Capture', 'WhatsApp Automated Workflows', 'Lead Scoring']
-    },
-    { 
-      num: '06', 
-      title: 'Web Development', 
-      tag: 'Next.js & Web Tech',
-      desc: 'Custom Next.js corporate websites, Web Tech & Campaign Strategy integration, and SEO optimization.',
-      icon: ExternalLink,
-      features: ['Custom Next.js Websites', 'Responsive Web Design', 'Web Tech & Campaign Integration', 'Core Web Vitals Optimization']
-    }
-  ];
 
   // Authentic Client Work & Portfolio from existing website & database
   const clientWork = [
@@ -293,10 +232,7 @@ export default function HomePage() {
          =================================================== */}
       <ScrollTextReveal text="Alvision transforms ambitious brands into digital experiences that attract attention, build trust, and turn every interaction into measurable growth." />
 
-      {/* ===================================================
-          02. FROM IDEA TO IMPACT - 9-STEP PROCESS & GROWTH LOOP (TOP PROCESS SECTION)
-         =================================================== */}
-      <ProcessSection />
+
 
       {/* ===================================================
           03. ABOUT US & DIGITAL TRANSFORMATION STORY
@@ -379,12 +315,7 @@ export default function HomePage() {
          =================================================== */}
       <CoveringPanels />
 
-      {/* ===================================================
-          04. SERVICES SHOWCASE WITH SCROLL ACTIVATION
-         =================================================== */}
-      <section id="services">
-        <ServicesShowcase />
-      </section>
+
 
       {/* ===================================================
           05. HORIZONTAL PROJECT GALLERY (PINNED SCROLL)

@@ -5,23 +5,17 @@ import {
   Search, 
   Lightbulb, 
   Camera, 
-  Send, 
-  BarChart3, 
-  Brain, 
-  Star, 
-  Check, 
-  ArrowRight,
-  ChevronDown,
-  ChevronRight,
-  Sparkles,
-  RefreshCw,
   Layers,
   FileCheck,
   Share2,
   Megaphone,
   TrendingUp,
   Settings,
-  Info
+  Check, 
+  ArrowRight,
+  ChevronDown,
+  Sparkles,
+  RefreshCw
 } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 

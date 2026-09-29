@@ -21,16 +21,14 @@ interface Stats {
 export default function AdminDashboardPage() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
-  const [userRole, setUserRole] = useState<string>('');
+  const [userRole, setUserRole] = useState<string>(() => {
+    if (typeof window === 'undefined') return '';
+    const session = localStorage.getItem('alvision_user');
+    if (session) return JSON.parse(session).role;
+    return '';
+  });
 
   useEffect(() => {
-    // Check role from simulated session
-    const session = localStorage.getItem('alvision_user');
-    if (session) {
-      const u = JSON.parse(session);
-      setUserRole(u.role);
-    }
-
     async function fetchStats() {
       try {
         const res = await fetch('/api/stats');

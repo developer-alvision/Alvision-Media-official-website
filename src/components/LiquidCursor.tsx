@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 export default function LiquidCursor() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = typeof window !== 'undefined';
   const [hoveredType, setHoveredType] = useState<'none' | 'link' | 'card' | 'btn'>('none');
 
   const cursorX = useMotionValue(-100);
@@ -15,8 +15,6 @@ export default function LiquidCursor() {
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
-    setMounted(true);
-
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     if (isTouchDevice) return;
 

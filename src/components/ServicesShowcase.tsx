@@ -96,7 +96,7 @@ export default function ServicesShowcase() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion || !containerRef.current) return;
 
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       const totalItems = services.length;
       const scrubDuration = totalItems * 100;
 

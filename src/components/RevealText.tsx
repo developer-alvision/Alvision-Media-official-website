@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion';
 
 interface RevealTextProps {
   text: string;
@@ -36,7 +36,7 @@ export default function RevealText({ text, className = '', as = 'p' }: RevealTex
 
 interface WordProps {
   children: string;
-  progress: any;
+  progress: MotionValue<number>;
   range: [number, number];
 }
 

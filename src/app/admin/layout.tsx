@@ -24,25 +24,25 @@ export default function AdminLayout({
   const pathname = usePathname();
   const router = useRouter();
   
-  const [currentUser, setCurrentUser] = useState<SimulatedUser | null>(null);
-  const [roleSelectOpen, setRoleSelectOpen] = useState(false);
-  const [authorized, setAuthorized] = useState(false);
-
-  // Load simulated user on mount
-  useEffect(() => {
-    if (pathname === '/admin/login') {
-      setAuthorized(true);
-      return;
-    }
-
+  const [currentUser, setCurrentUser] = useState<SimulatedUser | null>(() => {
+    if (typeof window === 'undefined') return null;
     const sessionData = localStorage.getItem('alvision_user');
-    if (!sessionData) {
+    return sessionData ? JSON.parse(sessionData) : null;
+  });
+  const [roleSelectOpen, setRoleSelectOpen] = useState(false);
+  const [authorized, setAuthorized] = useState(() => {
+    if (pathname === '/admin/login') return true;
+    if (typeof window === 'undefined') return false;
+    return !!localStorage.getItem('alvision_user');
+  });
+
+  // Redirect to login if no valid session
+  useEffect(() => {
+    if (pathname === '/admin/login') return;
+    if (!currentUser) {
       router.push('/admin/login');
-    } else {
-      setCurrentUser(JSON.parse(sessionData));
-      setAuthorized(true);
     }
-  }, [pathname, router]);
+  }, [pathname, router, currentUser]);
 
   // Bypass layout wrapping for the login page
   if (pathname === '/admin/login') {

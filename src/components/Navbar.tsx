@@ -46,7 +46,7 @@ const socialLinks = [
 ];
 
 
-import Logo, { LogoGlyph, LogoImage } from './Logo';
+import { LogoGlyph, LogoImage } from './Logo';
 export { LogoGlyph, LogoImage };
 
 export default function Navbar() {
@@ -145,7 +145,7 @@ export default function Navbar() {
                 aria-label="Contact Alvision team to start a project"
                 className="text-[12px] font-bold uppercase tracking-wider transition-colors flex items-center gap-1.5 font-manrope border-b pb-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alvision-blue rounded-sm px-1 text-studio-deep-dark border-studio-deep-dark/15 hover:text-alvision-blue hover:border-alvision-blue"
               >
-                Let's Talk <ArrowRight size={12} aria-hidden="true" />
+                Let&apos;s Talk <ArrowRight size={12} aria-hidden="true" />
               </Link>
             </Magnetic>
           </div>
@@ -203,7 +203,7 @@ export default function Navbar() {
               href="/contact"
               className="w-full text-center py-4 block font-manrope font-bold text-xs uppercase tracking-widest text-deep-black bg-alvision-blue hover:bg-alvision-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alvision-blue"
             >
-              Let's Talk
+              Let&apos;s Talk
             </Link>
             <div className="text-[9px] text-slate-400 font-inter text-center">
               © {new Date().getFullYear()} Alvision Media.
