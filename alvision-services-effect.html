@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alvision Media - Services Showcase Effect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #111111;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Minimal Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 40px;
+      color: #ffffff;
+      mix-blend-mode: difference;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: currentColor;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    .start-project-btn {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .start-project-btn::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: #0ea5e9;
+      border-radius: 50%;
+    }
+
+    /* Outer Scroll Spacer Section */
+    .services-scroll-wrapper {
+      position: relative;
+      width: 100%;
+      height: 700vh; /* Scroll distance to activate all 7 services */
+    }
+
+    /* Sticky Container */
+    .sticky-services-section {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    /* Large Rounded Cream Services Panel */
+    .services-panel {
+      width: 100%;
+      height: 94vh;
+      background-color: #F2F0E9;
+      border-top-left-radius: 64px;
+      border-top-right-radius: 64px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 60px 4vw 40px 4vw;
+      box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Section Label */
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.5);
+      margin-bottom: 40px;
+    }
+
+    /* Left Column Content Wrapper */
+    .services-list-container {
+      width: 60vw;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Single Service Row */
+    .service-row {
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 24px 0;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.3s;
+    }
+
+    .service-row:last-child {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    /* Service Title Header Row */
+    .service-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      cursor: pointer;
+    }
+
+    .service-number {
+      font-family: 'Newsreader', serif;
+      font-style: italic;
+      font-size: clamp(1.2rem, 2vw, 2rem);
+      color: rgba(0, 0, 0, 0.35);
+      min-width: 40px;
+    }
+
+    .service-title {
+      font-size: clamp(2.2rem, 4.5vw, 4.8rem);
+      font-weight: 600;
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      color: rgba(0, 0, 0, 0.20); /* Initial light gray */
+      transition: color 0.1s linear;
+    }
+
+    /* Service Description Reveal */
+    .service-description {
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(8px);
+      overflow: hidden;
+      padding-left: 56px;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .service-description p {
+      font-size: clamp(0.95rem, 1.3vw, 1.25rem);
+      line-height: 1.5;
+      color: #111111;
+      padding-top: 16px;
+      max-w: 650px;
+      font-weight: 400;
+    }
+
+    .service-description ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+      list-style: none;
+    }
+
+    .service-description li {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background-color: rgba(0, 0, 0, 0.06);
+      padding: 6px 14px;
+      border-radius: 20px;
+      color: #333333;
+    }
+
+    /* Right Side Nominee Tab */
+    .nominee-tab {
+      position: absolute;
+      right: 0;
+      top: 40%;
+      width: 68px;
+      height: 210px;
+      background-color: #ffffff;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      z-index: 20;
+    }
+
+    .nominee-logo {
+      font-weight: 900;
+      font-size: 20px;
+      color: #111111;
+      font-family: 'Newsreader', serif;
+    }
+
+    .nominee-text {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #111111;
+    }
+
+    /* Custom Circular Cursor */
+    .custom-cursor-circle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(0, 0, 0, 0.35);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.15s ease-out, border-color 0.2s;
+    }
+
+    .custom-cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background-color: #111111;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 900px) {
+      .services-list-container {
+        width: 90vw;
+      }
+      .services-panel {
+        border-top-left-radius: 36px;
+        border-top-right-radius: 36px;
+        padding: 40px 5vw;
+      }
+      .nominee-tab {
+        display: none;
+      }
+      .custom-cursor-circle, .custom-cursor-dot {
+        display: none;
+      }
+      .service-description {
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header>
+    <div class="logo">ALVISION MEDIA</div>
+    <nav>
+      <a href="#projects">PROJECTS</a>
+      <a href="#services">SERVICES</a>
+      <a href="#studio">STUDIO</a>
+    </nav>
+    <div class="start-project-btn">START A PROJECT</div>
+  </header>
+
+  <!-- Sticky Outer Wrapper -->
+  <div class="services-scroll-wrapper" id="servicesWrapper">
+    <div class="sticky-services-section">
+      <div class="services-panel">
+        
+        <!-- Header Label -->
+        <div class="section-label">WHAT WE DO</div>
+
+        <!-- Left Column Services List -->
+        <div class="services-list-container" id="servicesContainer">
+          
+          <!-- Service 01 -->
+          <div class="service-row" data-index="0">
+            <div class="service-header">
+              <span class="service-number">(01)</span>
+              <h3 class="service-title">Digital Marketing</h3>
+            </div>
+            <div class="service-description">
+              <p>Performance marketing across Meta, Google Search, and Performance Max. Targeted campaign strategies, organic growth, and data analytics.</p>
+              <ul>
+                <li>Meta & Google Ads</li>
+                <li>Campaign Strategy</li>
+                <li>Data Analytics</li>
+                <li>SEO Optimization</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 02 -->
+          <div class="service-row" data-index="1">
+            <div class="service-header">
+              <span class="service-number">(02)</span>
+              <h3 class="service-title">Editing & Post-Production</h3>
+            </div>
+            <div class="service-description">
+              <p>High-retention video editing for Reels, YouTube Shorts, and brand films. Color grading, sound engineering, and cinematic cuts.</p>
+              <ul>
+                <li>Reels & Shorts Cuts</li>
+                <li>Color Grading</li>
+                <li>Sound Engineering</li>
+                <li>Cinematic Edits</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 03 -->
+          <div class="service-row" data-index="2">
+            <div class="service-header">
+              <span class="service-number">(03)</span>
+              <h3 class="service-title">Content Creation</h3>
+            </div>
+            <div class="service-description">
+              <p>Cinematic shoots, creative scripting, brand visual assets, and digital campaign packages.</p>
+              <ul>
+                <li>Scriptwriting</li>
+                <li>Cinematic Shoots</li>
+                <li>Brand Visual Assets</li>
+                <li>Campaign Packages</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 04 -->
+          <div class="service-row" data-index="3">
+            <div class="service-header">
+              <span class="service-number">(04)</span>
+              <h3 class="service-title">Media Distribution</h3>
+            </div>
+            <div class="service-description">
+              <p>Multi-platform broadcasting across Alvision native media networks (3M+ subscribers) and partner channels.</p>
+              <ul>
+                <li>Slam Book Tamil</li>
+                <li>Mr. Guru Tech</li>
+                <li>Alvision Tamil Business</li>
+                <li>Jajabordiary Travel</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 05 -->
+          <div class="service-row" data-index="4">
+            <div class="service-header">
+              <span class="service-number">(05)</span>
+              <h3 class="service-title">Acquisition & Lead Funnels</h3>
+            </div>
+            <div class="service-description">
+              <p>High-intent lead capture and automated acquisition funnels for healthcare partners and enterprise clients.</p>
+              <ul>
+                <li>Patient Funnels</li>
+                <li>Enterprise Lead Capture</li>
+                <li>WhatsApp Workflows</li>
+                <li>Lead Scoring</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 06 -->
+          <div class="service-row" data-index="5">
+            <div class="service-header">
+              <span class="service-number">(06)</span>
+              <h3 class="service-title">Web Development</h3>
+            </div>
+            <div class="service-description">
+              <p>Custom Next.js corporate websites, Web Tech & Campaign Strategy integration, and SEO optimization.</p>
+              <ul>
+                <li>Custom Next.js Sites</li>
+                <li>Responsive Web Design</li>
+                <li>Campaign Integration</li>
+                <li>Core Web Vitals</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 07 -->
+          <div class="service-row" data-index="6">
+            <div class="service-header">
+              <span class="service-number">(07)</span>
+              <h3 class="service-title">Stratégie Digitale</h3>
+            </div>
+            <div class="service-description">
+              <p>Comprehensive 9-step growth loop flywheel to scale your content reach and audience retention month after month.</p>
+              <ul>
+                <li>Market Research</li>
+                <li>Audience Profiling</li>
+                <li>9-Step Flywheel</li>
+                <li>Monthly Growth Audits</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Side Fixed Nominee Badge -->
+        <div class="nominee-tab">
+          <div class="nominee-logo">W.</div>
+          <div class="nominee-text">Nominee</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor-circle" id="cursorCircle"></div>
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+
+  <script>
+    // Pure Scroll Position Interpolation (Deterministic & Reversible)
+    const wrapper = document.getElementById('servicesWrapper');
+    const rows = document.querySelectorAll('.service-row');
+    const totalServices = rows.length;
+
+    // Color Constants: Interpolates from light gray rgba(0,0,0,0.20) to dark #111111
+    const INACTIVE_COLOR = { r: 190, g: 190, b: 190, opacity: 0.20 };
+    const ACTIVE_COLOR = { r: 17, g: 17, b: 17, opacity: 1.0 };
+
+    function updateServicesOnScroll() {
+      const rect = wrapper.getBoundingClientRect();
+      const totalScrollableDistance = wrapper.offsetHeight - window.innerHeight;
+      
+      // Calculate normalized progress (0.0 to 1.0)
+      let progress = -rect.top / totalScrollableDistance;
+      progress = Math.max(0, Math.min(1, progress));
+
+      const stepSize = 1 / totalServices;
+
+      rows.forEach((row, index) => {
+        const title = row.querySelector('.service-title');
+        const desc = row.querySelector('.service-description');
+        
+        const serviceStart = index * stepSize;
+        const serviceEnd = (index + 1) * stepSize;
+
+        let localProgress = 0;
+
+        if (progress >= serviceStart && progress <= serviceEnd) {
+          localProgress = (progress - serviceStart) / stepSize;
+        } else if (progress > serviceEnd) {
+          localProgress = 0;
+        } else {
+          localProgress = 0;
+        }
+
+        const activeIndex = Math.min(totalServices - 1, Math.floor(progress * totalServices));
+
+        if (index === activeIndex) {
+          title.style.color = '#111111';
+          desc.style.maxHeight = '240px';
+          desc.style.opacity = '1';
+          desc.style.transform = 'translateY(0)';
+        } else {
+          title.style.color = 'rgba(0,0,0,0.20)';
+          desc.style.maxHeight = '0px';
+          desc.style.opacity = '0';
+          desc.style.transform = 'translateY(8px)';
+        }
+      });
+    }
+
+    let isTicking = false;
+    window.addEventListener('scroll', () => {
+      if (!isTicking) {
+        window.requestAnimationFrame(() => {
+          updateServicesOnScroll();
+          isTicking = false;
+        });
+        isTicking = true;
+      }
+    }, { passive: true });
+
+    updateServicesOnScroll();
+
+    const cursorCircle = document.getElementById('cursorCircle');
+    const cursorDot = document.getElementById('cursorDot');
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let circleX = mouseX;
+    let circleY = mouseY;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = mouseX + 'px';
+      cursorDot.style.top = mouseY + 'px';
+    });
+
+    function animateCursor() {
+      circleX += (mouseX - circleX) * 0.15;
+      circleY += (mouseY - circleY) * 0.15;
+      cursorCircle.style.left = circleX + 'px';
+      cursorCircle.style.top = circleY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+  </script>
+
+</body>
+</html>
