@@ -5,28 +5,27 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { 
   Sparkles, 
-  TrendingUp, 
   Layers, 
   Globe, 
-  Share2, 
   CheckCircle, 
   ArrowRight,
   Zap,
-  Target,
-  Award
+  Target
 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const panelsData = [
   { 
-    bg: '#0F172A', 
+    bg: '#0F172A', // Midnight Slate
     color: '#FFFFFF',
     tag: '01 / CREATIVE AGENCY',
     title: 'ALVISION MEDIA', 
     subtitle: 'Full-Service Digital & Media Agency',
     icon: Sparkles,
     badgeBg: 'bg-sky-500/20 text-sky-300 border-sky-400/30',
+    statBg: 'bg-slate-800/80 border-slate-700 text-white',
+    highlightBg: 'bg-slate-800/60 border-slate-700/80 text-sky-200',
     stats: [
       { label: 'Network Reach', val: '3M+ Subscribers' },
       { label: 'Total Views', val: '450M+ Views' },
@@ -35,13 +34,15 @@ const panelsData = [
     highlights: ['YouTube Creator Network', 'Corporate Lead Funnels', 'End-to-End Post Production']
   },
   { 
-    bg: '#F8FAFC', 
-    color: '#0F172A',
+    bg: '#0284C7', // Ocean Sky Blue
+    color: '#FFFFFF',
     tag: '02 / BRAND GROWTH',
     title: 'STRATEGY & AUDIENCE', 
     subtitle: 'We build targeted digital strategies that convert.',
     icon: Target,
-    badgeBg: 'bg-amber-100 text-amber-900 border-amber-300',
+    badgeBg: 'bg-white/20 text-white border-white/30',
+    statBg: 'bg-sky-900/40 border-white/20 text-white',
+    highlightBg: 'bg-sky-900/30 border-white/20 text-sky-100',
     stats: [
       { label: 'Audience Profiling', val: 'Precision Targeting' },
       { label: 'Strategy Framework', val: '9-Step Growth Loop' },
@@ -50,13 +51,15 @@ const panelsData = [
     highlights: ['Market & Competitor Audits', 'Monthly Content Calendars', 'Funnel Optimization']
   },
   { 
-    bg: '#0284C7', 
+    bg: '#7C3AED', // Royal Violet / Purple
     color: '#FFFFFF',
     tag: '03 / CINEMATIC PRODUCTION',
     title: 'CONTENT & PRODUCTION', 
     subtitle: 'High-retention reels, shorts, and brand films.',
     icon: Layers,
-    badgeBg: 'bg-white/20 text-white border-white/30',
+    badgeBg: 'bg-purple-300/20 text-purple-200 border-purple-300/30',
+    statBg: 'bg-purple-950/40 border-purple-300/20 text-white',
+    highlightBg: 'bg-purple-950/30 border-purple-300/20 text-purple-100',
     stats: [
       { label: 'Video Output', val: '120+ Cuts / Month' },
       { label: 'Resolution', val: '4K Cinematic Cuts' },
@@ -65,13 +68,15 @@ const panelsData = [
     highlights: ['4K Multi-Cam Shoots', 'Scriptwriting & Storyboards', 'Motion Graphics & Subtitles']
   },
   { 
-    bg: '#1e293b', 
+    bg: '#059669', // Emerald Mint Green
     color: '#FFFFFF',
     tag: '04 / WEB & DIGITAL FUNNELS',
     title: 'WEB DEVELOPMENT', 
     subtitle: 'Next.js corporate sites & lead capture funnels.',
     icon: Globe,
-    badgeBg: 'bg-emerald-500/20 text-emerald-300 border-emerald-400/30',
+    badgeBg: 'bg-emerald-300/20 text-emerald-100 border-emerald-300/30',
+    statBg: 'bg-emerald-950/40 border-emerald-300/20 text-white',
+    highlightBg: 'bg-emerald-950/30 border-emerald-300/20 text-emerald-100',
     stats: [
       { label: 'Page Load Speed', val: '< 1.0s Load Time' },
       { label: 'SEO Score', val: '99+ Lighthouse' },
@@ -80,13 +85,15 @@ const panelsData = [
     highlights: ['Next.js React Architecture', 'Responsive Mobile First', 'Core Web Vitals Optimized']
   },
   { 
-    bg: '#4F46E5', 
+    bg: '#D97706', // Warm Amber Gold
     color: '#FFFFFF',
     tag: '05 / READY TO SCALE?',
     title: "LET'S BUILD TOGETHER", 
     subtitle: 'Transform your brand into a digital growth engine.',
     icon: Zap,
-    badgeBg: 'bg-indigo-300/20 text-indigo-200 border-indigo-300/30',
+    badgeBg: 'bg-amber-950/30 text-amber-100 border-amber-300/30',
+    statBg: 'bg-amber-950/40 border-amber-200/30 text-white',
+    highlightBg: 'bg-amber-950/30 border-amber-200/30 text-amber-100',
     stats: [
       { label: 'Onboarding', val: '< 48 Hours Setup' },
       { label: 'Support', val: 'Dedicated Strategist' },
@@ -201,23 +208,23 @@ export default function CoveringPanels() {
                 </div>
 
                 {/* Section Title */}
-                <h2 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight font-manrope uppercase leading-none mb-4">
+                <h2 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight font-manrope uppercase leading-none mb-4 text-white">
                   {panel.title}
                 </h2>
 
                 {/* Subtitle */}
-                <p className="text-lg sm:text-xl md:text-2xl font-inter opacity-90 max-w-3xl mb-10 leading-relaxed font-light">
+                <p className="text-lg sm:text-xl md:text-2xl font-inter text-white/90 max-w-3xl mb-10 leading-relaxed font-light">
                   {panel.subtitle}
                 </p>
 
                 {/* Performance Stats Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-4xl mb-8">
                   {panel.stats.map((st, sIdx) => (
-                    <div key={sIdx} className="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 text-center">
-                      <span className="text-xl sm:text-2xl font-extrabold font-manrope block mb-1">
+                    <div key={sIdx} className={`p-5 rounded-2xl border backdrop-blur-md text-center shadow-sm ${panel.statBg}`}>
+                      <span className="text-xl sm:text-2xl font-extrabold font-manrope block mb-1 text-white">
                         {st.val}
                       </span>
-                      <span className="text-xs uppercase font-inter tracking-wider opacity-80 block">
+                      <span className="text-xs uppercase font-inter tracking-wider block opacity-90 text-white/80">
                         {st.label}
                       </span>
                     </div>
@@ -227,8 +234,8 @@ export default function CoveringPanels() {
                 {/* Highlights List */}
                 <div className="flex flex-wrap items-center justify-center gap-3">
                   {panel.highlights.map((hl, hIdx) => (
-                    <div key={hIdx} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-medium font-inter">
-                      <CheckCircle size={12} className="opacity-80" />
+                    <div key={hIdx} className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl border text-xs font-semibold font-inter shadow-xs ${panel.highlightBg}`}>
+                      <CheckCircle size={14} className="text-white shrink-0" />
                       <span>{hl}</span>
                     </div>
                   ))}
@@ -238,7 +245,7 @@ export default function CoveringPanels() {
                 {index === panelsData.length - 1 && (
                   <a
                     href="#contact"
-                    className="mt-8 px-8 py-4 bg-white text-slate-900 font-manrope font-bold text-xs uppercase tracking-widest rounded-full hover:bg-sky-50 transition-colors shadow-lg flex items-center gap-2"
+                    className="mt-8 px-8 py-4 bg-white text-slate-900 font-manrope font-bold text-xs uppercase tracking-widest rounded-full hover:bg-amber-50 transition-all shadow-xl flex items-center gap-2"
                   >
                     Get Started Now <ArrowRight size={14} />
                   </a>
@@ -252,4 +259,5 @@ export default function CoveringPanels() {
     </div>
   );
 }
+
 
