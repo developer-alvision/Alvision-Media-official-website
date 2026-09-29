@@ -126,7 +126,7 @@ export default function TermsPage() {
                 <div>
                   <h2 className="font-manrope font-bold text-lg text-studio-deep-dark mb-2">6. Governing Law</h2>
                   <p className="text-xs md:text-sm leading-relaxed">
-                    These Terms & Conditions shall be governed by and construed in accordance with the laws of India, without regard to conflicts of law principles. Any dispute arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the courts located in Chennai, Tamil Nadu, India.
+                    These Terms & Conditions shall be governed by and construed in accordance with the laws of India, without regard to conflicts of law principles. Any dispute arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the courts located in Madanapalle, Andhra Pradesh, India.
                   </p>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function TermsPage() {
                   </div>
                   <div className="flex items-center gap-2 text-xs text-slate-500">
                     <MapPin size={14} className="text-alvision-blue" />
-                    <span>Chennai, India</span>
+                    <span>Madanapalle, Andhra Pradesh</span>
                   </div>
                 </div>
               </div>

@@ -161,7 +161,7 @@ export default function ServicesShowcase() {
       </div>
 
       {/* Main Service List Scroll Container */}
-      <div className="flex-1 w-full flex items-center justify-start px-6 md:px-20 pt-28 md:pt-36 pb-12 overflow-y-auto hide-scrollbar z-10">
+      <div className="flex-1 w-full flex items-center justify-start px-6 md:px-20 pt-12 md:pt-24 pb-12 z-10">
         <div className="w-full md:w-[62%] flex flex-col">
           {services.map((service, idx) => (
             <div 
@@ -217,8 +217,6 @@ export default function ServicesShowcase() {
       />
       
       <style dangerouslySetInnerHTML={{__html: `
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .writing-mode-vertical { writing-mode: vertical-rl; }
       `}} />
     </div>

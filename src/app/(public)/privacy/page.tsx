@@ -138,7 +138,7 @@ export default function PrivacyPage() {
                   </div>
                   <div className="flex items-center gap-2 text-xs text-slate-500">
                     <MapPin size={14} className="text-alvision-blue" />
-                    <span>Chennai, India</span>
+                    <span>Madanapalle, Andhra Pradesh</span>
                   </div>
                 </div>
               </div>

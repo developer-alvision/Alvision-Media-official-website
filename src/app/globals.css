@@ -7,6 +7,11 @@
   --color-studio-deep-dark: #0F172A;
   --color-studio-light: #F0F9FF;
   --color-studio-accent: #E0F2FE;
+  --color-dark-navy: #0F172A;
+  --color-deep-black: #050B14;
+  --color-slate-650: #475569;
+  --color-glow-blue: #38BDF8;
+  --color-electric-blue: #0284C7;
   
   --font-manrope: var(--font-manrope), sans-serif;
   --font-inter: var(--font-inter), sans-serif;

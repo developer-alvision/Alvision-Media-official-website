@@ -112,7 +112,7 @@ export default function ContactPage() {
                   <div>
                     <span className="text-slate-500 text-[10px] block uppercase tracking-wider font-inter">Our Office</span>
                     <span className="text-sm font-manrope font-semibold block leading-relaxed text-studio-deep-dark">
-                      3/175 Krishna Nagar 10th street, Alapakkam, Chennai - 600087
+                      Ward No 17, 17/9149, New Eastpeta, Rajeev Nagar Road, Nemali Nagar, Madanapalle, Andhra Pradesh 517325
                     </span>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ export default function ContactPage() {
                   />
                   <circle cx="108" cy="65" r="4" fill="#0EA5E9" />
                   <circle cx="108" cy="65" r="10" stroke="#0EA5E9" strokeWidth="1.5" className="animate-ping opacity-35" />
-                  <text x="122" y="69" fill="#0F172A" fontFamily="var(--font-manrope)" fontSize="9" fontWeight="bold">CHENNAI (HQ)</text>
+                  <text x="122" y="69" fill="#0F172A" fontFamily="var(--font-manrope)" fontSize="9" fontWeight="bold">MADANAPALLE (HQ)</text>
                 </svg>
               </div>
             </ScrollReveal>

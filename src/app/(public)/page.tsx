@@ -365,7 +365,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent rounded-2xl" />
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/90 backdrop-blur-md border border-sky-100 text-xs text-slate-700 font-inter shadow-md">
                   <strong className="text-slate-950 font-manrope block font-bold text-sm mb-1">HQ Address</strong>
-                  3/175 Krishna Nagar 10th street, Alapakkam, Chennai - 600087
+                  Ward No 17, 17/9149, New Eastpeta, Rajeev Nagar Road, Nemali Nagar, Madanapalle, Andhra Pradesh 517325
                 </div>
               </div>
             </ScrollReveal>
@@ -517,7 +517,7 @@ export default function HomePage() {
                   <div>
                     <span className="text-slate-400 text-[10px] uppercase tracking-wider block font-inter">Office Location</span>
                     <span className="text-sm font-manrope font-semibold text-slate-900 block leading-relaxed">
-                      3/175 Krishna Nagar 10th street, Alapakkam, Chennai - 600087
+                      Ward No 17, 17/9149, New Eastpeta, Rajeev Nagar Road, Nemali Nagar, Madanapalle, Andhra Pradesh 517325
                     </span>
                   </div>
                 </div>
