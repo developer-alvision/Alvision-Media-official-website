@@ -80,7 +80,7 @@ export default function ServicesShowcase() {
         <span className="text-sm font-medium tracking-widest uppercase">Our Services</span>
       </div>
       
-      <div className="flex-1 w-full flex items-center justify-start px-8 md:px-24 pt-24 md:pt-0 pb-12 overflow-y-auto hide-scrollbar">
+      <div className="flex-1 w-full flex items-center justify-start px-8 md:px-24 pt-28 md:pt-36 pb-12 overflow-y-auto hide-scrollbar">
         <div className="w-full md:w-[60%] flex flex-col space-y-0">
           {services.map((service, idx) => (
             <div 
