@@ -82,7 +82,7 @@ export default function FAQSection() {
       
       <div className="mt-32 w-full flex justify-center pb-12 overflow-hidden">
         <h2 className="text-[10vw] font-bold leading-none tracking-tighter text-white uppercase text-center whitespace-nowrap">
-          LET&apos;S BUILD.
+          ALVISION MEDIA.
         </h2>
       </div>
     </section>

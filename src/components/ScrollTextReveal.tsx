@@ -36,7 +36,7 @@ export const ScrollTextReveal: React.FC<ScrollTextRevealProps> = ({
 
     if (prefersReducedMotion) {
       gsap.set(wordElements, {
-        color: '#0f172a',
+        color: '#FFFFFF',
         opacity: 1,
         filter: 'blur(0px)',
       });
@@ -45,9 +45,9 @@ export const ScrollTextReveal: React.FC<ScrollTextRevealProps> = ({
 
     // Set initial dim state for all words
     gsap.set(wordElements, {
-      color: 'rgba(15, 23, 42, 0.15)',
-      opacity: 0.15,
-      filter: 'blur(1.5px)',
+      color: 'rgba(255, 255, 255, 0.25)',
+      opacity: 0.25,
+      filter: 'blur(1px)',
     });
 
     const ctx = gsap.context(() => {
@@ -55,7 +55,7 @@ export const ScrollTextReveal: React.FC<ScrollTextRevealProps> = ({
         scrollTrigger: {
           trigger: containerRef.current,
           start: 'top top',
-          end: '+=180%',
+          end: '+=80%',
           pin: true,
           scrub: 0.8,
           anticipatePin: 1,
@@ -64,7 +64,7 @@ export const ScrollTextReveal: React.FC<ScrollTextRevealProps> = ({
       });
 
       tl.to(wordElements, {
-        color: '#0f172a',
+        color: '#FFFFFF',
         opacity: 1,
         filter: 'blur(0px)',
         stagger: {
@@ -88,11 +88,10 @@ export const ScrollTextReveal: React.FC<ScrollTextRevealProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full min-h-screen bg-[#F0F9FF] flex items-center justify-center overflow-hidden py-20 border-b border-sky-100 ${className}`}
+      className={`relative w-full min-h-screen bg-[#0B0F17] flex items-center justify-center overflow-hidden py-20 border-b border-slate-800 ${className}`}
     >
-      {/* Soft atmospheric white fog backdrop */}
-      <div className="absolute inset-0 pointer-events-none opacity-80 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-sky-100/50 to-transparent blur-3xl scale-125" />
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/60 via-transparent to-white/60" />
+      {/* Dark atmospheric backdrop glow */}
+      <div className="absolute inset-0 pointer-events-none opacity-40 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-500/20 via-slate-900/40 to-transparent blur-3xl scale-125" />
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 relative z-10 text-center">
         <div

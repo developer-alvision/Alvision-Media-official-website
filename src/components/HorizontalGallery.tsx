@@ -30,8 +30,7 @@ export default function HorizontalGallery() {
       const viewportWidth = window.innerWidth;
       
       // Calculate how far to move left
-      // We subtract the viewport width so the last item stops near the right edge
-      const xDistance = -(totalWidth - viewportWidth + viewportWidth * 0.1); 
+      const xDistance = -(totalWidth - viewportWidth + 60); 
 
       gsap.to(galleryRef.current, {
         x: xDistance,
@@ -40,10 +39,10 @@ export default function HorizontalGallery() {
           trigger: containerRef.current,
           pin: true,
           scrub: 1,
-          start: "center center",
-          end: () => `+=${totalWidth}`,
+          start: "top top",
+          end: () => `+=${totalWidth - viewportWidth}`,
           anticipatePin: 1,
-          invalidateOnRefresh: true, // Recalculates on resize
+          invalidateOnRefresh: true,
         }
       });
     }, containerRef);
@@ -54,19 +53,19 @@ export default function HorizontalGallery() {
   return (
     <section 
       ref={containerRef} 
-      className="bg-[#FAFAFA] relative h-screen w-full overflow-hidden flex flex-col justify-center"
+      className="bg-[#0F172A] relative min-h-screen w-full overflow-hidden flex flex-col justify-center border-t border-slate-800"
     >
-      <div className="absolute top-[10%] md:top-[15%] left-8 md:left-16 lg:left-24 z-10 pointer-events-none">
-        <h2 className="text-5xl md:text-7xl lg:text-8xl font-black font-inter tracking-tighter text-slate-900 leading-none">
+      <div className="absolute top-[10%] md:top-[12%] left-8 md:left-16 lg:left-24 z-10 pointer-events-none">
+        <h2 className="text-5xl md:text-7xl lg:text-8xl font-black font-inter tracking-tighter text-white leading-none">
           VIEW,
         </h2>
-        <p className="text-4xl md:text-6xl lg:text-7xl font-serif italic text-slate-500 mt-2">
+        <p className="text-4xl md:text-6xl lg:text-7xl font-serif italic text-slate-400 mt-2">
           before you read.
         </p>
       </div>
 
       {/* Gallery Container */}
-      <div className="mt-24 md:mt-32 w-full">
+      <div className="mt-28 md:mt-36 w-full">
         <div 
           ref={galleryRef}
           className="flex items-center gap-8 md:gap-16 px-8 md:px-24 w-max"
@@ -117,20 +116,20 @@ export default function HorizontalGallery() {
                 />
                 
                 {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
                 
                 {/* Metric Badge */}
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-extrabold rounded-full text-sky-600 shadow-sm z-30">
+                <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-sm border border-slate-700 px-3 py-1 text-xs font-extrabold rounded-full text-sky-400 shadow-sm z-30">
                   {project.metric}
                 </div>
               </div>
               
               <div className="mt-5 flex flex-col gap-1.5">
-                <div className="flex justify-between items-center text-xs font-semibold text-sky-600 font-inter uppercase tracking-widest">
+                <div className="flex justify-between items-center text-xs font-semibold text-sky-400 font-inter uppercase tracking-widest">
                   <span>{project.category}</span>
                   <span className="text-slate-400">{project.year}</span>
                 </div>
-                <h3 className="text-lg md:text-xl font-extrabold font-manrope text-slate-950 group-hover:text-sky-600 transition-colors line-clamp-2">
+                <h3 className="text-lg md:text-xl font-extrabold font-manrope text-white group-hover:text-sky-400 transition-colors line-clamp-2">
                   {project.title}
                 </h3>
               </div>
@@ -141,3 +140,4 @@ export default function HorizontalGallery() {
     </section>
   );
 }
+
