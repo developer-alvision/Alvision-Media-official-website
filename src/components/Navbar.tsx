@@ -165,7 +165,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[68px] bg-[#0B0F17]/98 backdrop-blur-xl z-45 border-t border-slate-800 flex flex-col justify-between py-12 px-8 animate-in fade-in slide-in-from-top-3 duration-300">
+        <div className="md:hidden fixed inset-0 top-[68px] bg-[#0B0F17] z-[60] border-t border-slate-800 flex flex-col justify-between py-12 px-8 animate-in fade-in slide-in-from-top-3 duration-300">
           <nav role="navigation" aria-label="Mobile navigation" className="flex flex-col space-y-6">
             {navLinks.map((link) => (
               <Link

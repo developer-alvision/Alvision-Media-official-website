@@ -85,40 +85,6 @@ export default function HomePage() {
     'Jyothi Dental Hospital'
   ];
 
-  // Verified Alvision Media Youtube Channels
-  const channels = [
-    { 
-      name: 'Slam Book Tamil', 
-      cat: 'Entertainment & Lifestyle', 
-      desc: 'Tamil Nadu\'s leading lifestyle, celebrity interview, and pop-culture digital network.',
-      image: '/images/Slam Book Tamil.png' 
-    },
-    { 
-      name: 'Mr. Guru', 
-      cat: 'Tech & Careers', 
-      desc: 'Premium coding tutorials, computer science guidance, and software engineering deep dives in regional languages.',
-      image: '/images/Mr.Guru.png' 
-    },
-    { 
-      name: 'Alvision Tamil', 
-      cat: 'Business & Finance', 
-      desc: 'Detailed corporate case studies, regional financial advice, and startup growth models delivered in Tamil.',
-      image: '/images/Alvision Tamil.png' 
-    },
-    { 
-      name: 'Alvision Fusion', 
-      cat: 'Infotainment & Shorts', 
-      desc: 'Bite-sized business statistics, geopolitical insights, and current tech trends packaged for the modern scroll.',
-      image: '/images/Alvision Fusion.png' 
-    },
-    { 
-      name: 'Wild Card', 
-      cat: 'Pop Culture & Analysis', 
-      desc: 'Deep essays on cinema critiques, internet memes, and Gen-Z digital communities.',
-      image: '/images/Wild Card.jpeg' 
-    }
-  ];
-
   const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -142,7 +108,7 @@ export default function HomePage() {
          =================================================== */}
       <section 
         aria-label="Welcome to Alvision Media"
-        className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden bg-gradient-to-b from-[#0B0F17] via-[#0F172A] to-[#0B0F17]"
+        className="relative min-h-[calc(100svh-10rem)] md:min-h-screen flex items-center justify-center pt-28 pb-12 md:pb-16 overflow-hidden bg-gradient-to-b from-[#0B0F17] via-[#0F172A] to-[#0B0F17]"
       >
         {/* Clean Backdrop */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -315,31 +281,6 @@ export default function HomePage() {
                 </div>
               </ScrollReveal>
             ))}
-          </div>
-
-          {/* YouTube Media Channels Grid */}
-          <div className="mt-16 pt-12 border-t border-slate-800">
-            <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-400 block mb-8 text-center font-inter">
-              Alvision YouTube Channels
-            </span>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {channels.map((chan, idx) => (
-                <ScrollReveal key={idx} variant="fade-up" delay={idx * 80}>
-                  <div className="glass-panel p-6 rounded-2xl bg-[#131C2E] border border-slate-800 hover:border-sky-500/40 hover:shadow-md transition-all flex items-center gap-4">
-                    <img 
-                      src={chan.image} 
-                      alt={chan.name} 
-                      className="w-14 h-14 rounded-full object-cover border border-slate-700 shrink-0" 
-                    />
-                    <div>
-                      <h4 className="font-manrope font-bold text-base text-white">{chan.name}</h4>
-                      <p className="text-[11px] text-slate-400 font-inter line-clamp-1 mt-0.5">{chan.desc}</p>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
           </div>
 
         </div>
