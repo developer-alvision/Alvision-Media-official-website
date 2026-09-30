@@ -108,7 +108,7 @@ export default function HomePage() {
          =================================================== */}
       <section 
         aria-label="Welcome to Alvision Media"
-        className="relative min-h-[calc(100svh-10rem)] md:min-h-screen flex items-center justify-center pt-28 pb-12 md:pb-16 overflow-hidden bg-gradient-to-b from-[#0B0F17] via-[#0F172A] to-[#0B0F17]"
+        className="relative min-h-[calc(100svh-11rem)] md:min-h-screen flex items-center justify-center pt-0 pb-6 md:pt-28 md:pb-16 overflow-hidden bg-gradient-to-b from-[#0B0F17] via-[#0F172A] to-[#0B0F17]"
       >
         {/* Clean Backdrop */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">

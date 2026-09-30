@@ -43,20 +43,20 @@ export const ScrollTextReveal: React.FC<ScrollTextRevealProps> = ({
       return;
     }
 
-    // Set initial dim state for all words
-    gsap.set(wordElements, {
-      color: 'rgba(255, 255, 255, 0.25)',
-      opacity: 0.25,
-      filter: 'blur(1px)',
-    });
+    const media = gsap.matchMedia();
+    const setupReveal = (pin: boolean) => {
+      gsap.set(wordElements, {
+        color: 'rgba(255, 255, 255, 0.25)',
+        opacity: 0.25,
+        filter: 'blur(1px)',
+      });
 
-    const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top top',
-          end: '+=80%',
-          pin: true,
+          start: pin ? 'top top' : 'top 78%',
+          end: pin ? '+=80%' : '+=60%',
+          pin,
           scrub: 0.8,
           anticipatePin: 1,
           invalidateOnRefresh: true,
@@ -72,7 +72,10 @@ export const ScrollTextReveal: React.FC<ScrollTextRevealProps> = ({
           ease: 'power1.inOut',
         },
       });
-    }, containerRef);
+    };
+
+    media.add('(min-width: 768px)', () => setupReveal(true));
+    media.add('(max-width: 767px)', () => setupReveal(false));
 
     // Refresh ScrollTrigger to ensure correct scroll coordinates
     const timer = setTimeout(() => {
@@ -81,14 +84,14 @@ export const ScrollTextReveal: React.FC<ScrollTextRevealProps> = ({
 
     return () => {
       clearTimeout(timer);
-      ctx.revert();
+      media.revert();
     };
   }, [words]);
 
   return (
     <div
       ref={containerRef}
-      className={`relative w-full min-h-screen bg-[#0B0F17] flex items-center justify-center overflow-hidden py-20 border-b border-slate-800 ${className}`}
+      className={`relative w-full min-h-[50svh] md:min-h-screen bg-[#0B0F17] flex items-center justify-center overflow-hidden py-6 md:py-20 border-b border-slate-800 ${className}`}
     >
       {/* Dark atmospheric backdrop glow */}
       <div className="absolute inset-0 pointer-events-none opacity-40 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-500/20 via-slate-900/40 to-transparent blur-3xl scale-125" />
@@ -97,7 +100,7 @@ export const ScrollTextReveal: React.FC<ScrollTextRevealProps> = ({
         <div
           ref={textRef}
           className="font-manrope font-extrabold tracking-tight text-center leading-[1.25]"
-          style={{ fontSize: 'clamp(2.2rem, 5.5vw, 4.8rem)' }}
+          style={{ fontSize: 'clamp(1.8rem, 8vw, 4.8rem)' }}
         >
           {words.map((word, i) => (
             <span key={i} className="inline-block whitespace-pre">
