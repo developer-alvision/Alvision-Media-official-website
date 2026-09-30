@@ -14,6 +14,7 @@ import RevealText from '@/components/RevealText';
 import Magnetic from '@/components/Magnetic';
 import ScrollTextReveal from '@/components/ScrollTextReveal';
 import HorizontalGallery from '@/components/HorizontalGallery';
+import CoveringPanels from '@/components/CoveringPanels';
 import FAQSection from '@/components/FAQSection';
 
 export default function HomePage() {
@@ -276,6 +277,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+        <CoveringPanels />
 
       {/* ===================================================
           05. HORIZONTAL PROJECT GALLERY (PINNED SCROLL)
