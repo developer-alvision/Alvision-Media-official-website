@@ -46,7 +46,7 @@ const socialLinks = [
 ];
 
 
-import { LogoGlyph, LogoImage } from './Logo';
+import { BrandLockup, LogoGlyph, LogoImage } from './Logo';
 export { LogoGlyph, LogoImage };
 
 export default function Navbar() {
@@ -71,11 +71,11 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Services', path: '/#services' },
-    { name: 'Our Work', path: '/#our-work' },
-    { name: 'Clients', path: '/#clients' },
-    { name: 'About', path: '/#about' },
-    { name: 'Contact', path: '/#contact' },
+    { name: 'Services', path: '/services' },
+    { name: 'Our Work', path: '/portfolio' },
+    { name: 'Channels', path: '/channels' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   const isActive = (path: string) => {
@@ -101,7 +101,7 @@ export default function Navbar() {
             aria-label="Alvision Media Home"
             className="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 rounded-md px-1 py-0.5"
           >
-            <LogoImage className="h-8 md:h-9 w-auto max-w-[200px]" />
+            <BrandLockup />
           </Link>
 
           <nav role="navigation" aria-label="Main navigation" className="hidden md:flex items-center space-x-8">

@@ -109,7 +109,7 @@ export default function CoveringPanels() {
         return (
           <div
             key={panel.title}
-            className="relative md:sticky md:top-0 min-h-0 md:min-h-screen w-full flex flex-col justify-center items-center px-4 sm:px-8 py-10 md:py-12 border-t border-white/10 shadow-2xl"
+            className="sticky top-0 min-h-[100svh] w-full flex flex-col justify-center items-center px-3 sm:px-8 py-6 sm:py-10 md:py-12 border-t border-white/10 shadow-2xl"
             style={{ backgroundColor: panel.background, color: '#FFFFFF', zIndex: panelIndex + 1 }}
           >
             <div className="max-w-4xl w-full mx-auto flex flex-col items-center text-center">
@@ -132,14 +132,14 @@ export default function CoveringPanels() {
                 </p>
               </ScrollReveal>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full max-w-3xl mb-6 md:mb-10">
+              <div className="grid grid-cols-2 gap-2 sm:gap-4 w-full max-w-3xl mb-5 sm:mb-8">
                 {panel.items.map((item, itemIndex) => (
                   <ScrollReveal key={item} className="h-full" delay={itemIndex * 55} duration={550} distance={22}>
-                    <div className={`h-full min-h-14 p-3.5 sm:p-4 rounded-xl border backdrop-blur-md flex items-center gap-3 text-left shadow-sm card-hover-lift hover:border-white/40 hover:bg-white/10 ${panel.card}`}>
-                      <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                        <CheckCircle2 size={14} className="text-sky-200" aria-hidden="true" />
+                    <div className={`h-full min-h-12 p-2 sm:p-4 rounded-lg sm:rounded-xl border backdrop-blur-md flex items-center gap-2 sm:gap-3 text-left shadow-sm card-hover-lift hover:border-white/40 hover:bg-white/10 ${panel.card}`}>
+                      <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                        <CheckCircle2 size={12} className="text-sky-200" aria-hidden="true" />
                       </span>
-                      <span className="text-xs sm:text-sm font-semibold font-inter text-white/95 leading-snug">
+                      <span className="text-[10px] sm:text-sm font-semibold font-inter text-white/95 leading-tight sm:leading-snug">
                         {item}
                       </span>
                     </div>

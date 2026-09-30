@@ -15,7 +15,6 @@ import Magnetic from '@/components/Magnetic';
 import ScrollTextReveal from '@/components/ScrollTextReveal';
 import HorizontalGallery from '@/components/HorizontalGallery';
 import CoveringPanels from '@/components/CoveringPanels';
-import FAQSection from '@/components/FAQSection';
 
 export default function HomePage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -136,7 +135,7 @@ export default function HomePage() {
   };
 
   return (
-    <main id="main-content" className="relative bg-[#0B0F17] text-white overflow-hidden">
+    <main id="main-content" className="relative bg-[#0B0F17] text-white overflow-x-clip">
       
       {/* ===================================================
           01. HERO / CINEMATIC OPENING EXPERIENCE
@@ -345,11 +344,6 @@ export default function HomePage() {
 
         </div>
       </section>
-
-      {/* ===================================================
-          06B. DARK MINIMAL FAQ SECTION
-         =================================================== */}
-      <FAQSection />
 
       {/* ===================================================
           07. CONTACT & FINAL CTA SECTION

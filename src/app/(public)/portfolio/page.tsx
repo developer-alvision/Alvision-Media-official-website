@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Briefcase, ArrowUpRight, TrendingUp, Sparkles, Filter, X, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import FAQSection from '@/components/FAQSection';
 
 interface PortfolioProject {
   id: string;
@@ -164,6 +165,8 @@ export default function PortfolioPage() {
 
         </div>
       </section>
+
+      <FAQSection />
 
       {/* 4. Case Study Details Modal - White Background */}
       {selectedProject && (

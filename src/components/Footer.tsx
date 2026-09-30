@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import { LogoImage } from './Navbar';
+import { BrandLockup } from './Logo';
 
 const socialLinks = [
   {
@@ -55,7 +55,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-4 md:col-span-2">
             <Link href="/" className="flex items-center group">
-              <LogoImage className="h-9 w-auto max-w-[200px]" />
+              <BrandLockup />
             </Link>
             <p className="text-xs text-slate-400 max-w-md font-inter leading-relaxed">
               Alvision Media solves the challenges effectively for reaching and engaging target audiences, maximizing brand visibility and driving business growth through strategic planning and execution across digital channels and native media networks.
@@ -82,11 +82,11 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="font-manrope text-xs font-bold uppercase tracking-wider text-white">Navigation</h4>
             <ul className="space-y-2.5 text-xs font-inter text-slate-400">
-              <li><a href="#services" className="hover:text-sky-400 transition-colors">Services</a></li>
-              <li><a href="#our-work" className="hover:text-sky-400 transition-colors">Our Work</a></li>
-              <li><a href="#clients" className="hover:text-sky-400 transition-colors">Clients</a></li>
-              <li><a href="#about" className="hover:text-sky-400 transition-colors">About Us</a></li>
-              <li><a href="#contact" className="hover:text-sky-400 transition-colors">Contact</a></li>
+              <li><Link href="/services" className="hover:text-sky-400 transition-colors">Services</Link></li>
+              <li><Link href="/portfolio" className="hover:text-sky-400 transition-colors">Our Work</Link></li>
+              <li><Link href="/channels" className="hover:text-sky-400 transition-colors">Channels</Link></li>
+              <li><Link href="/about" className="hover:text-sky-400 transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-sky-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
 

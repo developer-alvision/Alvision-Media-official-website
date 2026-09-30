@@ -30,6 +30,25 @@ export function LogoGlyph({ className = "w-7 h-7" }: { className?: string }) {
   );
 }
 
+export function BrandLockup() {
+  return (
+    <span className="inline-flex items-center gap-2.5 group">
+      <span className="relative block h-7 w-10 shrink-0 overflow-hidden">
+        <img
+          src="/images/alvision-media-hd-logo.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute left-1/2 top-0 h-10 w-auto max-w-none -translate-x-1/2 object-contain brightness-0 invert transition-transform duration-300 group-hover:scale-105"
+        />
+      </span>
+      <span className="flex items-center gap-1 whitespace-nowrap font-manrope text-sm font-extrabold uppercase tracking-wider">
+        <span className="text-white">ALVISION</span>
+        <span className="text-sky-400">MEDIA</span>
+      </span>
+    </span>
+  );
+}
+
 export default function Logo({
   className = "",
   size = 32,
