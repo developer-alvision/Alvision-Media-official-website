@@ -188,11 +188,11 @@ export default function ServicesPage() {
   };
 
   return (
-    <main id="main-content" role="main" className="relative bg-white text-dark-navy min-h-screen pt-24 pb-8">
+    <main id="main-content" role="main" className="relative bg-[#0B0F17] text-white min-h-screen pt-24 pb-8">
       
       {/* Glow effects */}
-      <div className="absolute top-40 right-10 w-[400px] h-[400px] bg-alvision-blue/5 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
-      <div className="absolute bottom-20 left-10 w-[400px] h-[400px] bg-glow-blue/5 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute top-40 right-10 w-[400px] h-[400px] bg-sky-500/10 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-20 left-10 w-[400px] h-[400px] bg-sky-400/10 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
 
       {/* 1. Header Hero */}
       <section className="py-8 md:py-12 text-center relative z-10" aria-label="Services intro">
@@ -201,20 +201,20 @@ export default function ServicesPage() {
             <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4 font-inter">OUR DEPARTMENTS</span>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={100} duration={700}>
-            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6">
+            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
               Digital Capabilities That Drive Value
             </h1>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={200} duration={700}>
-            <p className="max-w-2xl mx-auto text-slate-500 text-base md:text-lg leading-relaxed font-inter">
+            <p className="max-w-2xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed font-inter">
               Explore our core service capabilities. From Digital Marketing and High-Retention Editing to Content Creation, Distribution, and Acquisition, we focus on technical precision and measurable growth.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* 2. Interactive Service Explorer - White Background */}
-      <section className="py-10 md:py-14 relative z-10 bg-white border-y border-sky-100/40" aria-label="Services selector explorer">
+      {/* 2. Interactive Service Explorer - Dark Theme */}
+      <section className="py-10 md:py-14 relative z-10 bg-[#0F172A] border-y border-slate-800" aria-label="Services selector explorer">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             
@@ -235,10 +235,10 @@ export default function ServicesPage() {
                         setActiveTab(idx);
                         setFormSubmitted(false);
                       }}
-                      className={`w-full text-left px-4 py-3.5 rounded-xl font-manrope font-bold text-sm md:text-base flex items-center justify-between transition-all duration-300 border focus-visible:ring-2 focus-visible:ring-alvision-blue focus-visible:outline-none ${
+                      className={`w-full text-left px-4 py-3.5 rounded-xl font-manrope font-bold text-sm md:text-base flex items-center justify-between transition-all duration-300 border focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:outline-none ${
                         activeTab === idx 
-                          ? 'bg-alvision-blue text-deep-black border-alvision-blue shadow-lg shadow-alvision-blue/25 scale-[1.01]' 
-                          : 'bg-white hover:bg-slate-50 border-sky-100 text-slate-500 hover:text-dark-navy hover:border-slate-350 shadow-sm'
+                          ? 'bg-sky-400 text-slate-950 border-sky-400 shadow-lg shadow-sky-500/25 scale-[1.01]' 
+                          : 'bg-[#131C2E] hover:bg-slate-800 border-slate-800 text-slate-300 hover:text-white shadow-sm'
                       }`}
                     >
                       <span className="flex items-center gap-3.5">

@@ -383,7 +383,7 @@ class JSONDb {
         let updated = false;
         for (const key of Object.keys(defaultData) as Array<keyof DatabaseSchema>) {
           if (!this.data![key]) {
-            (this.data as Record<string, unknown>)[key] = defaultData[key];
+            (this.data as unknown as Record<string, unknown>)[key] = defaultData[key];
             updated = true;
           }
         }

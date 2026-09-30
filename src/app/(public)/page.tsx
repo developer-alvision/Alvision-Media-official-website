@@ -154,22 +154,22 @@ export default function HomePage() {
   };
 
   return (
-    <main id="main-content" className="relative bg-[#F0F9FF] text-slate-900 overflow-hidden">
+    <main id="main-content" className="relative bg-[#0B0F17] text-white overflow-hidden">
       
       {/* ===================================================
-          01. HERO / CINEMATIC 3D OPENING EXPERIENCE
+          01. HERO / CINEMATIC OPENING EXPERIENCE
          =================================================== */}
       <section 
         aria-label="Welcome to Alvision Media"
-        className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden bg-gradient-to-b from-[#F0F9FF] via-[#E0F2FE]/40 to-white"
+        className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden bg-gradient-to-b from-[#0B0F17] via-[#0F172A] to-[#0B0F17]"
       >
-        {/* Clean Studio Background Backdrop */}
+        {/* Clean Backdrop */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.12),transparent_70%)]" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-sky-200/40 rounded-full blur-3xl animate-blob-drift" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.12),transparent_70%)]" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-sky-500/10 rounded-full blur-3xl animate-blob-drift" />
           
           {/* Studio Focus Grid Lines */}
-          <div className="absolute inset-8 border border-sky-200/40 opacity-50" />
+          <div className="absolute inset-8 border border-sky-500/10 opacity-40" />
           <div className="absolute top-12 left-12 w-6 h-6 border-t-2 border-l-2 border-sky-400" />
           <div className="absolute top-12 right-12 w-6 h-6 border-t-2 border-r-2 border-sky-400" />
           <div className="absolute bottom-12 left-12 w-6 h-6 border-b-2 border-l-2 border-sky-400" />
@@ -179,25 +179,25 @@ export default function HomePage() {
         {/* Hero HTML Content Layer */}
         <div className="relative z-20 max-w-6xl mx-auto px-6 sm:px-8 text-center flex flex-col items-center">
           <ScrollReveal variant="fade-down" duration={600}>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100/90 border border-sky-200/80 backdrop-blur-md mb-6 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
-              <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-sky-700 font-inter">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-400/20 backdrop-blur-md mb-6 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
+              <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-sky-300 font-inter">
                 Alvision Media
               </span>
             </div>
           </ScrollReveal>
 
           <ScrollReveal variant="fade-up" delay={150} duration={800}>
-            <h1 className="font-manrope font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-[1.05] text-slate-950 max-w-5xl mb-6">
+            <h1 className="font-manrope font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-[1.05] text-white max-w-5xl mb-6">
               Make Your Brand <br className="hidden sm:inline" />
-              <span className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
                 Visible.
               </span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal variant="fade-up" delay={300} duration={800}>
-            <p className="max-w-2xl text-slate-700 text-base sm:text-lg md:text-xl font-inter leading-relaxed font-normal mb-10">
+            <p className="max-w-2xl text-slate-300 text-base sm:text-lg md:text-xl font-inter leading-relaxed font-normal mb-10">
               Digital marketing, creative content and web solutions that help businesses grow.
             </p>
           </ScrollReveal>
@@ -207,7 +207,7 @@ export default function HomePage() {
               <Magnetic>
                 <a
                   href="#contact"
-                  className="px-8 py-4 font-manrope font-bold text-xs uppercase tracking-widest text-white bg-sky-500 hover:bg-sky-600 rounded-full transition-all duration-300 shadow-lg shadow-sky-500/25 flex items-center gap-2 group btn-shimmer"
+                  className="px-8 py-4 font-manrope font-bold text-xs uppercase tracking-widest text-slate-950 bg-sky-400 hover:bg-sky-300 rounded-full transition-all duration-300 shadow-lg shadow-sky-500/25 flex items-center gap-2 group btn-shimmer"
                 >
                   Start a Project
                   <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -217,7 +217,7 @@ export default function HomePage() {
               <Magnetic>
                 <a
                   href="#our-work"
-                  className="px-8 py-4 font-manrope font-bold text-xs uppercase tracking-widest text-slate-800 bg-white/90 border border-sky-200 backdrop-blur-md rounded-full hover:bg-sky-50 hover:border-sky-300 transition-all duration-300 shadow-sm flex items-center gap-2"
+                  className="px-8 py-4 font-manrope font-bold text-xs uppercase tracking-widest text-white bg-slate-900/80 border border-slate-700 backdrop-blur-md rounded-full hover:bg-slate-800 transition-all duration-300 shadow-sm flex items-center gap-2"
                 >
                   View Our Work
                 </a>
@@ -232,75 +232,73 @@ export default function HomePage() {
          =================================================== */}
       <ScrollTextReveal text="Alvision transforms ambitious brands into digital experiences that attract attention, build trust, and turn every interaction into measurable growth." />
 
-
-
       {/* ===================================================
           03. ABOUT US & DIGITAL TRANSFORMATION STORY
          =================================================== */}
       <section 
         id="about"
         aria-label="About Alvision Media"
-        className="py-20 md:py-28 relative bg-white border-t border-sky-100 scroll-mt-20"
+        className="py-20 md:py-28 relative bg-[#0F172A] border-t border-slate-800 scroll-mt-20"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
             <ScrollReveal variant="fade-right" className="lg:col-span-6 space-y-6">
-              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-600 font-inter block">
+              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-400 font-inter block">
                 About Us & Digital Transformation
               </span>
               <RevealText 
                 text="Creating Impactful Content Across Platforms."
-                className="font-manrope font-extrabold text-3xl sm:text-5xl text-slate-950 leading-tight"
+                className="font-manrope font-extrabold text-3xl sm:text-5xl text-white leading-tight"
                 as="h2"
               />
               <div className="w-16 h-1 bg-sky-500 rounded-full" />
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-inter">
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-inter">
                 At Alvision Media, storytelling is at the heart of everything we do. With dynamic media channels covering entertainment, lifestyle, tech, and informative content, we bring fresh, engaging videos to diverse audiences every week.
               </p>
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-inter">
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-inter">
                 Backed by a passionate creative team and collaborations with talented creators, we solve client acquisition challenges by pairing strategic planning and production with our direct 3M+ subscriber distribution network.
               </p>
 
               {/* Verified Performance Stats Grid */}
               <div className="pt-4 grid grid-cols-2 gap-4">
-                <div className="glass-panel p-5 rounded-2xl bg-[#F0F9FF] border border-sky-100 shadow-xs">
-                  <span className="font-manrope font-extrabold text-2xl sm:text-3xl text-sky-600 block mb-1">3M+</span>
-                  <span className="text-xs text-slate-700 font-inter uppercase tracking-wider block font-semibold">Subscribers</span>
-                  <p className="text-[11px] text-slate-500 mt-1 font-inter">Across Alvision native channels.</p>
+                <div className="glass-panel p-5 rounded-2xl bg-[#131C2E] border border-slate-800 shadow-xs">
+                  <span className="font-manrope font-extrabold text-2xl sm:text-3xl text-sky-400 block mb-1">3M+</span>
+                  <span className="text-xs text-slate-200 font-inter uppercase tracking-wider block font-semibold">Subscribers</span>
+                  <p className="text-[11px] text-slate-400 mt-1 font-inter">Across Alvision native channels.</p>
                 </div>
 
-                <div className="glass-panel p-5 rounded-2xl bg-[#F0F9FF] border border-sky-100 shadow-xs">
-                  <span className="font-manrope font-extrabold text-2xl sm:text-3xl text-slate-900 block mb-1">450M+</span>
-                  <span className="text-xs text-slate-700 font-inter uppercase tracking-wider block font-semibold">Total Views</span>
-                  <p className="text-[11px] text-slate-500 mt-1 font-inter">Direct network views generated.</p>
+                <div className="glass-panel p-5 rounded-2xl bg-[#131C2E] border border-slate-800 shadow-xs">
+                  <span className="font-manrope font-extrabold text-2xl sm:text-3xl text-white block mb-1">450M+</span>
+                  <span className="text-xs text-slate-200 font-inter uppercase tracking-wider block font-semibold">Total Views</span>
+                  <p className="text-[11px] text-slate-400 mt-1 font-inter">Direct network views generated.</p>
                 </div>
 
-                <div className="glass-panel p-5 rounded-2xl bg-[#F0F9FF] border border-sky-100 shadow-xs">
-                  <span className="font-manrope font-extrabold text-2xl sm:text-3xl text-sky-600 block mb-1">6</span>
-                  <span className="text-xs text-slate-700 font-inter uppercase tracking-wider block font-semibold">Media Networks</span>
-                  <p className="text-[11px] text-slate-500 mt-1 font-inter">Entertainment, tech, business & travel.</p>
+                <div className="glass-panel p-5 rounded-2xl bg-[#131C2E] border border-slate-800 shadow-xs">
+                  <span className="font-manrope font-extrabold text-2xl sm:text-3xl text-sky-400 block mb-1">6</span>
+                  <span className="text-xs text-slate-200 font-inter uppercase tracking-wider block font-semibold">Media Networks</span>
+                  <p className="text-[11px] text-slate-400 mt-1 font-inter">Entertainment, tech, business & travel.</p>
                 </div>
 
-                <div className="glass-panel p-5 rounded-2xl bg-[#F0F9FF] border border-sky-100 shadow-xs">
-                  <span className="font-manrope font-extrabold text-2xl sm:text-3xl text-slate-900 block mb-1">100%</span>
-                  <span className="text-xs text-slate-700 font-inter uppercase tracking-wider block font-semibold">Dedicated Team</span>
-                  <p className="text-[11px] text-slate-500 mt-1 font-inter">Concept, production & growth.</p>
+                <div className="glass-panel p-5 rounded-2xl bg-[#131C2E] border border-slate-800 shadow-xs">
+                  <span className="font-manrope font-extrabold text-2xl sm:text-3xl text-white block mb-1">100%</span>
+                  <span className="text-xs text-slate-200 font-inter uppercase tracking-wider block font-semibold">Dedicated Team</span>
+                  <p className="text-[11px] text-slate-400 mt-1 font-inter">Concept, production & growth.</p>
                 </div>
               </div>
             </ScrollReveal>
 
             {/* Visual Studio Image Banner */}
             <ScrollReveal variant="fade-left" delay={200} className="lg:col-span-6">
-              <div className="relative rounded-3xl overflow-hidden border border-sky-100 shadow-lg p-2 bg-white">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-800 shadow-lg p-2 bg-slate-900">
                 <img 
                   src="/images/about_story_banner.png" 
                   alt="Alvision Media Production Studio" 
                   className="w-full h-[400px] md:h-[500px] object-cover rounded-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent rounded-2xl" />
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/90 backdrop-blur-md border border-sky-100 text-xs text-slate-700 font-inter shadow-md">
-                  <strong className="text-slate-950 font-manrope block font-bold text-sm mb-1">HQ Address</strong>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent rounded-2xl" />
+                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-800 text-xs text-slate-300 font-inter shadow-md">
+                  <strong className="text-white font-manrope block font-bold text-sm mb-1">HQ Address</strong>
                   Ward No 17, 17/9149, New Eastpeta, Rajeev Nagar Road, Nemali Nagar, Madanapalle, Andhra Pradesh 517325
                 </div>
               </div>
@@ -311,11 +309,9 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================
-          03B. SEQUENTIAL COVERING PANELS (10 FULL-SCREEN PANELS)
+          03B. SEQUENTIAL COVERING PANELS (9-STEP PROCESS)
          =================================================== */}
       <CoveringPanels />
-
-
 
       {/* ===================================================
           05. HORIZONTAL PROJECT GALLERY (PINNED SCROLL)
@@ -330,14 +326,14 @@ export default function HomePage() {
       <section 
         id="clients"
         aria-label="Our Clients and Partners"
-        className="py-20 md:py-28 relative bg-[#F0F9FF] border-t border-sky-100"
+        className="py-20 md:py-28 relative bg-[#0F172A] border-t border-slate-800"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <ScrollReveal variant="fade-up" className="text-center mb-12">
-            <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-600 block mb-3 font-inter">
+            <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-400 block mb-3 font-inter">
               Clients & Partners
             </span>
-            <h2 className="font-manrope font-extrabold text-3xl sm:text-5xl text-slate-950">
+            <h2 className="font-manrope font-extrabold text-3xl sm:text-5xl text-white">
               OUR CLIENTS
             </h2>
           </ScrollReveal>
@@ -346,8 +342,8 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {trustedClients.map((clientName, idx) => (
               <ScrollReveal key={idx} variant="fade-up" delay={idx * 60}>
-                <div className="p-6 rounded-2xl bg-white border border-sky-100 hover:border-sky-300 hover:shadow-md transition-all text-center group flex items-center justify-center min-h-[100px]">
-                  <span className="font-manrope font-extrabold text-sm md:text-base text-slate-900 group-hover:text-sky-600 transition-colors block">
+                <div className="p-6 rounded-2xl bg-[#131C2E] border border-slate-800 hover:border-sky-500/50 hover:shadow-md transition-all text-center group flex items-center justify-center min-h-[100px]">
+                  <span className="font-manrope font-extrabold text-sm md:text-base text-white group-hover:text-sky-400 transition-colors block">
                     {clientName}
                   </span>
                 </div>
@@ -356,24 +352,24 @@ export default function HomePage() {
           </div>
 
           {/* YouTube Media Channels Grid */}
-          <div className="mt-16 pt-12 border-t border-sky-200/60">
-            <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-700 block mb-8 text-center font-inter">
+          <div className="mt-16 pt-12 border-t border-slate-800">
+            <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-400 block mb-8 text-center font-inter">
               Alvision YouTube Channels (3M+ Subscribers)
             </span>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {channels.map((chan, idx) => (
                 <ScrollReveal key={idx} variant="fade-up" delay={idx * 80}>
-                  <div className="glass-panel p-6 rounded-2xl bg-white border border-sky-100 hover:border-sky-300 hover:shadow-md transition-all flex items-center gap-4">
+                  <div className="glass-panel p-6 rounded-2xl bg-[#131C2E] border border-slate-800 hover:border-sky-500/40 hover:shadow-md transition-all flex items-center gap-4">
                     <img 
                       src={chan.image} 
                       alt={chan.name} 
-                      className="w-14 h-14 rounded-full object-cover border border-sky-200 shrink-0" 
+                      className="w-14 h-14 rounded-full object-cover border border-slate-700 shrink-0" 
                     />
                     <div>
-                      <h4 className="font-manrope font-bold text-base text-slate-900">{chan.name}</h4>
-                      <span className="text-[11px] text-sky-600 font-semibold block">{chan.subs} • {chan.views}</span>
-                      <p className="text-[11px] text-slate-500 font-inter line-clamp-1 mt-0.5">{chan.desc}</p>
+                      <h4 className="font-manrope font-bold text-base text-white">{chan.name}</h4>
+                      <span className="text-[11px] text-sky-400 font-semibold block">{chan.subs} • {chan.views}</span>
+                      <p className="text-[11px] text-slate-400 font-inter line-clamp-1 mt-0.5">{chan.desc}</p>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -395,18 +391,18 @@ export default function HomePage() {
       <section 
         id="contact"
         aria-label="Contact Details"
-        className="py-24 md:py-32 relative bg-[#F8FAFC] border-t border-sky-100"
+        className="py-24 md:py-32 relative bg-[#0B0F17] border-t border-slate-800"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           
           <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-600 block mb-3 font-inter">
+            <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-400 block mb-3 font-inter">
               Get In Touch
             </span>
-            <h2 className="font-manrope font-extrabold text-4xl sm:text-6xl text-slate-950 mb-6">
-              Let&apos;s Build Something Great.
+            <h2 className="font-manrope font-extrabold text-4xl sm:text-6xl text-white mb-6">
+              Ready to Scale Your Brand?
             </h2>
-            <p className="text-slate-600 text-base md:text-lg font-inter">
+            <p className="text-slate-300 text-base md:text-lg font-inter">
               Have a project in mind, want to sponsor a channel, or recruit our team? Reach out directly below.
             </p>
           </ScrollReveal>
@@ -415,39 +411,39 @@ export default function HomePage() {
             
             {/* Direct Contact Information Cards */}
             <ScrollReveal variant="fade-right" className="lg:col-span-5 space-y-6">
-              <div className="glass-panel p-6 rounded-2xl bg-white border border-sky-100 shadow-sm space-y-6">
+              <div className="glass-panel p-6 rounded-2xl bg-[#131C2E] border border-slate-800 shadow-sm space-y-6">
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 shrink-0">
                     <Mail size={20} />
                   </div>
                   <div>
                     <span className="text-slate-400 text-[10px] uppercase tracking-wider block font-inter">Email Us</span>
-                    <a href="mailto:hello@alvisionmedia.com" className="text-base font-manrope font-bold text-slate-900 hover:text-sky-600 transition-colors">
+                    <a href="mailto:hello@alvisionmedia.com" className="text-base font-manrope font-bold text-white hover:text-sky-400 transition-colors">
                       hello@alvisionmedia.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 shrink-0">
                     <Phone size={20} />
                   </div>
                   <div>
                     <span className="text-slate-400 text-[10px] uppercase tracking-wider block font-inter">Call Us</span>
-                    <a href="tel:+916262949423" className="text-base font-manrope font-bold text-slate-900 hover:text-sky-600 transition-colors">
+                    <a href="tel:+916262949423" className="text-base font-manrope font-bold text-white hover:text-sky-400 transition-colors">
                       +91 62629 49423
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 shrink-0">
                     <MapPin size={20} />
                   </div>
                   <div>
                     <span className="text-slate-400 text-[10px] uppercase tracking-wider block font-inter">Office Location</span>
-                    <span className="text-sm font-manrope font-semibold text-slate-900 block leading-relaxed">
+                    <span className="text-sm font-manrope font-semibold text-white block leading-relaxed">
                       Ward No 17, 17/9149, New Eastpeta, Rajeev Nagar Road, Nemali Nagar, Madanapalle, Andhra Pradesh 517325
                     </span>
                   </div>
@@ -456,21 +452,21 @@ export default function HomePage() {
               </div>
 
               {/* Direct WhatsApp CTA Card */}
-              <div className="glass-panel p-6 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-between shadow-sm">
+              <div className="glass-panel p-6 rounded-2xl bg-emerald-950/40 border border-emerald-800/80 flex items-center justify-between shadow-sm">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white shrink-0">
                     <MessageSquare size={18} />
                   </div>
                   <div>
-                    <span className="font-manrope font-bold text-sm text-slate-900 block">WhatsApp Us</span>
-                    <span className="text-slate-500 text-[11px] font-inter">Direct chat link</span>
+                    <span className="font-manrope font-bold text-sm text-white block">WhatsApp Us</span>
+                    <span className="text-slate-400 text-[11px] font-inter">Direct chat link</span>
                   </div>
                 </div>
                 <a 
                   href="https://wa.me/916262949423?text=Hello%20Alvision%20Media,%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-manrope font-bold text-xs rounded-full transition-colors flex items-center gap-1.5 shadow-sm btn-shimmer"
+                  className="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-manrope font-bold text-xs rounded-full transition-colors flex items-center gap-1.5 shadow-sm btn-shimmer"
                 >
                   WhatsApp Us <ArrowRight size={12} />
                 </a>
@@ -479,17 +475,17 @@ export default function HomePage() {
 
             {/* Interactive Contact Form */}
             <ScrollReveal variant="fade-left" delay={150} className="lg:col-span-7">
-              <div className="glass-panel p-8 md:p-10 rounded-3xl bg-white border border-sky-100 shadow-sm">
+              <div className="glass-panel p-8 md:p-10 rounded-3xl bg-[#131C2E] border border-slate-800 shadow-sm">
                 {formSubmitted ? (
                   <div className="text-center py-12 flex flex-col items-center">
-                    <div className="w-16 h-16 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center mb-4">
+                    <div className="w-16 h-16 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center mb-4">
                       <CheckCircle size={32} />
                     </div>
-                    <h3 className="font-manrope font-bold text-2xl text-slate-900 mb-2">Message Delivered!</h3>
-                    <p className="text-slate-600 text-sm font-inter">Thank you for reaching out. We will get back to you shortly.</p>
+                    <h3 className="font-manrope font-bold text-2xl text-white mb-2">Message Delivered!</h3>
+                    <p className="text-slate-300 text-sm font-inter">Thank you for reaching out. We will get back to you shortly.</p>
                     <button 
                       onClick={() => setFormSubmitted(false)}
-                      className="mt-6 text-xs text-sky-600 underline font-semibold"
+                      className="mt-6 text-xs text-sky-400 underline font-semibold"
                     >
                       Send another message
                     </button>
@@ -498,31 +494,31 @@ export default function HomePage() {
                   <form onSubmit={handleContactSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2 font-inter">Your Name *</label>
+                        <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 font-inter">Your Name *</label>
                         <input 
                           type="text" 
                           name="name"
                           required 
                           placeholder="Name" 
-                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-100"
+                          className="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-500/20"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2 font-inter">Your Email *</label>
+                        <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 font-inter">Your Email *</label>
                         <input 
                           type="email" 
                           name="email"
                           required 
                           placeholder="Email" 
-                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-100"
+                          className="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-500/20"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2 font-inter">Service Required *</label>
-                      <select name="service" required className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-100">
+                      <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 font-inter">Service Required *</label>
+                      <select name="service" required className="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-500/20">
                         <option value="">Select a Service</option>
                         <option value="digital-marketing">Digital Marketing</option>
                         <option value="video-editing">Editing & Post-Production</option>
@@ -534,19 +530,19 @@ export default function HomePage() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2 font-inter">Message *</label>
+                      <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 font-inter">Message *</label>
                       <textarea 
                         name="message"
                         rows={4} 
                         required 
                         placeholder="Your message..." 
-                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-100"
+                        className="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-500/20"
                       />
                     </div>
 
                     <button 
                       type="submit" 
-                      className="w-full py-4 font-manrope font-bold text-xs uppercase tracking-widest text-white bg-sky-500 hover:bg-sky-600 rounded-xl transition-all flex items-center justify-center gap-2 shadow-md shadow-sky-500/20 btn-shimmer"
+                      className="w-full py-4 font-manrope font-bold text-xs uppercase tracking-widest text-slate-950 bg-sky-400 hover:bg-sky-300 rounded-xl transition-all flex items-center justify-center gap-2 shadow-md shadow-sky-500/20 btn-shimmer"
                     >
                       Send Message <ArrowRight size={16} />
                     </button>

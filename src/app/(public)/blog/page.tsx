@@ -64,19 +64,19 @@ export default function BlogPage() {
   ];
 
   return (
-    <main id="main-content" role="main" className="relative bg-white text-dark-navy min-h-screen pt-24 pb-12">
+    <main id="main-content" role="main" className="relative bg-[#0B0F17] text-white min-h-screen pt-24 pb-12">
       {/* Ambient background glow */}
-      <div className="absolute top-20 right-10 w-[400px] h-[400px] bg-alvision-blue/5 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
-      <div className="absolute bottom-20 left-10 w-[400px] h-[400px] bg-glow-blue/5 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute top-20 right-10 w-[400px] h-[400px] bg-sky-500/10 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-20 left-10 w-[400px] h-[400px] bg-sky-400/10 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
 
       {/* 1. Header Hero */}
-      <section className="py-8 md:py-12 text-center relative z-10 bg-white" aria-label="Insights blog title intro">
+      <section className="py-8 md:py-12 text-center relative z-10 bg-[#0B0F17]" aria-label="Insights blog title intro">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4 font-inter">ALVISION INSIGHTS</span>
-          <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6">
+          <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
             Ecosystem Growth Insights
           </h1>
-          <p className="max-w-2xl mx-auto text-slate-500 text-base md:text-lg leading-relaxed font-inter">
+          <p className="max-w-2xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed font-inter">
             Explore articles and analysis on YouTube algorithms, WhatsApp automated flows, AI marketing tools, and D2C scaling metrics.
           </p>
         </div>

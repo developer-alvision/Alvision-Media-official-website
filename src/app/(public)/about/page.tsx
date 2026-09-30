@@ -21,11 +21,11 @@ export default function AboutPage() {
   ];
 
   return (
-    <main id="main-content" role="main" className="relative bg-white text-dark-navy min-h-screen pt-24 pb-8">
+    <main id="main-content" role="main" className="relative bg-[#0B0F17] text-white min-h-screen pt-24 pb-8">
       
       {/* Background glow overlays */}
-      <div className="absolute top-20 left-1/4 w-[350px] h-[350px] bg-alvision-blue/5 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
-      <div className="absolute bottom-40 right-1/4 w-[350px] h-[350px] bg-glow-blue/5 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute top-20 left-1/4 w-[350px] h-[350px] bg-sky-500/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-40 right-1/4 w-[350px] h-[350px] bg-sky-400/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
 
       {/* 1. Header Hero */}
       <section className="py-8 md:py-12 text-center relative z-10" aria-label="About Alvision story intro">
@@ -34,12 +34,12 @@ export default function AboutPage() {
             <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4 font-inter">OUR STORY</span>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={100} duration={700}>
-            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6">
+            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
               Connecting Stories, Tech, and Growth
             </h1>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={200} duration={700}>
-            <p className="max-w-3xl mx-auto text-slate-650 text-base md:text-lg leading-relaxed font-inter">
+            <p className="max-w-3xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed font-inter">
               Alvision Media was founded on a simple premise: content and marketing shouldn't operate in silos. We built a complete digital growth ecosystem that unifies storytelling, audience engagement, performance marketing, and modern software development.
             </p>
           </ScrollReveal>
@@ -48,7 +48,7 @@ export default function AboutPage() {
 
       {/* Widescreen visual banner block */}
       <ScrollReveal variant="scale" delay={300} duration={800} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 relative z-10" as="div">
-        <div className="h-[280px] md:h-[450px] rounded-3xl overflow-hidden border border-sky-100 shadow-md p-2.5 bg-white">
+        <div className="h-[280px] md:h-[450px] rounded-3xl overflow-hidden border border-slate-800 shadow-md p-2.5 bg-slate-900">
           <img 
             src="/images/about_story_banner.png" 
             alt="Alvision Creative Brainstorming Meeting Studio" 
@@ -58,7 +58,7 @@ export default function AboutPage() {
       </ScrollReveal>
 
       {/* 2. Story / Mission & Vision Grid */}
-      <section className="py-10 md:py-14 relative z-10 bg-white border-y border-sky-100/40" aria-label="Our focus and mission structures">
+      <section className="py-10 md:py-14 relative z-10 bg-[#0F172A] border-y border-slate-800" aria-label="Our focus and mission structures">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             

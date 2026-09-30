@@ -48,7 +48,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#F8FAFC] text-slate-600 border-t border-sky-100 relative z-10 py-12 md:py-16">
+    <footer className="bg-[#080C14] text-slate-400 border-t border-slate-800/80 relative z-10 py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
@@ -57,7 +57,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center group">
               <LogoImage className="h-9 w-auto max-w-[200px]" />
             </Link>
-            <p className="text-xs text-slate-500 max-w-md font-inter leading-relaxed">
+            <p className="text-xs text-slate-400 max-w-md font-inter leading-relaxed">
               Alvision Media solves the challenges effectively for reaching and engaging target audiences, maximizing brand visibility and driving business growth through strategic planning and execution across digital channels and native media networks.
             </p>
 
@@ -70,7 +70,7 @@ export default function Footer() {
                   target={s.href.startsWith('http') ? '_blank' : undefined}
                   rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   aria-label={s.label}
-                  className={`w-8 h-8 rounded-xl border border-slate-200 bg-white flex items-center justify-center text-slate-500 transition-all duration-200 ${s.color}`}
+                  className={`w-8 h-8 rounded-xl border border-slate-800 bg-slate-900 flex items-center justify-center text-slate-400 transition-all duration-200 ${s.color}`}
                 >
                   {s.icon}
                 </a>
@@ -80,30 +80,30 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div className="space-y-4">
-            <h4 className="font-manrope text-xs font-bold uppercase tracking-wider text-slate-900">Navigation</h4>
-            <ul className="space-y-2.5 text-xs font-inter text-slate-600">
-              <li><a href="#services" className="hover:text-sky-600 transition-colors">Services</a></li>
-              <li><a href="#our-work" className="hover:text-sky-600 transition-colors">Our Work</a></li>
-              <li><a href="#clients" className="hover:text-sky-600 transition-colors">Clients</a></li>
-              <li><a href="#about" className="hover:text-sky-600 transition-colors">About Us</a></li>
-              <li><a href="#contact" className="hover:text-sky-600 transition-colors">Contact</a></li>
+            <h4 className="font-manrope text-xs font-bold uppercase tracking-wider text-white">Navigation</h4>
+            <ul className="space-y-2.5 text-xs font-inter text-slate-400">
+              <li><a href="#services" className="hover:text-sky-400 transition-colors">Services</a></li>
+              <li><a href="#our-work" className="hover:text-sky-400 transition-colors">Our Work</a></li>
+              <li><a href="#clients" className="hover:text-sky-400 transition-colors">Clients</a></li>
+              <li><a href="#about" className="hover:text-sky-400 transition-colors">About Us</a></li>
+              <li><a href="#contact" className="hover:text-sky-400 transition-colors">Contact</a></li>
             </ul>
           </div>
 
           {/* Contact Node */}
           <div className="space-y-4">
-            <h4 className="font-manrope text-xs font-bold uppercase tracking-wider text-slate-900">Contact HQ</h4>
-            <div className="space-y-2.5 text-xs font-inter text-slate-600">
+            <h4 className="font-manrope text-xs font-bold uppercase tracking-wider text-white">Contact HQ</h4>
+            <div className="space-y-2.5 text-xs font-inter text-slate-400">
               <p className="flex items-center gap-2">
-                <Mail size={14} className="text-sky-600 shrink-0" />
-                <a href="mailto:hello@alvisionmedia.com" className="hover:text-slate-900 transition-colors">hello@alvisionmedia.com</a>
+                <Mail size={14} className="text-sky-400 shrink-0" />
+                <a href="mailto:hello@alvisionmedia.com" className="hover:text-white transition-colors">hello@alvisionmedia.com</a>
               </p>
               <p className="flex items-center gap-2">
-                <Phone size={14} className="text-sky-600 shrink-0" />
-                <a href="tel:+916262949423" className="hover:text-slate-900 transition-colors">+91 62629 49423</a>
+                <Phone size={14} className="text-sky-400 shrink-0" />
+                <a href="tel:+916262949423" className="hover:text-white transition-colors">+91 62629 49423</a>
               </p>
               <p className="flex items-start gap-2 pt-1">
-                <MapPin size={14} className="text-sky-600 shrink-0 mt-0.5" />
+                <MapPin size={14} className="text-sky-400 shrink-0 mt-0.5" />
                 <span>Ward No 17, 17/9149, New Eastpeta, Rajeev Nagar Road, Nemali Nagar, Madanapalle, Andhra Pradesh 517325</span>
               </p>
             </div>
@@ -111,13 +111,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright Bar */}
-        <div className="border-t border-slate-200/80 pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] font-inter space-y-4 sm:space-y-0 text-slate-500">
+        <div className="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] font-inter space-y-4 sm:space-y-0 text-slate-500">
           <div>
             <span>&copy; {currentYear} Alvision Media. All Rights Reserved.</span>
           </div>
           <div className="flex flex-wrap gap-4 sm:gap-6 justify-center sm:justify-end items-center">
-            <Link href="/privacy" className="hover:text-sky-600 transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-sky-600 transition-colors">Terms & Conditions</Link>
+            <Link href="/privacy" className="hover:text-sky-400 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-sky-400 transition-colors">Terms & Conditions</Link>
           </div>
         </div>
 

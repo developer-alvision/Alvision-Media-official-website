@@ -12,10 +12,10 @@ export default function TermsPage() {
   const lastUpdated = "August 2, 2026";
 
   return (
-    <main id="main-content" role="main" className="relative bg-white text-dark-navy min-h-screen pt-24 pb-20">
+    <main id="main-content" role="main" className="relative bg-[#0B0F17] text-white min-h-screen pt-24 pb-20">
       {/* Background glow overlays */}
-      <div className="absolute top-20 right-1/4 w-[350px] h-[350px] bg-alvision-blue/5 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
-      <div className="absolute bottom-40 left-1/4 w-[350px] h-[350px] bg-glow-blue/5 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute top-20 right-1/4 w-[350px] h-[350px] bg-sky-500/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-40 left-1/4 w-[350px] h-[350px] bg-sky-400/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
 
       {/* Hero Header */}
       <section className="py-8 md:py-12 text-center relative z-10" aria-label="Terms of Service Intro">
@@ -24,7 +24,7 @@ export default function TermsPage() {
             <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4 font-inter">LEGAL</span>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={100} duration={700}>
-            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6">
+            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
               Terms & Conditions
             </h1>
           </ScrollReveal>

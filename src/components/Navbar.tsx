@@ -89,8 +89,8 @@ export default function Navbar() {
       role="banner"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'py-4 bg-white/95 backdrop-blur-md border-b border-slate-200/40 shadow-sm'
-          : 'py-8 bg-white/40'
+          ? 'py-4 bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-800 shadow-md'
+          : 'py-6 bg-[#0B0F17]/60 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
@@ -100,7 +100,7 @@ export default function Navbar() {
           <Link 
             href="/" 
             aria-label="Alvision Media Home"
-            className="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alvision-blue rounded-md px-1 py-0.5"
+            className="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 rounded-md px-1 py-0.5"
           >
             <LogoImage className="h-8 md:h-9 w-auto max-w-[200px]" />
           </Link>
@@ -110,10 +110,10 @@ export default function Navbar() {
               <Magnetic key={link.path}>
                 <Link
                   href={link.path}
-                  className={`text-[12px] font-semibold tracking-widest uppercase transition-colors duration-300 font-inter focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alvision-blue rounded-md px-2 py-1 nav-link-hover ${
+                  className={`text-[12px] font-semibold tracking-widest uppercase transition-colors duration-300 font-inter focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 rounded-md px-2 py-1 nav-link-hover ${
                     isActive(link.path) 
-                      ? 'text-alvision-blue font-bold active' 
-                      : 'text-studio-deep-dark/60 hover:text-studio-deep-dark'
+                      ? 'text-sky-400 font-bold active' 
+                      : 'text-slate-300 hover:text-white'
                   }`}
                 >
                   {link.name}
@@ -132,18 +132,18 @@ export default function Navbar() {
                   target={s.href.startsWith('http') ? '_blank' : undefined}
                   rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   aria-label={s.label}
-                  className={`w-7 h-7 rounded-lg border border-slate-200/60 flex items-center justify-center text-slate-400 transition-all duration-200 ${s.color}`}
+                  className={`w-7 h-7 rounded-lg border border-slate-800 bg-slate-900/60 flex items-center justify-center text-slate-400 transition-all duration-200 ${s.color}`}
                 >
                   {s.icon}
                 </a>
               ))}
             </div>
-            <div className="w-px h-4 bg-slate-200" aria-hidden="true" />
+            <div className="w-px h-4 bg-slate-800" aria-hidden="true" />
             <Magnetic>
               <Link
                 href="/contact"
                 aria-label="Contact Alvision team to start a project"
-                className="text-[12px] font-bold uppercase tracking-wider transition-colors flex items-center gap-1.5 font-manrope border-b pb-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alvision-blue rounded-sm px-1 text-studio-deep-dark border-studio-deep-dark/15 hover:text-alvision-blue hover:border-alvision-blue"
+                className="text-[12px] font-bold uppercase tracking-wider transition-colors flex items-center gap-1.5 font-manrope border-b pb-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 rounded-sm px-1 text-white border-white/20 hover:text-sky-400 hover:border-sky-400"
               >
                 Let&apos;s Talk <ArrowRight size={12} aria-hidden="true" />
               </Link>
@@ -156,7 +156,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Navigation Menu"
               aria-expanded={mobileMenuOpen}
-              className="focus:outline-none p-1 transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-alvision-blue rounded text-studio-deep-dark"
+              className="focus:outline-none p-1 transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-sky-400 rounded text-white"
             >
               {mobileMenuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
             </button>
@@ -166,15 +166,15 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[68px] bg-white/95 backdrop-blur-lg z-45 border-t border-slate-200/55 flex flex-col justify-between py-12 px-8 animate-in fade-in slide-in-from-top-3 duration-300">
+        <div className="md:hidden fixed inset-0 top-[68px] bg-[#0B0F17]/98 backdrop-blur-xl z-45 border-t border-slate-800 flex flex-col justify-between py-12 px-8 animate-in fade-in slide-in-from-top-3 duration-300">
           <nav role="navigation" aria-label="Mobile navigation" className="flex flex-col space-y-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 onClick={() => setMobileMenuOpen(false)}
                 href={link.path}
-                className={`text-xl font-bold font-manrope tracking-wide border-b border-slate-200/30 pb-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alvision-blue ${
-                  isActive(link.path) ? 'text-alvision-blue' : 'text-studio-deep-dark/60 hover:text-studio-deep-dark'
+                className={`text-xl font-bold font-manrope tracking-wide border-b border-slate-800 pb-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
+                  isActive(link.path) ? 'text-sky-400' : 'text-slate-300 hover:text-white'
                 }`}
               >
                 {link.name}
@@ -192,7 +192,7 @@ export default function Navbar() {
                   target={s.href.startsWith('http') ? '_blank' : undefined}
                   rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   aria-label={s.label}
-                  className={`w-10 h-10 rounded-xl border border-slate-100 flex items-center justify-center text-slate-400 transition-all duration-200 ${s.color}`}
+                  className={`w-10 h-10 rounded-xl border border-slate-800 bg-slate-900 flex items-center justify-center text-slate-400 transition-all duration-200 ${s.color}`}
                 >
                   {s.icon}
                 </a>
@@ -201,11 +201,11 @@ export default function Navbar() {
             <Link
               onClick={() => setMobileMenuOpen(false)}
               href="/contact"
-              className="w-full text-center py-4 block font-manrope font-bold text-xs uppercase tracking-widest text-deep-black bg-alvision-blue hover:bg-alvision-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alvision-blue"
+              className="w-full text-center py-4 block font-manrope font-bold text-xs uppercase tracking-widest text-slate-950 bg-sky-400 hover:bg-sky-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 rounded-xl"
             >
               Let&apos;s Talk
             </Link>
-            <div className="text-[9px] text-slate-400 font-inter text-center">
+            <div className="text-[9px] text-slate-500 font-inter text-center">
               © {new Date().getFullYear()} Alvision Media.
             </div>
           </div>

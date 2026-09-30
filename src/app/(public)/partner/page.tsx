@@ -37,7 +37,7 @@ export default function PartnerPage() {
   };
 
   return (
-    <main id="main-content" role="main" className="relative bg-white text-dark-navy min-h-screen pt-24 pb-10">
+    <main id="main-content" role="main" className="relative bg-[#0B0F17] text-white min-h-screen pt-24 pb-10">
       {/* Background glow */}
       <div className="absolute top-20 right-1/4 w-[350px] h-[350px] bg-alvision-blue/5 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
       <div className="absolute bottom-40 left-1/4 w-[350px] h-[350px] bg-glow-blue/5 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />

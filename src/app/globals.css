@@ -18,9 +18,9 @@
 }
 
 :root {
-  /* Sky-50 light sky-blue background instead of white */
-  --background: #F0F9FF;
-  --foreground: #0F172A;
+  /* Sleek, non-reflective dark slate background */
+  --background: #0B0F17;
+  --foreground: #F8FAFC;
 }
 
 body {
@@ -46,10 +46,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F0F9FF;
+  background: #0B0F17;
 }
 ::-webkit-scrollbar-thumb {
-  background: #E0F2FE;
+  background: #1E293B;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -72,25 +72,25 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
   z-index: 5;
   background-image: repeating-radial-gradient(circle at 17% 32%, white 0px, black 1px, transparent 2px);
-  opacity: 0.008;
+  opacity: 0.015;
 }
 
-/* Premium Glass/Modal Overlay with Safari support */
+/* Premium Dark Glass Panel Overlay */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(14, 165, 233, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 /* Luxury text gradients */
 .text-gradient {
-  background: linear-gradient(135deg, #0F172A 30%, #0EA5E9 100%);
+  background: linear-gradient(135deg, #FFFFFF 30%, #38BDF8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .text-gradient-blue {
-  background: linear-gradient(135deg, #0284C7 0%, #0EA5E9 100%);
+  background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -36,24 +36,24 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="relative bg-white text-dark-navy min-h-screen pt-24 pb-20">
+    <div className="relative bg-[#0B0F17] text-white min-h-screen pt-24 pb-20">
       {/* Glow overlays */}
-      <div className="absolute top-20 right-1/4 w-[350px] h-[350px] bg-alvision-blue/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-40 left-1/4 w-[350px] h-[350px] bg-glow-blue/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-20 right-1/4 w-[350px] h-[350px] bg-sky-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-40 left-1/4 w-[350px] h-[350px] bg-sky-400/10 rounded-full blur-[100px] pointer-events-none" />
 
       {/* 1. Header Hero */}
-      <section className="py-8 md:py-12 text-center relative z-10 bg-white">
+      <section className="py-8 md:py-12 text-center relative z-10 bg-[#0B0F17]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-down" duration={600}>
             <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4">Contact</span>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={100} duration={700}>
-            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-studio-deep-dark">
+            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
               Get In Touch
             </h1>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={200} duration={700}>
-            <p className="max-w-xl mx-auto text-slate-500 text-base md:text-lg leading-relaxed font-inter">
+            <p className="max-w-xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed font-inter">
               Have a project in mind, want to sponsor a channel, or recruit our creator desks? Reach out directly below.
             </p>
           </ScrollReveal>
@@ -62,7 +62,7 @@ export default function ContactPage() {
 
       {/* Widescreen visual banner block */}
       <ScrollReveal variant="scale" delay={300} duration={800} className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10" as="div">
-        <div className="h-[220px] md:h-[300px] rounded-3xl overflow-hidden border border-sky-100 shadow-md p-2 bg-white">
+        <div className="h-[220px] md:h-[300px] rounded-3xl overflow-hidden border border-slate-800 shadow-md p-2 bg-slate-900">
           <img 
             src="/images/contact_office_banner.png" 
             alt="Alvision Creative Consulting Office Studio" 
@@ -72,7 +72,7 @@ export default function ContactPage() {
       </ScrollReveal>
 
       {/* 2. Interactive Contact Grid */}
-      <section className="py-8 relative z-10 bg-white">
+      <section className="py-8 relative z-10 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
