@@ -15,9 +15,9 @@ export default function AboutPage() {
 
   const timeline = [
     { year: '2023', title: 'The Genesis', desc: 'Alvision Media founded in Chennai with a single channel, Slam Book Tamil, aiming to deliver conversational lifestyle content.' },
-    { year: '2024', title: 'Ecosystem Expansion', desc: 'Launched Mr. Guru and Jajabordiary, capturing tech training and travel niches. Total subscriber base reached 1M+.' },
+    { year: '2024', title: 'Ecosystem Expansion', desc: 'Expanded into technology training and travel content, growing our audience.' },
     { year: '2025', title: 'Digital Agency Launch', desc: 'Integrated tech and digital marketing solutions, helping brands scale using automated WhatsApp tools and performance marketing.' },
-    { year: '2026', title: 'Ecosystem Maturity', desc: 'Operating 6 regional networks with 3M+ active subscribers and 500M+ views, partnering with major global and local D2C brands.' }
+    { year: '2026', title: 'Ecosystem Maturity', desc: 'Operating regional networks and partnering with major global and local D2C brands.' }
   ];
 
   return (
@@ -66,7 +66,7 @@ export default function AboutPage() {
             <ScrollReveal variant="fade-right" duration={700} className="max-w-3xl">
               <h2 className="font-manrope font-800 text-2xl md:text-3xl mb-6 text-gradient">The Intersection of Agency & Creator Hub</h2>
               <p className="text-slate-650 text-sm md:text-base leading-relaxed mb-4 font-inter">
-                Traditional agencies struggle with distribution; traditional creators struggle with commercialization. At Alvision Media, we solved this mismatch by creating our own channels, building an organic community of 3M+ subscribers, and using those distribution networks to fuel our client campaigns.
+                Traditional agencies struggle with distribution; traditional creators struggle with commercialization. At Alvision Media, we solved this mismatch by creating our own channels, building an organic community, and using those distribution networks to fuel our client campaigns.
               </p>
               <p className="text-slate-650 text-sm md:text-base leading-relaxed font-inter">
                 When you partner with us, you aren't just buying ad impressions or hiring developers. You are tapping into an active, highly engaged ecosystem that knows exactly what audiences want to watch and what drives them to buy.

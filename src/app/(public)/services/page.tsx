@@ -69,9 +69,9 @@ export default function ServicesPage() {
       title: 'Distribution',
       icon: Share2,
       short: 'Multi-channel broadcasting, native creator networks & audience reach.',
-      desc: 'Amplify your message across our high-reach native media network (including Slam Book Tamil, Jajabordiary, Mr. Guru, Alvision Fusion, Alvision Tamil, Wild Card) and regional partner channels reaching millions of active viewers.',
+      desc: 'Amplify your message across our high-reach native media network and regional partner channels reaching millions of active viewers.',
       features: [
-        'Native Channel Content Placement (3M+ base)',
+        'Native Channel Content Placement',
         'Regional Creator Network Amplification',
         'Cross-Platform Syndication Strategy',
         'Audience Engagement & Retention Audits',
@@ -122,7 +122,7 @@ export default function ServicesPage() {
         'Creator Discovery & Vetting',
         'Content Co-creation & Guidelines',
         'Campaign Contracts & Compliance',
-        'Native Channel Integrations (3M+ base)',
+        'Native Channel Integrations',
         'Engagement & Conversion Audits'
       ],
       deliverable: 'Curated influencer list, content assets, reach & impression reports, brand lift metrics.',
@@ -362,10 +362,9 @@ export default function ServicesPage() {
                           <span className="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-2">
                             <Share2 size={14} /> Native Network Reach Map
                           </span>
-                          <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded-full font-inter border border-emerald-400/30">3M+ Active Base</span>
                         </div>
                         <div className="flex flex-wrap gap-2 pt-1">
-                          {['Slam Book Tamil', 'Jajabordiary', 'Mr. Guru', 'Alvision Fusion', 'Alvision Tamil', 'Wild Card'].map((ch, i) => (
+                          {['Slam Book Tamil', 'Mr. Guru', 'Alvision Fusion', 'Alvision Tamil', 'Wild Card'].map((ch, i) => (
                             <span key={i} className="text-xs bg-white/10 hover:bg-white/20 text-slate-200 px-3 py-1.5 rounded-lg border border-white/10 font-inter">
                               {ch}
                             </span>

@@ -28,8 +28,8 @@ const services = [
   { 
     num: '04', 
     title: 'Media Distribution', 
-    desc: 'Multi-platform broadcasting across Alvision native media networks (3M+ subscribers) and partner channels.',
-    tags: ['Slam Book Tamil', 'Mr. Guru Tech', 'Alvision Tamil Business', 'Jajabordiary Travel']
+    desc: 'Multi-platform broadcasting across Alvision native media networks and partner channels.',
+    tags: ['Slam Book Tamil', 'Mr. Guru Tech', 'Alvision Tamil Business']
   },
   { 
     num: '05', 

@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const faqs = [
-  { num: '01', q: 'What services does Alvision Media offer?', a: 'We provide digital marketing, video editing & post-production, content creation, media distribution across our 3M+ subscriber network, acquisition & lead funnels, and custom web development.' },
+  { num: '01', q: 'What services does Alvision Media offer?', a: 'We provide digital marketing, video editing & post-production, content creation, media distribution across our native creator network, acquisition & lead funnels, and custom web development.' },
   { num: '02', q: 'Can these services be taken separately?', a: 'Yes. Each service can be commissioned independently or combined into a complete project tailored to your brand goals.' },
   { num: '03', q: 'How does a project with Alvision Media work?', a: 'We begin by understanding your business, then move through strategy, creative development, production, and launch with continuous optimization.' },
   { num: '04', q: 'How long does a website project take?', a: 'Typical website projects take 4-8 weeks from strategy to launch, depending on complexity and content requirements.' },

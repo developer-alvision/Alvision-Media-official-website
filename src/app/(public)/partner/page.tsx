@@ -15,7 +15,7 @@ export default function PartnerPage() {
   const partnershipTypes = [
     { title: 'Sponsorships', desc: 'Secure high-impact integration slots inside our native YouTube channels (e.g. Slam Book Tamil interviews).', icon: Sparkles },
     { title: 'Brand Collaborations', desc: 'Co-develop digital campaigns, visual assets, and customized content programs designed to sell.', icon: MessageSquare },
-    { title: 'Promotional Integrations', desc: 'Integrate short-form video reels or community post promotions across our 3M+ active follower base.', icon: CheckSquare },
+    { title: 'Promotional Integrations', desc: 'Integrate short-form video reels or community post promotions across our active follower base.', icon: CheckSquare },
     { title: 'Events & Coverage', desc: 'Hire Alvision visual desks to cover regional product launches, travel tours, or corporate announcements.', icon: Calendar }
   ];
 

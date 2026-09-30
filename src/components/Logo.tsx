@@ -15,7 +15,7 @@ export function LogoImage({ className = "h-8 w-auto" }: { className?: string }) 
     <img
       src="/images/alvision-media-hd-logo.png"
       alt="Alvision Media HD Logo"
-      className={`object-contain transition-transform duration-300 group-hover:scale-105 ${className}`}
+      className={`object-contain brightness-0 invert transition-transform duration-300 group-hover:scale-105 ${className}`}
     />
   );
 }

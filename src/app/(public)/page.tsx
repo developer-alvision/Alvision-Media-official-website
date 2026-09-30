@@ -14,7 +14,6 @@ import RevealText from '@/components/RevealText';
 import Magnetic from '@/components/Magnetic';
 import ScrollTextReveal from '@/components/ScrollTextReveal';
 import HorizontalGallery from '@/components/HorizontalGallery';
-import CoveringPanels from '@/components/CoveringPanels';
 import FAQSection from '@/components/FAQSection';
 
 export default function HomePage() {
@@ -91,48 +90,30 @@ export default function HomePage() {
     { 
       name: 'Slam Book Tamil', 
       cat: 'Entertainment & Lifestyle', 
-      views: '145M views', 
-      subs: '1.2M subs', 
       desc: 'Tamil Nadu\'s leading lifestyle, celebrity interview, and pop-culture digital network.',
       image: '/images/Slam Book Tamil.png' 
     },
     { 
       name: 'Mr. Guru', 
       cat: 'Tech & Careers', 
-      views: '98M views', 
-      subs: '850K subs', 
       desc: 'Premium coding tutorials, computer science guidance, and software engineering deep dives in regional languages.',
       image: '/images/Mr.Guru.png' 
     },
     { 
       name: 'Alvision Tamil', 
       cat: 'Business & Finance', 
-      views: '65M views', 
-      subs: '550K subs', 
       desc: 'Detailed corporate case studies, regional financial advice, and startup growth models delivered in Tamil.',
       image: '/images/Alvision Tamil.png' 
     },
     { 
-      name: 'Jajabordiary', 
-      cat: 'Travel & Cinematography', 
-      views: '48M views', 
-      subs: '410K subs', 
-      desc: 'Scenic expeditions and premium travel diaries showcasing offbeat spots, culinary cultures, and luxury resorts.',
-      image: '/images/Jajabordiary.png' 
-    },
-    { 
       name: 'Alvision Fusion', 
       cat: 'Infotainment & Shorts', 
-      views: '32M views', 
-      subs: '280K subs', 
       desc: 'Bite-sized business statistics, geopolitical insights, and current tech trends packaged for the modern scroll.',
       image: '/images/Alvision Fusion.png' 
     },
     { 
       name: 'Wild Card', 
       cat: 'Pop Culture & Analysis', 
-      views: '18M views', 
-      subs: '180K subs', 
       desc: 'Deep essays on cinema critiques, internet memes, and Gen-Z digital communities.',
       image: '/images/Wild Card.jpeg' 
     }
@@ -257,23 +238,11 @@ export default function HomePage() {
                 At Alvision Media, storytelling is at the heart of everything we do. With dynamic media channels covering entertainment, lifestyle, tech, and informative content, we bring fresh, engaging videos to diverse audiences every week.
               </p>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-inter">
-                Backed by a passionate creative team and collaborations with talented creators, we solve client acquisition challenges by pairing strategic planning and production with our direct 3M+ subscriber distribution network.
+                Backed by a passionate creative team and collaborations with talented creators, we solve client acquisition challenges by pairing strategic planning and production with our direct distribution network.
               </p>
 
               {/* Verified Performance Stats Grid */}
               <div className="pt-4 grid grid-cols-2 gap-4">
-                <div className="glass-panel p-5 rounded-2xl bg-[#131C2E] border border-slate-800 shadow-xs">
-                  <span className="font-manrope font-extrabold text-2xl sm:text-3xl text-sky-400 block mb-1">3M+</span>
-                  <span className="text-xs text-slate-200 font-inter uppercase tracking-wider block font-semibold">Subscribers</span>
-                  <p className="text-[11px] text-slate-400 mt-1 font-inter">Across Alvision native channels.</p>
-                </div>
-
-                <div className="glass-panel p-5 rounded-2xl bg-[#131C2E] border border-slate-800 shadow-xs">
-                  <span className="font-manrope font-extrabold text-2xl sm:text-3xl text-white block mb-1">450M+</span>
-                  <span className="text-xs text-slate-200 font-inter uppercase tracking-wider block font-semibold">Total Views</span>
-                  <p className="text-[11px] text-slate-400 mt-1 font-inter">Direct network views generated.</p>
-                </div>
-
                 <div className="glass-panel p-5 rounded-2xl bg-[#131C2E] border border-slate-800 shadow-xs">
                   <span className="font-manrope font-extrabold text-2xl sm:text-3xl text-sky-400 block mb-1">6</span>
                   <span className="text-xs text-slate-200 font-inter uppercase tracking-wider block font-semibold">Media Networks</span>
@@ -307,11 +276,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ===================================================
-          03B. SEQUENTIAL COVERING PANELS (9-STEP PROCESS)
-         =================================================== */}
-      <CoveringPanels />
 
       {/* ===================================================
           05. HORIZONTAL PROJECT GALLERY (PINNED SCROLL)
@@ -354,7 +318,7 @@ export default function HomePage() {
           {/* YouTube Media Channels Grid */}
           <div className="mt-16 pt-12 border-t border-slate-800">
             <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-sky-400 block mb-8 text-center font-inter">
-              Alvision YouTube Channels (3M+ Subscribers)
+              Alvision YouTube Channels
             </span>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -368,7 +332,6 @@ export default function HomePage() {
                     />
                     <div>
                       <h4 className="font-manrope font-bold text-base text-white">{chan.name}</h4>
-                      <span className="text-[11px] text-sky-400 font-semibold block">{chan.subs} • {chan.views}</span>
                       <p className="text-[11px] text-slate-400 font-inter line-clamp-1 mt-0.5">{chan.desc}</p>
                     </div>
                   </div>

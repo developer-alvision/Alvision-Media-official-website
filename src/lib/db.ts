@@ -191,18 +191,6 @@ const defaultData: DatabaseSchema = {
       url: 'https://youtube.com/c/slambooktamil'
     },
     {
-      id: 'c-2',
-      name: 'Jajabordiary',
-      slug: 'jajabordiary',
-      subscribers: '410K',
-      videos_count: 185,
-      views_count: '48M',
-      description: 'A premium travel and cinematography diary exploring hidden gems, offbeat cultures, and premium stays across India and the globe.',
-      logo_url: '/images/Jajabordiary.png',
-      category: 'Travel & Cinematography',
-      url: 'https://youtube.com/c/jajabordiary'
-    },
-    {
       id: 'c-3',
       name: 'Mr. Guru',
       slug: 'mr-guru',

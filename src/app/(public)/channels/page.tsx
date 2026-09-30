@@ -1,16 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Play, Users, Eye, Film, ArrowUpRight } from 'lucide-react';
+import { Play, ArrowUpRight } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export default function ChannelsPage() {
   const channels = [
     {
       name: 'Slam Book Tamil',
-      subs: '1.2M',
-      views: '145M',
-      videos: 320,
       cat: 'Entertainment & Lifestyle',
       desc: 'Tamil Nadu\'s leading lifestyle, celebrity interview, and pop-culture digital network. Celebrated for its unique, personal, and conversational formatting.',
       url: 'https://youtube.com/c/slambooktamil',
@@ -20,23 +17,7 @@ export default function ChannelsPage() {
       growthData: 'M 0 60 Q 30 50 60 30 T 120 10'
     },
     {
-      name: 'Jajabordiary',
-      subs: '410K',
-      views: '48M',
-      videos: 185,
-      cat: 'Travel & Cinematography',
-      desc: 'A premium travel and cinematography diary exploring hidden gems, offbeat cultures, and premium stays across India and the globe.',
-      url: 'https://youtube.com/c/jajabordiary',
-      image: '/images/Jajabordiary.png',
-      color: 'from-amber-500/10 to-orange-600/10 border-amber-500/20',
-      textAccent: 'text-amber-600',
-      growthData: 'M 0 80 Q 30 70 60 45 T 120 20'
-    },
-    {
       name: 'Mr. Guru',
-      subs: '850K',
-      views: '98M',
-      videos: 290,
       cat: 'Tech & Education',
       desc: 'Premium tech education, programming tutorials, software development guidelines, and career mentorship delivered in regional languages.',
       url: 'https://youtube.com/c/mrguru',
@@ -47,9 +28,6 @@ export default function ChannelsPage() {
     },
     {
       name: 'Alvision Fusion',
-      subs: '280K',
-      views: '32M',
-      videos: 420,
       cat: 'Infotainment & Shorts',
       desc: 'Short-form informative content, business analysis, and digital tech trends packaged for the modern fast-paced consumer.',
       url: 'https://youtube.com/c/alvisionfusion',
@@ -60,9 +38,6 @@ export default function ChannelsPage() {
     },
     {
       name: 'Alvision Tamil',
-      subs: '550K',
-      views: '65M',
-      videos: 210,
       cat: 'Business & Finance',
       desc: 'Local business case studies, regional financial advice, entrepreneur interviews, and digital success stories in Tamil.',
       url: 'https://youtube.com/c/alvisiontamil',
@@ -73,9 +48,6 @@ export default function ChannelsPage() {
     },
     {
       name: 'Wild Card',
-      subs: '180K',
-      views: '18M',
-      videos: 95,
       cat: 'Pop Culture & Analysis',
       desc: 'Deep dives into pop-culture phenomena, movie essays, and digital community memes that connect with Gen-Z audiences.',
       url: 'https://youtube.com/c/wildcard',
@@ -106,7 +78,7 @@ export default function ChannelsPage() {
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={200} duration={700}>
             <p className="max-w-2xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed font-inter">
-              We build, curate, and scale digital channels in-house. With over 3M combined subscribers, we provide brands with direct organic distribution.
+              We build, curate, and scale digital channels in-house, providing brands with direct organic distribution.
             </p>
           </ScrollReveal>
         </div>
@@ -115,11 +87,11 @@ export default function ChannelsPage() {
       {/* 2. Grid list of channels */}
       <section className="py-8 md:py-12 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-8">
             {channels.map((chan, idx) => (
-              <ScrollReveal key={idx} variant="fade-up" delay={idx * 100} duration={650}>
+              <ScrollReveal key={idx} className="h-full" variant="fade-up" delay={idx * 100} duration={650}>
                 <div 
-                  className="bg-white border border-slate-200/40 rounded-3xl overflow-hidden flex flex-col justify-between h-[540px] shadow-sm card-hover-tilt group"
+                  className="bg-white border border-slate-200/40 rounded-3xl overflow-hidden flex flex-col justify-between h-full min-h-[540px] shadow-sm card-hover-tilt group"
                 >
                   {/* Top Banner Cover Image */}
                   <div className="h-48 overflow-hidden relative border-b border-slate-100" aria-hidden="true">
@@ -172,32 +144,6 @@ export default function ChannelsPage() {
                       </svg>
                     </div>
 
-                    {/* Metrics Footer */}
-                    <div className="border-t border-slate-200 pt-4 flex justify-between items-center text-xs font-inter">
-                      <div className="flex items-center gap-1.5">
-                        <Users size={14} className={chan.textAccent} />
-                        <div>
-                          <span className="text-[9px] text-slate-500 block -mb-0.5">Subscribers</span>
-                          <strong className="text-xs font-manrope font-bold text-dark-navy">{chan.subs}</strong>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-1.5">
-                        <Eye size={14} className={chan.textAccent} />
-                        <div>
-                          <span className="text-[9px] text-slate-500 block -mb-0.5">Total Views</span>
-                          <strong className="text-xs font-manrope font-bold text-dark-navy">{chan.views}</strong>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-1.5">
-                        <Film size={14} className={chan.textAccent} />
-                        <div>
-                          <span className="text-[9px] text-slate-500 block -mb-0.5">Videos</span>
-                          <strong className="text-xs font-manrope font-bold text-dark-navy">{chan.videos}</strong>
-                        </div>
-                      </div>
-                    </div>
                   </div>
 
                 </div>
