@@ -89,10 +89,10 @@ export default function ContactPage() {
   };
 
   const inputClasses = (field: keyof FormFields) =>
-    `w-full rounded-xl border bg-white px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sky-200 shadow-sm ${
+    `w-full rounded-xl border-2 bg-slate-50/50 px-4 py-3.5 text-sm text-slate-900 placeholder:text-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sky-300/50 focus:bg-white shadow-sm ${
       errors[field]
         ? 'border-red-300 focus:border-red-400 focus:ring-red-100'
-        : 'border-sky-100 focus:border-sky-300'
+        : 'border-sky-200/70 focus:border-sky-400'
     }`;
 
   return (
@@ -133,7 +133,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <h3 className="font-manrope font-bold text-xl md:text-2xl text-gradient-blue">Direct Channels</h3>
 
-                <div className="flex items-center gap-4 bg-white p-2 rounded-xl hover:translate-x-2 transition-transform duration-300">
+                <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-sky-100 shadow-sm hover:shadow-md hover:translate-x-2 hover:border-sky-300/50 transition-all duration-300">
                   <div className="w-10 h-10 rounded-xl bg-alvision-blue/10 flex items-center justify-center text-alvision-blue shrink-0 animate-pulse-glow">
                     <Mail size={18} />
                   </div>
@@ -145,7 +145,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 bg-white p-2 rounded-xl hover:translate-x-2 transition-transform duration-300">
+                <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-sky-100 shadow-sm hover:shadow-md hover:translate-x-2 hover:border-sky-300/50 transition-all duration-300">
                   <div className="w-10 h-10 rounded-xl bg-alvision-blue/10 flex items-center justify-center text-alvision-blue shrink-0 animate-pulse-glow">
                     <Phone size={18} />
                   </div>
@@ -157,7 +157,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 bg-white p-2 rounded-xl hover:translate-x-2 transition-transform duration-300">
+                <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-sky-100 shadow-sm hover:shadow-md hover:translate-x-2 hover:border-sky-300/50 transition-all duration-300">
                   <div className="w-10 h-10 rounded-xl bg-alvision-blue/10 flex items-center justify-center text-alvision-blue shrink-0 animate-pulse-glow">
                     <MapPin size={18} />
                   </div>
@@ -205,7 +205,7 @@ export default function ContactPage() {
             </ScrollReveal>
 
             <ScrollReveal variant="fade-left" delay={150} duration={700} className="lg:col-span-7" as="div">
-              <div className="glass-panel p-6 md:p-10 rounded-3xl border border-sky-100 shadow-sm bg-white card-hover-tilt">
+              <div className="glass-panel p-6 md:p-10 rounded-3xl border-2 border-sky-200/80 shadow-lg shadow-sky-100/30 bg-white card-hover-tilt">
                 {formSubmitted ? (
                   <div className="text-center py-16 flex flex-col items-center bg-white">
                     <div className="w-16 h-16 rounded-full bg-alvision-blue/10 flex items-center justify-center text-alvision-blue mb-6">
@@ -223,7 +223,7 @@ export default function ContactPage() {
                 ) : (
                   <form onSubmit={handleContactSubmit} className="space-y-6 bg-white" noValidate>
                     <div>
-                      <label htmlFor="name" className="block text-xs font-semibold text-slate-650 uppercase tracking-wider mb-2 font-inter">Your Name *</label>
+                      <label htmlFor="name" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2 font-inter">Your Name *</label>
                       <input
                         id="name"
                         type="text"
@@ -238,7 +238,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-xs font-semibold text-slate-650 uppercase tracking-wider mb-2 font-inter">Your Email *</label>
+                      <label htmlFor="email" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2 font-inter">Your Email *</label>
                       <input
                         id="email"
                         type="email"
@@ -253,7 +253,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="subject" className="block text-xs font-semibold text-slate-650 uppercase tracking-wider mb-2 font-inter">Subject *</label>
+                      <label htmlFor="subject" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2 font-inter">Subject *</label>
                       <input
                         id="subject"
                         type="text"
@@ -268,7 +268,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-xs font-semibold text-slate-650 uppercase tracking-wider mb-2 font-inter">Message *</label>
+                      <label htmlFor="message" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2 font-inter">Message *</label>
                       <textarea
                         id="message"
                         rows={5}
@@ -310,7 +310,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 font-manrope font-bold text-sm text-deep-black bg-gradient-to-r from-alvision-blue to-glow-blue rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-2 shadow-md shadow-alvision-blue/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alvision-blue btn-shimmer disabled:cursor-not-allowed disabled:opacity-70"
+                      className="w-full py-4 font-manrope font-bold text-sm text-white bg-gradient-to-r from-sky-500 via-alvision-blue to-sky-400 rounded-xl hover:opacity-95 hover:shadow-xl hover:shadow-sky-400/20 transition-all flex items-center justify-center gap-2 shadow-lg shadow-sky-500/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alvision-blue btn-shimmer disabled:cursor-not-allowed disabled:opacity-70"
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                       {!isSubmitting && <ArrowRight size={16} aria-hidden="true" />}

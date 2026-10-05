@@ -537,14 +537,14 @@ export default function ServicesPage() {
       </section>
 
       {/* 3. Featured Clients Showcase Section */}
-      <section className="py-12 md:py-16 relative z-10 bg-slate-50/50 border-b border-sky-100/40" aria-label="Our Trusted Clients">
+      <section className="py-12 md:py-16 relative z-10 bg-[#0F1729] border-b border-slate-800" aria-label="Our Trusted Clients">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" duration={600} className="text-center max-w-3xl mx-auto mb-10">
             <span className="text-[10px] font-bold text-alvision-secondary uppercase tracking-[0.25em] block mb-3 font-inter">PROVEN TRUST</span>
-            <h2 className="font-manrope font-800 text-3xl md:text-4xl text-dark-navy mb-4">
+            <h2 className="font-manrope font-800 text-3xl md:text-4xl text-white mb-4">
               Our Esteemed Clients
             </h2>
-            <p className="text-slate-500 text-sm font-inter">
+            <p className="text-slate-300 text-sm font-inter">
               We work with leading healthcare institutions, infrastructure conglomerates, and growing enterprises to power digital acquisition and campaign strategies.
             </p>
           </ScrollReveal>
@@ -554,18 +554,18 @@ export default function ServicesPage() {
               const ClientIcon = client.icon;
               return (
                 <ScrollReveal key={idx} variant="fade-up" delay={idx * 100} duration={600}>
-                  <div className="bg-white border border-sky-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-alvision-blue/40 transition-all duration-300 flex flex-col justify-between h-full group">
+                  <div className="bg-slate-900/80 border border-slate-700 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:shadow-sky-500/10 hover:border-sky-500/40 transition-all duration-300 flex flex-col justify-between h-full group backdrop-blur-sm">
                     <div>
-                      <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-alvision-blue mb-4 group-hover:scale-110 transition-transform">
+                      <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-4 group-hover:scale-110 transition-transform">
                         <ClientIcon size={20} />
                       </div>
-                      <h3 className="font-manrope font-bold text-lg text-dark-navy mb-1.5 group-hover:text-alvision-blue transition-colors">
+                      <h3 className="font-manrope font-bold text-lg text-white mb-1.5 group-hover:text-sky-400 transition-colors">
                         {client.name}
                       </h3>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-inter block mb-3">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 font-inter block mb-3">
                         {client.category}
                       </span>
-                      <p className="text-slate-550 text-xs font-inter leading-relaxed">
+                      <p className="text-slate-400 text-xs font-inter leading-relaxed">
                         {client.description}
                       </p>
                     </div>
@@ -578,13 +578,13 @@ export default function ServicesPage() {
       </section>
 
       {/* 4. Technology Alignment statement - White Background */}
-      <section className="py-10 text-center relative z-10 bg-white" aria-label="Technology integration standards">
+      <section className="py-10 text-center relative z-10 bg-[#0B0F17]" aria-label="Technology integration standards">
         <ScrollReveal variant="fade-up" duration={600} className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="font-manrope font-bold text-xl md:text-2xl mb-4 text-dark-navy">Technology & Media Integration</h3>
-          <p className="text-slate-550 text-xs md:text-sm max-w-2xl mx-auto leading-relaxed mb-6 font-inter">
+          <h3 className="font-manrope font-bold text-xl md:text-2xl mb-4 text-white">Technology & Media Integration</h3>
+          <p className="text-slate-300 text-xs md:text-sm max-w-2xl mx-auto leading-relaxed mb-6 font-inter">
             Through our media networks and tech infrastructure, we deliver cutting-edge automation, machine learning analytics, performance tracking dashboards, and high-conversion software assets alongside creative video pipelines.
           </p>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-sky-100 text-xs font-semibold text-slate-500 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/80 border border-sky-500/30 text-xs font-semibold text-slate-300 shadow-sm backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
             100% Core Web Vital Audit Target Compliant
           </div>

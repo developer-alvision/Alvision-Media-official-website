@@ -89,7 +89,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'py-4 bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-800 shadow-md'
-          : 'py-6 bg-[#0B0F17]/60 backdrop-blur-sm'
+          : 'py-6 bg-[#0B0F17]/85 backdrop-blur-md'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
@@ -172,8 +172,8 @@ export default function Navbar() {
                 key={link.path}
                 onClick={() => setMobileMenuOpen(false)}
                 href={link.path}
-                className={`text-xl font-bold font-manrope tracking-wide border-b border-slate-800 pb-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
-                  isActive(link.path) ? 'text-sky-400' : 'text-slate-300 hover:text-white'
+                className={`text-2xl font-bold font-manrope tracking-wide border-b border-slate-700 pb-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
+                  isActive(link.path) ? 'text-sky-400' : 'text-white hover:text-white'
                 }`}
               >
                 {link.name}
@@ -191,7 +191,7 @@ export default function Navbar() {
                   target={s.href.startsWith('http') ? '_blank' : undefined}
                   rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   aria-label={s.label}
-                  className={`w-10 h-10 rounded-xl border border-slate-800 bg-slate-900 flex items-center justify-center text-slate-400 transition-all duration-200 ${s.color}`}
+                  className={`w-10 h-10 rounded-xl border border-slate-600 bg-slate-800 flex items-center justify-center text-slate-200 transition-all duration-200 ${s.color}`}
                 >
                   {s.icon}
                 </a>
