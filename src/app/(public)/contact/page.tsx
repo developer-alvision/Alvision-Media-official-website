@@ -112,7 +112,7 @@ export default function ContactPage() {
                   <div>
                     <span className="text-slate-500 text-[10px] block uppercase tracking-wider font-inter">Our Office</span>
                     <span className="text-sm font-manrope font-semibold block leading-relaxed text-studio-deep-dark">
-                      Ward No 17, 17/9149, New Eastpeta, Rajeev Nagar Road, Nemali Nagar, Madanapalle, Andhra Pradesh 517325
+                      Revenue Ward, 17/91-4-9, Rajeev Nagar Rd, New Eastpeta, Nemali Nagar, Madanapalle, Andhra Pradesh 517325
                     </span>
                   </div>
                 </div>
@@ -139,20 +139,18 @@ export default function ContactPage() {
                 </a>
               </div>
 
-              {/* Vector SVG Map */}
-              <div className="glass-panel p-6 rounded-2xl border border-sky-100 text-center relative overflow-hidden select-none bg-white shadow-sm card-hover-tilt">
-                <span className="text-[9px] uppercase tracking-widest text-slate-500 font-inter block mb-4">HQ Location Node</span>
-                <svg className="w-full h-[150px] text-slate-200 overflow-visible" viewBox="0 0 200 100" fill="none">
-                  <path 
-                    d="M100 10 L120 30 L110 50 L115 70 L95 90 L90 80 L80 60 L85 45 L90 30 Z" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5" 
-                    strokeDasharray="4 4" 
-                  />
-                  <circle cx="108" cy="65" r="4" fill="#0EA5E9" />
-                  <circle cx="108" cy="65" r="10" stroke="#0EA5E9" strokeWidth="1.5" className="animate-ping opacity-35" />
-                  <text x="122" y="69" fill="#0F172A" fontFamily="var(--font-manrope)" fontSize="9" fontWeight="bold">MADANAPALLE (HQ)</text>
-                </svg>
+              {/* Google Maps Embed */}
+              <div className="rounded-2xl overflow-hidden border border-sky-100 shadow-sm" style={{ height: '220px' }}>
+                <iframe
+                  title="Alvision Media Office Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57.84506!2d78.5136366!3d13.5458146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb265d7fa2d957f%3A0xe3d989ee36190ab2!2sAlvision%20Media!5e0!3m2!1sen!2sin!4v1696500000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="220"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </ScrollReveal>
 

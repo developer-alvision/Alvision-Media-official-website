@@ -19,65 +19,7 @@ import CoveringPanels from '@/components/CoveringPanels';
 export default function HomePage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  // Authentic Client Work & Portfolio from existing website & database
-  const clientWork = [
-    {
-      client: 'Preetham Infra Constructions & Healthcare Partners',
-      industry: 'Infrastructure & Healthcare',
-      title: 'Preetham Infra & Healthcare Web Tech Campaign',
-      category: 'Web Tech & Campaign Strategy',
-      metric: '10M Reach',
-      detail: 'Leveraged native channels & Web Tech infrastructure to drive multi-channel lead acquisition for Preetham Infra Constructions Company & Healthcare partners.',
-      image: '/images/hero_cinematic_studio.png'
-    },
-    {
-      client: 'Slam Book Tamil Celebrity Series',
-      industry: 'Media & Production',
-      title: 'Slam Book Tamil Creator Placement',
-      category: 'Content Production & Distribution',
-      metric: '18.5M Views',
-      detail: 'Coordinated sponsorship placement inside high-production celebrity conversational videos, leading to 140% sponsor renewals.',
-      image: '/images/case_influencer_food.png'
-    },
-    {
-      client: 'WhatsApp E-Commerce Automation',
-      industry: 'Performance Marketing',
-      title: 'WhatsApp Automation E-Commerce Funnel',
-      category: 'Performance Marketing',
-      metric: '22% Cart Recovery',
-      detail: 'Built triggers that recovered 22% of abandoned checkouts in 30 days for top D2C clothing brands.',
-      image: '/images/case_cart_recovery.png'
-    },
-    {
-      client: 'Vocal for Local Campaign',
-      industry: 'Influencer Marketing',
-      title: 'Tamil Influencer Campaign',
-      category: 'Influencer Marketing',
-      metric: '4.5M Reach',
-      detail: 'Curated partnership with 12 micro and macro regional Tamil creators to promote organic traditional products.',
-      image: '/images/service_influencer.png'
-    },
-    {
-      client: 'Healthcare Partner Network',
-      industry: 'Healthcare Acquisition',
-      title: 'Multi-Channel Hospital Lead Strategy',
-      category: 'Healthcare & Enterprise Acquisition',
-      metric: 'Multi-Channel Lead Flow',
-      detail: 'Configured targeted digital marketing and video content for Jyosthna Maternity Hospital, MLL Multi Speciality Hospital, and Jyothi Dental Hospital.',
-      image: '/images/service_google_ads.png'
-    },
-    {
-      client: 'D2C Skincare Web Launch',
-      industry: 'Web Development',
-      title: 'Modern D2C Skincare Web Launch',
-      category: 'Web Development',
-      metric: '0.9s Load Time',
-      detail: 'A custom glassmorphic e-commerce landing page built with Next.js and optimized for conversion and Core Web Vitals.',
-      image: '/images/service_web.png'
-    }
-  ];
-
-  // Authentic Verified Clients List
+  // Authenticated clients
   const trustedClients = [
     'Preetham Infra Constructions',
     'Jyosthna Maternity Hospital',
@@ -85,6 +27,8 @@ export default function HomePage() {
     'Jyothi Dental Hospital'
   ];
 
+  // Authentic Client Work
+  // (used for future portfolio section if needed)
   const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -234,7 +178,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent rounded-2xl" />
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-800 text-xs text-slate-300 font-inter shadow-md">
                   <strong className="text-white font-manrope block font-bold text-sm mb-1">HQ Address</strong>
-                  Ward No 17, 17/9149, New Eastpeta, Rajeev Nagar Road, Nemali Nagar, Madanapalle, Andhra Pradesh 517325
+                  Revenue Ward, 17/91-4-9, Rajeev Nagar Rd, New Eastpeta, Nemali Nagar, Madanapalle, Andhra Pradesh 517325
                 </div>
               </div>
             </ScrollReveal>
@@ -243,7 +187,7 @@ export default function HomePage() {
         </div>
       </section>
 
-        <CoveringPanels />
+      <CoveringPanels />
 
       {/* ===================================================
           05. HORIZONTAL PROJECT GALLERY (PINNED SCROLL)
@@ -345,7 +289,7 @@ export default function HomePage() {
                   <div>
                     <span className="text-slate-400 text-[10px] uppercase tracking-wider block font-inter">Office Location</span>
                     <span className="text-sm font-manrope font-semibold text-white block leading-relaxed">
-                      Ward No 17, 17/9149, New Eastpeta, Rajeev Nagar Road, Nemali Nagar, Madanapalle, Andhra Pradesh 517325
+                      Revenue Ward, 17/91-4-9, Rajeev Nagar Rd, New Eastpeta, Nemali Nagar, Madanapalle, Andhra Pradesh 517325
                     </span>
                   </div>
                 </div>

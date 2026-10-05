@@ -104,7 +104,7 @@ export default function Footer() {
               </p>
               <p className="flex items-start gap-2 pt-1">
                 <MapPin size={14} className="text-sky-400 shrink-0 mt-0.5" />
-                <span>Ward No 17, 17/9149, New Eastpeta, Rajeev Nagar Road, Nemali Nagar, Madanapalle, Andhra Pradesh 517325</span>
+                <span>Revenue Ward, 17/91-4-9, Rajeev Nagar Rd, New Eastpeta, Nemali Nagar, Madanapalle, Andhra Pradesh 517325</span>
               </p>
             </div>
           </div>
