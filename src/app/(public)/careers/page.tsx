@@ -64,7 +64,7 @@ export default function CareersPage() {
       <section className="py-8 md:py-12 text-center relative z-10" aria-label="Careers opportunities intro">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4 font-inter">WE ARE HIRING</span>
-          <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
+          <h1 className="font-manrope font-extrabold text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
             Join the Alvision Core
           </h1>
           <p className="max-w-xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed font-inter">

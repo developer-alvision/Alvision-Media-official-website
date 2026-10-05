@@ -24,6 +24,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormFields>(initialForm);
   const [errors, setErrors] = useState<Partial<Record<keyof FormFields, string>>>({});
+  const [captchaError, setCaptchaError] = useState('');
 
   const handleFieldChange = (field: keyof FormFields, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -66,7 +67,7 @@ export default function ContactPage() {
     }
 
     if (!captchaChecked) {
-      setErrors((prev) => ({ ...prev, message: 'Please complete the verification check.' }));
+      setCaptchaError('Please complete the verification check.');
       return;
     }
 
@@ -81,6 +82,7 @@ export default function ContactPage() {
       setFormData(initialForm);
       setCaptchaChecked(false);
       setErrors({});
+      setCaptchaError('');
     } catch {
       setErrors((prev) => ({ ...prev, message: 'Failed to redirect to WhatsApp. Please try again.' }));
     } finally {
@@ -106,7 +108,7 @@ export default function ContactPage() {
             <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4">Contact</span>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={100} duration={700}>
-            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">Get In Touch</h1>
+            <h1 className="font-manrope font-extrabold text-4xl sm:text-5xl md:text-6xl mb-6 text-white">Get In Touch</h1>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={200} duration={700}>
             <p className="max-w-xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed font-inter">
@@ -277,6 +279,7 @@ export default function ContactPage() {
                         placeholder="Tell us about your brand targets..."
                         aria-invalid={Boolean(errors.message)}
                         aria-describedby={errors.message ? 'message-error' : undefined}
+                        maxLength={500}
                         className={`${inputClasses('message')} min-h-[150px] resize-y`}
                       />
                       <div className="mt-2 flex items-center justify-between gap-3">
@@ -303,8 +306,8 @@ export default function ContactPage() {
                       </label>
                     </div>
 
-                    {errors.message && errors.message === 'Please complete the verification check.' && (
-                      <p className="text-xs text-red-500">Please complete the verification check before sending.</p>
+                    {captchaError && (
+                      <p className="text-xs text-red-500">{captchaError}</p>
                     )}
 
                     <button

@@ -158,7 +158,7 @@ export default function AdminContentCMSPage() {
           <div className="w-16 h-16 rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 mx-auto mb-6">
             <Lock size={28} />
           </div>
-          <h3 className="font-montserrat font-bold text-xl mb-2 text-premium-white">Access Unauthorized</h3>
+          <h3 className="font-manrope font-bold text-xl mb-2 text-premium-white">Access Unauthorized</h3>
           <p className="text-slate-gray text-xs md:text-sm font-poppins leading-relaxed mb-6">
             Your current simulated console role lacks rights to edit or write CMS content. Please change your role in the sidebar simulator to Super Admin, Content Manager, or Designer.
           </p>
@@ -178,7 +178,7 @@ export default function AdminContentCMSPage() {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
         <div>
           <span className="text-gradient-blue text-[10px] font-extrabold uppercase tracking-widest font-inter block mb-1">CMS PUBLISHING</span>
-          <h1 className="font-montserrat font-950 text-2xl md:text-3xl lg:text-4xl text-premium-white">
+          <h1 className="font-manrope font-black text-2xl md:text-3xl lg:text-4xl text-premium-white">
             Ecosystem Content Editor
           </h1>
         </div>
@@ -194,7 +194,7 @@ export default function AdminContentCMSPage() {
               setActiveSubTab('blogs');
               setBlogSubmitted(false);
             }}
-            className={`px-4 py-2 rounded-lg text-xs font-bold font-montserrat uppercase transition-all duration-300 ${
+            className={`px-4 py-2 rounded-lg text-xs font-bold font-manrope uppercase transition-all duration-300 ${
               activeSubTab === 'blogs' 
                 ? 'bg-alvision-blue text-deep-black shadow-md' 
                 : 'text-slate-gray hover:text-white'
@@ -207,7 +207,7 @@ export default function AdminContentCMSPage() {
               setActiveSubTab('portfolios');
               setPortSubmitted(false);
             }}
-            className={`px-4 py-2 rounded-lg text-xs font-bold font-montserrat uppercase transition-all duration-300 ${
+            className={`px-4 py-2 rounded-lg text-xs font-bold font-manrope uppercase transition-all duration-300 ${
               activeSubTab === 'portfolios' 
                 ? 'bg-alvision-blue text-deep-black shadow-md' 
                 : 'text-slate-gray hover:text-white'
@@ -230,7 +230,7 @@ export default function AdminContentCMSPage() {
             
             {activeSubTab === 'blogs' && (
               <div className="glass-panel p-6 md:p-8 rounded-3xl border border-slate-gray/10 space-y-6">
-                <h3 className="font-montserrat font-bold text-lg text-premium-white flex items-center gap-2 pb-4 border-b border-slate-gray/5">
+                <h3 className="font-manrope font-bold text-lg text-premium-white flex items-center gap-2 pb-4 border-b border-slate-gray/5">
                   <BookOpen className="text-alvision-blue" size={18} />
                   Write Dynamic Blog Article
                 </h3>
@@ -240,7 +240,7 @@ export default function AdminContentCMSPage() {
                     <div className="w-12 h-12 rounded-full bg-alvision-blue/10 flex items-center justify-center text-alvision-blue mb-4">
                       <CheckCircle size={24} />
                     </div>
-                    <h4 className="font-montserrat font-bold text-lg mb-1">Article Published!</h4>
+                    <h4 className="font-manrope font-bold text-lg mb-1">Article Published!</h4>
                     <p className="text-slate-gray text-xs">The post was saved and is now live on the public blog path.</p>
                     <button 
                       onClick={() => setBlogSubmitted(false)}
@@ -316,7 +316,7 @@ export default function AdminContentCMSPage() {
 
                     <button 
                       type="submit" 
-                      className="w-full py-3.5 font-montserrat font-bold text-xs text-deep-black bg-gradient-to-r from-alvision-blue to-glow-blue rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-1.5"
+                      className="w-full py-3.5 font-manrope font-bold text-xs text-deep-black bg-gradient-to-r from-alvision-blue to-glow-blue rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-1.5"
                     >
                       Publish Article Inside CMS <PlusCircle size={14} />
                     </button>
@@ -327,7 +327,7 @@ export default function AdminContentCMSPage() {
 
             {activeSubTab === 'portfolios' && (
               <div className="glass-panel p-6 md:p-8 rounded-3xl border border-slate-gray/10 space-y-6">
-                <h3 className="font-montserrat font-bold text-lg text-premium-white flex items-center gap-2 pb-4 border-b border-slate-gray/5">
+                <h3 className="font-manrope font-bold text-lg text-premium-white flex items-center gap-2 pb-4 border-b border-slate-gray/5">
                   <Briefcase className="text-alvision-blue" size={18} />
                   Upload Portfolio Case Study
                 </h3>
@@ -337,7 +337,7 @@ export default function AdminContentCMSPage() {
                     <div className="w-12 h-12 rounded-full bg-alvision-blue/10 flex items-center justify-center text-alvision-blue mb-4">
                       <CheckCircle size={24} />
                     </div>
-                    <h4 className="font-montserrat font-bold text-lg mb-1">Case Study Uploaded!</h4>
+                    <h4 className="font-manrope font-bold text-lg mb-1">Case Study Uploaded!</h4>
                     <p className="text-slate-gray text-xs">The project details are now live on the public portfolio page.</p>
                     <button 
                       onClick={() => setPortSubmitted(false)}
@@ -428,7 +428,7 @@ export default function AdminContentCMSPage() {
 
                     <button 
                       type="submit" 
-                      className="w-full py-3.5 font-montserrat font-bold text-xs text-deep-black bg-gradient-to-r from-alvision-blue to-glow-blue rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-1.5"
+                      className="w-full py-3.5 font-manrope font-bold text-xs text-deep-black bg-gradient-to-r from-alvision-blue to-glow-blue rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-1.5"
                     >
                       Publish Project to Portfolio <PlusCircle size={14} />
                     </button>
@@ -444,14 +444,14 @@ export default function AdminContentCMSPage() {
             
             {activeSubTab === 'blogs' && (
               <div className="glass-panel p-6 rounded-3xl border border-slate-gray/10">
-                <h3 className="font-montserrat font-bold text-sm text-premium-white uppercase tracking-wider mb-4 pb-2 border-b border-slate-gray/5">
+                <h3 className="font-manrope font-bold text-sm text-premium-white uppercase tracking-wider mb-4 pb-2 border-b border-slate-gray/5">
                   Blogs Registry ({blogs.length})
                 </h3>
                 <div className="space-y-3 max-h-[450px] overflow-y-auto">
                   {blogs.map((b) => (
                     <div key={b.id} className="flex justify-between items-center p-3 bg-deep-black/60 border border-slate-gray/5 rounded-xl text-xs gap-4 hover:border-slate-gray/15 transition-all">
                       <div className="truncate">
-                        <strong className="block font-montserrat text-premium-white truncate">{b.title}</strong>
+                        <strong className="block font-manrope text-premium-white truncate">{b.title}</strong>
                         <span className="text-slate-gray text-[10px] block mt-0.5">{b.category.replace('_', ' ')}</span>
                       </div>
                       <button
@@ -468,14 +468,14 @@ export default function AdminContentCMSPage() {
 
             {activeSubTab === 'portfolios' && (
               <div className="glass-panel p-6 rounded-3xl border border-slate-gray/10">
-                <h3 className="font-montserrat font-bold text-sm text-premium-white uppercase tracking-wider mb-4 pb-2 border-b border-slate-gray/5">
+                <h3 className="font-manrope font-bold text-sm text-premium-white uppercase tracking-wider mb-4 pb-2 border-b border-slate-gray/5">
                   Portfolio Registry ({portfolios.length})
                 </h3>
                 <div className="space-y-3 max-h-[450px] overflow-y-auto">
                   {portfolios.map((p) => (
                     <div key={p.id} className="flex justify-between items-center p-3 bg-deep-black/60 border border-slate-gray/5 rounded-xl text-xs gap-4 hover:border-slate-gray/15 transition-all">
                       <div className="truncate">
-                        <strong className="block font-montserrat text-premium-white truncate">{p.title}</strong>
+                        <strong className="block font-manrope text-premium-white truncate">{p.title}</strong>
                         <span className="text-slate-gray text-[10px] block mt-0.5">Client: {p.client_name}</span>
                       </div>
                       <button

@@ -99,7 +99,7 @@ export default function AdminLoginPage() {
           <div className="flex justify-center mb-3">
             <LogoGlyph className="h-12 w-12" />
           </div>
-          <h2 className="font-montserrat font-950 text-3xl tracking-wider uppercase">
+          <h2 className="font-manrope font-black text-3xl tracking-wider uppercase">
             ALVISION<span className="text-alvision-blue">MEDIA</span>
           </h2>
           <span className="text-[10px] font-inter uppercase tracking-[0.2em] text-slate-gray">Ecosystem Command Portal</span>
@@ -107,7 +107,7 @@ export default function AdminLoginPage() {
 
         <div className="glass-panel p-8 rounded-3xl border border-slate-gray/10 shadow-xl shadow-black/80">
           
-          <h3 className="font-montserrat font-bold text-lg mb-6 flex items-center gap-2">
+          <h3 className="font-manrope font-bold text-lg mb-6 flex items-center gap-2">
             <ShieldCheck className="text-alvision-blue" size={20} />
             Administrator Login
           </h3>
@@ -157,7 +157,7 @@ export default function AdminLoginPage() {
             <button 
               type="submit" 
               disabled={loading}
-              className="w-full py-3.5 font-montserrat font-bold text-xs text-deep-black bg-gradient-to-r from-alvision-blue to-glow-blue rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-1.5 shadow-lg shadow-alvision-blue/10 disabled:opacity-50"
+              className="w-full py-3.5 font-manrope font-bold text-xs text-deep-black bg-gradient-to-r from-alvision-blue to-glow-blue rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-1.5 shadow-lg shadow-alvision-blue/10 disabled:opacity-50"
             >
               {loading ? 'Authenticating...' : 'Sign In To Console'}
               <ArrowRight size={14} />
@@ -176,7 +176,7 @@ export default function AdminLoginPage() {
                   onClick={() => triggerQuickLogin(role.email, role.pass)}
                   className="bg-dark-navy/60 hover:bg-dark-navy border border-slate-gray/5 hover:border-alvision-blue/30 rounded-xl p-2.5 text-left transition-all duration-300 group"
                 >
-                  <span className="block font-montserrat font-bold text-[10px] text-premium-white group-hover:text-alvision-blue transition-colors">
+                  <span className="block font-manrope font-bold text-[10px] text-premium-white group-hover:text-alvision-blue transition-colors">
                     {role.name}
                   </span>
                   <span className="block text-[9px] text-slate-gray leading-none font-poppins">{role.desc}</span>

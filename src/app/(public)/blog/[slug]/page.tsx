@@ -49,7 +49,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <span className="flex items-center gap-1"><Clock size={12} aria-hidden="true" /> {readingTimeMinutes} min read</span>
           </div>
 
-          <h1 className="font-manrope font-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-dark-navy mb-6">
+          <h1 className="font-manrope font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-dark-navy mb-6">
             {blog.title}
           </h1>
         </div>

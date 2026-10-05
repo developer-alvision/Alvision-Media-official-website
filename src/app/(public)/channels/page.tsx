@@ -72,7 +72,7 @@ export default function ChannelsPage() {
             <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4">MEDIA NETWORK</span>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={100} duration={700}>
-            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
+            <h1 className="font-manrope font-extrabold text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
               Our Native Creator Network
             </h1>
           </ScrollReveal>

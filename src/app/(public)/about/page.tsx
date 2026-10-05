@@ -34,7 +34,7 @@ export default function AboutPage() {
             <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4 font-inter">OUR STORY</span>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={100} duration={700}>
-            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
+            <h1 className="font-manrope font-extrabold text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
               Connecting Stories, Tech, and Growth
             </h1>
           </ScrollReveal>
@@ -64,7 +64,7 @@ export default function AboutPage() {
             
             {/* Story text */}
             <ScrollReveal variant="fade-right" duration={700} className="max-w-3xl">
-              <h2 className="font-manrope font-800 text-2xl md:text-3xl mb-6 text-gradient">The Intersection of Agency & Creator Hub</h2>
+              <h2 className="font-manrope font-extrabold text-2xl md:text-3xl mb-6 text-gradient">The Intersection of Agency & Creator Hub</h2>
               <p className="text-slate-650 text-sm md:text-base leading-relaxed mb-4 font-inter">
                 Traditional agencies struggle with distribution; traditional creators struggle with commercialization. At Alvision Media, we solved this mismatch by creating our own channels, building an organic community, and using those distribution networks to fuel our client campaigns.
               </p>
@@ -113,7 +113,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" duration={600} className="text-center max-w-2xl mx-auto mb-8">
             <span className="text-gradient text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-3 font-inter">OUR CORE VALUES</span>
-            <h2 className="font-manrope font-800 text-3xl md:text-4xl text-studio-deep-dark">The Pillars We Build On</h2>
+            <h2 className="font-manrope font-extrabold text-3xl md:text-4xl text-studio-deep-dark">The Pillars We Build On</h2>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -142,7 +142,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal variant="fade-up" duration={600} className="text-center max-w-2xl mx-auto mb-8">
             <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-3 font-inter">MILESTONES</span>
-            <h2 className="font-manrope font-800 text-3xl md:text-4xl text-studio-deep-dark">Our Journey So Far</h2>
+            <h2 className="font-manrope font-extrabold text-3xl md:text-4xl text-studio-deep-dark">Our Journey So Far</h2>
           </ScrollReveal>
 
           <div className="relative border-l border-sky-100 ml-4 md:ml-32 pl-8 md:pl-16 space-y-12">

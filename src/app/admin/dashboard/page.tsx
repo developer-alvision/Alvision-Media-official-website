@@ -55,7 +55,7 @@ export default function AdminDashboardPage() {
           <div className="w-16 h-16 rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 mx-auto mb-6">
             <Lock size={28} />
           </div>
-          <h3 className="font-montserrat font-bold text-xl mb-2 text-premium-white">Access Unauthorized</h3>
+          <h3 className="font-manrope font-bold text-xl mb-2 text-premium-white">Access Unauthorized</h3>
           <p className="text-slate-gray text-xs md:text-sm font-poppins leading-relaxed mb-6">
             Your current simulated console role lacks rights to view Dashboard Analytics. Please change your role in the sidebar simulator to Super Admin or Marketing Manager.
           </p>
@@ -74,7 +74,7 @@ export default function AdminDashboardPage() {
       {/* Header title */}
       <div>
         <span className="text-gradient-blue text-[10px] font-extrabold uppercase tracking-widest font-inter block mb-1">REAL-TIME OVERVIEW</span>
-        <h1 className="font-montserrat font-950 text-2xl md:text-3xl lg:text-4xl text-premium-white">
+        <h1 className="font-manrope font-black text-2xl md:text-3xl lg:text-4xl text-premium-white">
           Ecosystem Dashboard
         </h1>
       </div>
@@ -91,7 +91,7 @@ export default function AdminDashboardPage() {
             <div className="glass-panel rounded-2xl border border-slate-gray/10 p-6 flex justify-between items-center hover:border-slate-gray/20 transition-all duration-300">
               <div>
                 <span className="text-[10px] uppercase tracking-wider text-slate-gray font-inter block mb-1">Consolidated Subs</span>
-                <strong className="text-2xl md:text-3xl font-montserrat font-extrabold text-premium-white">
+                <strong className="text-2xl md:text-3xl font-manrope font-extrabold text-premium-white">
                   {(stats.subscribers / 1000000).toFixed(1)}M
                 </strong>
                 <span className="text-[10px] text-emerald-400 font-inter flex items-center gap-0.5 mt-1">
@@ -106,7 +106,7 @@ export default function AdminDashboardPage() {
             <div className="glass-panel rounded-2xl border border-slate-gray/10 p-6 flex justify-between items-center hover:border-slate-gray/20 transition-all duration-300">
               <div>
                 <span className="text-[10px] uppercase tracking-wider text-slate-gray font-inter block mb-1">Network Views</span>
-                <strong className="text-2xl md:text-3xl font-montserrat font-extrabold text-premium-white">
+                <strong className="text-2xl md:text-3xl font-manrope font-extrabold text-premium-white">
                   {(stats.totalViews / 1000000).toFixed(0)}M
                 </strong>
                 <span className="text-[10px] text-emerald-400 font-inter flex items-center gap-0.5 mt-1">
@@ -121,7 +121,7 @@ export default function AdminDashboardPage() {
             <div className="glass-panel rounded-2xl border border-slate-gray/10 p-6 flex justify-between items-center hover:border-slate-gray/20 transition-all duration-300">
               <div>
                 <span className="text-[10px] uppercase tracking-wider text-slate-gray font-inter block mb-1">Lead Count (CRM)</span>
-                <strong className="text-2xl md:text-3xl font-montserrat font-extrabold text-premium-white">
+                <strong className="text-2xl md:text-3xl font-manrope font-extrabold text-premium-white">
                   {stats.totalLeads}
                 </strong>
                 <span className="text-[10px] text-alvision-blue font-inter block mt-1">
@@ -136,7 +136,7 @@ export default function AdminDashboardPage() {
             <div className="glass-panel rounded-2xl border border-slate-gray/10 p-6 flex justify-between items-center hover:border-slate-gray/20 transition-all duration-300">
               <div>
                 <span className="text-[10px] uppercase tracking-wider text-slate-gray font-inter block mb-1">Estimated Campaign Rev</span>
-                <strong className="text-2xl md:text-3xl font-montserrat font-extrabold text-gradient-blue">
+                <strong className="text-2xl md:text-3xl font-manrope font-extrabold text-gradient-blue">
                   ₹{(stats.totalRevenue / 100000).toFixed(1)}L
                 </strong>
                 <span className="text-[10px] text-emerald-400 font-inter flex items-center gap-0.5 mt-1">
@@ -157,7 +157,7 @@ export default function AdminDashboardPage() {
             <div className="lg:col-span-2 glass-panel p-6 md:p-8 rounded-3xl border border-slate-gray/10 space-y-6">
               <div className="flex justify-between items-center border-b border-slate-gray/5 pb-4">
                 <div>
-                  <h3 className="font-montserrat font-bold text-lg text-premium-white">Audience Growth & Traffic Trajectory</h3>
+                  <h3 className="font-manrope font-bold text-lg text-premium-white">Audience Growth & Traffic Trajectory</h3>
                   <span className="text-slate-gray text-xs block font-poppins">Monthly network click distributions</span>
                 </div>
               </div>
@@ -209,7 +209,7 @@ export default function AdminDashboardPage() {
             {/* Leads Breakdown summary */}
             <div className="glass-panel p-6 md:p-8 rounded-3xl border border-slate-gray/10 space-y-6 flex flex-col justify-between">
               <div>
-                <h3 className="font-montserrat font-bold text-lg text-premium-white border-b border-slate-gray/5 pb-4">CRM Conversion Rates</h3>
+                <h3 className="font-manrope font-bold text-lg text-premium-white border-b border-slate-gray/5 pb-4">CRM Conversion Rates</h3>
                 
                 <div className="space-y-4 pt-4">
                   <div>

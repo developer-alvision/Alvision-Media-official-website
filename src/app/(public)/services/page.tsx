@@ -201,7 +201,7 @@ export default function ServicesPage() {
             <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4 font-inter">OUR DEPARTMENTS</span>
           </ScrollReveal>
           <ScrollReveal variant="fade-up" delay={100} duration={700}>
-            <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
+            <h1 className="font-manrope font-extrabold text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
               Digital Capabilities That Drive Value
             </h1>
           </ScrollReveal>
@@ -268,7 +268,7 @@ export default function ServicesPage() {
                       {React.createElement(services[activeTab].icon, { size: 28 })}
                     </div>
                     <div>
-                      <h2 className="font-manrope font-800 text-2xl md:text-3xl text-dark-navy">
+                      <h2 className="font-manrope font-extrabold text-2xl md:text-3xl text-dark-navy">
                         {services[activeTab].title}
                       </h2>
                       <span className="text-slate-400 text-xs md:text-sm font-inter block mt-1">Alvision Capability Suite</span>
@@ -541,7 +541,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" duration={600} className="text-center max-w-3xl mx-auto mb-10">
             <span className="text-[10px] font-bold text-alvision-secondary uppercase tracking-[0.25em] block mb-3 font-inter">PROVEN TRUST</span>
-            <h2 className="font-manrope font-800 text-3xl md:text-4xl text-white mb-4">
+            <h2 className="font-manrope font-extrabold text-3xl md:text-4xl text-white mb-4">
               Our Esteemed Clients
             </h2>
             <p className="text-slate-300 text-sm font-inter">

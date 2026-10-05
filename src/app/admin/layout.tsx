@@ -107,7 +107,7 @@ export default function AdminLayout({
           <Link href="/" className="flex items-center space-x-2 border-b border-slate-gray/5 pb-4">
             <LogoGlyph className="h-8 w-8" />
             <div className="flex flex-col">
-              <span className="font-montserrat font-900 text-base tracking-wider text-dark-navy">
+              <span className="font-manrope font-black text-base tracking-wider text-dark-navy">
                 ALVISION<span className="text-alvision-blue">CONSOLE</span>
               </span>
               <span className="text-[8px] font-inter tracking-[0.2em] text-slate-gray -mt-0.5">ADMIN PANEL</span>

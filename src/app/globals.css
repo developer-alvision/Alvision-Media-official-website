@@ -12,6 +12,10 @@
   --color-slate-650: #475569;
   --color-glow-blue: #38BDF8;
   --color-electric-blue: #0284C7;
+  --color-slate-550: #64748B;
+  --color-slate-655: #4B5563;
+  --color-slate-gray: #94A3B8;
+  --color-premium-white: #F8FAFC;
   
   --font-manrope: var(--font-manrope), sans-serif;
   --font-inter: var(--font-inter), sans-serif;

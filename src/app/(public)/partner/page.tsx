@@ -24,7 +24,7 @@ export default function PartnerPage() {
     try {
       const text = `Hello Alvision Media, I am ${name} from ${company}. Email: ${email}. Partnership Type: ${partnerType}. Message: ${msg}`;
       const whatsappUrl = `https://wa.me/916262949423?text=${encodeURIComponent(text)}`;
-      window.open(whatsappUrl, '_blank');
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
       
       setPartnerSubmitted(true);
       setName('');
@@ -46,7 +46,7 @@ export default function PartnerPage() {
       <section className="py-8 md:py-12 text-center relative z-10 bg-white" aria-label="Partner page title">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4 font-inter">COLLABORATION DESK</span>
-          <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-studio-deep-dark">
+          <h1 className="font-manrope font-extrabold text-4xl sm:text-5xl md:text-6xl mb-6 text-studio-deep-dark">
             Partner With Alvision Media
           </h1>
           <p className="max-w-xl mx-auto text-slate-550 text-base md:text-lg leading-relaxed font-inter">
@@ -79,7 +79,7 @@ export default function PartnerPage() {
           <div className="glass-panel rounded-3xl p-6 md:p-12 border border-sky-100 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-md bg-white">
             <div>
               <span className="text-gradient-blue text-xs font-bold uppercase tracking-wider block mb-2 font-inter">PARTNERSHIP QUERY</span>
-              <h2 className="font-manrope font-800 text-2xl md:text-3xl mb-4 text-studio-deep-dark">Let's Co-Create</h2>
+              <h2 className="font-manrope font-extrabold text-2xl md:text-3xl mb-4 text-studio-deep-dark">Let's Co-Create</h2>
               <p className="text-slate-550 text-xs md:text-sm leading-relaxed mb-6 font-inter">
                 Select your partnership model and submit your details. Our brand alignment managers will review your site and propose a customized integration matrix within 24 hours.
               </p>
@@ -153,7 +153,7 @@ export default function PartnerPage() {
                     <label htmlFor="msg-textarea" className="block text-[10px] font-semibold text-slate-650 uppercase tracking-wider mb-1.5 font-inter">Message / Requirements</label>
                     <textarea 
                       id="msg-textarea"
-                      rows={2.5} 
+                      rows={3} 
                       value={msg}
                       onChange={(e) => setMsg(e.target.value)}
                       placeholder="Describe your project..." 

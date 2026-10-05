@@ -74,7 +74,7 @@ export default function PortfolioPage() {
       <section className="py-8 md:py-12 text-center relative z-10" aria-label="Portfolio intro">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4 font-inter">CASE STUDIES</span>
-          <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
+          <h1 className="font-manrope font-extrabold text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
             Proven Results & Growth
           </h1>
           <p className="max-w-2xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed font-inter">
@@ -184,7 +184,7 @@ export default function PortfolioPage() {
                 <span className="text-[10px] font-extrabold font-inter uppercase tracking-widest text-alvision-blue block mb-2">
                   {selectedProject.category} Case Study
                 </span>
-                <h3 id="modal-title" className="font-manrope font-800 text-xl md:text-3xl text-dark-navy">
+                <h3 id="modal-title" className="font-manrope font-extrabold text-xl md:text-3xl text-dark-navy">
                   {selectedProject.title}
                 </h3>
                 <span className="text-slate-500 text-xs md:text-sm font-inter block mt-1">Client: {selectedProject.client_name}</span>

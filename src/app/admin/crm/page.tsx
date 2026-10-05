@@ -104,7 +104,7 @@ export default function AdminCRMPage() {
           <div className="w-16 h-16 rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 mx-auto mb-6">
             <Lock size={28} />
           </div>
-          <h3 className="font-montserrat font-bold text-xl mb-2 text-premium-white">Access Unauthorized</h3>
+          <h3 className="font-manrope font-bold text-xl mb-2 text-premium-white">Access Unauthorized</h3>
           <p className="text-slate-gray text-xs md:text-sm font-poppins leading-relaxed mb-6">
             Your current simulated console role lacks rights to view the Leads CRM pipeline. Please change your role in the sidebar simulator to Super Admin or Marketing Manager.
           </p>
@@ -123,7 +123,7 @@ export default function AdminCRMPage() {
       {/* Header title */}
       <div>
         <span className="text-gradient-blue text-[10px] font-extrabold uppercase tracking-widest font-inter block mb-1">CRM PIPELINE</span>
-        <h1 className="font-montserrat font-950 text-2xl md:text-3xl lg:text-4xl text-premium-white">
+        <h1 className="font-manrope font-black text-2xl md:text-3xl lg:text-4xl text-premium-white">
           Lead Tracking Boards
         </h1>
       </div>
@@ -143,7 +143,7 @@ export default function AdminCRMPage() {
               >
                 {/* Column header */}
                 <div className="flex justify-between items-center mb-4 border-b border-slate-gray/5 pb-2">
-                  <h3 className="font-montserrat font-bold text-xs md:text-sm text-premium-white uppercase tracking-wider">
+                  <h3 className="font-manrope font-bold text-xs md:text-sm text-premium-white uppercase tracking-wider">
                     {col.title}
                   </h3>
                   <span className="bg-deep-black/60 text-slate-gray text-[10px] font-bold px-2 py-0.5 rounded border border-slate-gray/10">
@@ -159,7 +159,7 @@ export default function AdminCRMPage() {
                       onClick={() => setSelectedLead(lead)}
                       className="bg-deep-black/60 hover:bg-deep-black border border-slate-gray/5 hover:border-alvision-blue/30 rounded-xl p-3.5 cursor-pointer transition-all duration-300 relative group"
                     >
-                      <h4 className="font-montserrat font-bold text-xs text-premium-white truncate mb-1.5 group-hover:text-alvision-blue transition-colors">
+                      <h4 className="font-manrope font-bold text-xs text-premium-white truncate mb-1.5 group-hover:text-alvision-blue transition-colors">
                         {lead.name}
                       </h4>
                       <span className="text-[9px] uppercase tracking-wider text-slate-gray font-inter block mb-2">
@@ -215,7 +215,7 @@ export default function AdminCRMPage() {
 
             <div>
               <span className="text-[9px] font-bold text-alvision-blue uppercase tracking-widest font-inter">Lead details</span>
-              <h3 className="font-montserrat font-bold text-xl text-premium-white mt-1">{selectedLead.name}</h3>
+              <h3 className="font-manrope font-bold text-xl text-premium-white mt-1">{selectedLead.name}</h3>
               <span className="text-slate-gray text-xs block font-poppins">{selectedLead.company || 'Private Client'}</span>
             </div>
 
@@ -241,7 +241,7 @@ export default function AdminCRMPage() {
                   <button
                     key={c.key}
                     onClick={() => updateStatus(selectedLead.id, c.key)}
-                    className={`px-2 py-1 rounded text-[9px] font-bold font-montserrat uppercase ${
+                    className={`px-2 py-1 rounded text-[9px] font-bold font-manrope uppercase ${
                       selectedLead.status === c.key 
                         ? 'bg-alvision-blue text-deep-black' 
                         : 'bg-dark-navy text-slate-gray hover:text-white'

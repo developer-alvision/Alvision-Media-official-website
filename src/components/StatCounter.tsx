@@ -50,7 +50,7 @@ export default function StatCounter({ end, suffix = "", duration = 2000 }: StatC
   }, [hasStarted, end, duration]);
 
   return (
-    <span ref={containerRef} className="font-montserrat font-900 text-3xl md:text-5xl lg:text-6xl text-gradient tabular-nums">
+    <span ref={containerRef} className="font-manrope font-black text-3xl md:text-5xl lg:text-6xl text-gradient tabular-nums">
       {count.toLocaleString()}{suffix}
     </span>
   );

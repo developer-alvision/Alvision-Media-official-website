@@ -73,7 +73,7 @@ export default function BlogPage() {
       <section className="py-8 md:py-12 text-center relative z-10 bg-[#0B0F17]" aria-label="Insights blog title intro">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-4 font-inter">ALVISION INSIGHTS</span>
-          <h1 className="font-manrope font-800 text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
+          <h1 className="font-manrope font-extrabold text-4xl sm:text-5xl md:text-6xl mb-6 text-white">
             Ecosystem Growth Insights
           </h1>
           <p className="max-w-2xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed font-inter">
