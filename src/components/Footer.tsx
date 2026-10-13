@@ -106,16 +106,30 @@ export default function Footer() {
                 <MapPin size={14} className="text-sky-400 shrink-0 mt-0.5" />
                 <span>Revenue Ward, 17/91-4-9, Rajeev Nagar Rd, New Eastpeta, Nemali Nagar, Madanapalle, Andhra Pradesh 517325</span>
               </p>
+              <div className="pt-2 border-t border-slate-800/80 space-y-1">
+                <p className="text-[11px] text-slate-400">
+                  <span className="text-slate-500 font-semibold">GSTIN:</span>{' '}
+                  <span className="font-mono text-slate-300 font-semibold tracking-wider">37GNDPS8576K1ZY</span>
+                </p>
+                <p className="text-[11px] text-slate-400">
+                  <span className="text-slate-500 font-semibold">Entity:</span> S Sanath (Sole Proprietorship)
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Copyright Bar */}
-        <div className="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] font-inter space-y-4 sm:space-y-0 text-slate-500">
-          <div>
-            <span>&copy; {currentYear} Alvision Media. All Rights Reserved.</span>
+        <div className="border-t border-slate-800/80 pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] font-inter gap-4 text-slate-500 text-center md:text-left">
+          <div className="space-y-1">
+            <p>
+              &copy; {currentYear} Alvision Media. S Sanath is a sole proprietorship. All rights reserved.
+            </p>
+            <p className="text-slate-400">
+              GSTIN: <span className="font-mono text-slate-300 font-semibold tracking-wider">37GNDPS8576K1ZY</span>
+            </p>
           </div>
-          <div className="flex flex-wrap gap-4 sm:gap-6 justify-center sm:justify-end items-center">
+          <div className="flex flex-wrap gap-4 sm:gap-6 justify-center md:justify-end items-center">
             <Link href="/privacy" className="hover:text-sky-400 transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-sky-400 transition-colors">Terms & Conditions</Link>
           </div>

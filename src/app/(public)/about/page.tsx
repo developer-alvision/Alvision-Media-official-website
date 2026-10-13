@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Target, Eye, Sparkles, Award, Cpu, Heart } from 'lucide-react';
+import { Target, Eye, Sparkles, Award, Cpu, Heart, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
@@ -108,7 +108,104 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. Core Values */}
+      {/* 3. Leadership / Founder Section */}
+      <section className="py-14 md:py-20 relative z-10 bg-[#0B0F17] border-b border-slate-800" aria-label="Leadership and Founder">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal variant="fade-up" duration={600} className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-gradient-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block mb-3 font-inter">LEADERSHIP</span>
+            <h2 className="font-manrope font-extrabold text-3xl md:text-4xl lg:text-5xl text-white">
+              Meet Our Founder
+            </h2>
+            <p className="text-slate-400 text-sm md:text-base font-inter mt-3">
+              Visionary leadership shaping the future of digital marketing, media production, and creator growth.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal variant="scale" delay={150} duration={750} className="max-w-4xl mx-auto">
+            <div className="glass-panel p-8 md:p-12 rounded-3xl bg-[#131C2E]/90 border border-slate-800 shadow-xl relative overflow-hidden">
+              {/* Ambient radial glow */}
+              <div className="absolute top-0 right-0 w-80 h-80 bg-sky-500/10 rounded-full blur-[90px] pointer-events-none" />
+              
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center relative z-10">
+                {/* Founder Visual Badge / Monogram */}
+                <div className="md:col-span-5 flex flex-col items-center text-center">
+                  <div className="relative mb-6">
+                    <div className="w-36 h-36 md:w-44 md:h-44 rounded-3xl bg-gradient-to-br from-sky-400 via-blue-600 to-indigo-700 p-1 shadow-2xl shadow-sky-500/20">
+                      <div className="w-full h-full rounded-[22px] bg-[#0B0F17] flex flex-col items-center justify-center p-4">
+                        <span className="font-manrope font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-300">
+                          SS
+                        </span>
+                        <span className="text-[10px] uppercase font-mono tracking-widest text-slate-400 mt-2">
+                          Founder & CEO
+                        </span>
+                      </div>
+                    </div>
+                    <div className="absolute -bottom-2 -right-2 bg-sky-500 text-white rounded-full p-2 shadow-lg border-2 border-[#0B0F17]" title="Founder & CEO">
+                      <Award size={18} />
+                    </div>
+                  </div>
+
+                  <h3 className="font-manrope font-extrabold text-2xl text-white">
+                    S Sanath
+                  </h3>
+                  <p className="text-sky-400 font-inter font-semibold text-sm mt-1">
+                    Founder & CEO of Alvision
+                  </p>
+                  <span className="inline-block mt-3 px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-sky-300 text-xs font-mono">
+                    Sole Proprietor
+                  </span>
+                </div>
+
+                {/* Founder Bio & Expertise */}
+                <div className="md:col-span-7 space-y-5">
+                  <div>
+                    <span className="text-[11px] font-mono tracking-widest uppercase text-sky-400 block mb-1">
+                      Leadership & Vision
+                    </span>
+                    <h4 className="font-manrope font-bold text-xl text-white">
+                      S Sanath &mdash; Founder & CEO of Alvision
+                    </h4>
+                  </div>
+
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-inter">
+                    As the Founder & CEO of Alvision Media, S Sanath spearheads the company’s mission to connect compelling creative storytelling with scalable, high-conversion commercial growth.
+                  </p>
+
+                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-inter">
+                    With extensive expertise in Digital Marketing, performance advertising, and creator network distribution, S Sanath guides brands through comprehensive digital transformations, customer acquisition funnels, and data-driven marketing systems.
+                  </p>
+
+                  {/* Core Expertise Badges */}
+                  <div className="pt-2">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block mb-3">Core Expertise:</span>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        'Digital Marketing & Strategy',
+                        'Performance Ads (Meta & Google)',
+                        'Audience Growth & Lead Funnels',
+                        'Search Engine Optimization (SEO)',
+                        'Creator Network & Distribution',
+                        'Conversion Rate Optimization'
+                      ].map((skill, i) => (
+                        <span 
+                          key={i} 
+                          className="px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 text-slate-300 text-xs font-inter font-medium flex items-center gap-1.5"
+                        >
+                          <CheckCircle2 size={12} className="text-sky-400 shrink-0" />
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* 4. Core Values */}
       <section className="py-10 md:py-14 relative z-10 bg-white" aria-label="Core corporate principles">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" duration={600} className="text-center max-w-2xl mx-auto mb-8">

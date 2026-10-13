@@ -55,7 +55,7 @@ export default function TermsPage() {
                 <div>
                   <h2 className="font-manrope font-bold text-lg text-studio-deep-dark mb-2">1. Acceptance of Terms</h2>
                   <p className="text-xs md:text-sm leading-relaxed">
-                    By accessing or using the website of Alvision Media (collectively, "we", "us", "our"), you represent that you have read, understood, and agreed to be bound by these Terms & Conditions. If you do not agree to these terms, you must immediately discontinue your use of our platform and services.
+                    By accessing or using the website of Alvision Media (operated by S Sanath as a sole proprietorship, GSTIN: 37GNDPS8576K1ZY; collectively, "we", "us", "our"), you represent that you have read, understood, and agreed to be bound by these Terms & Conditions. If you do not agree to these terms, you must immediately discontinue your use of our platform and services.
                   </p>
                 </div>
               </div>

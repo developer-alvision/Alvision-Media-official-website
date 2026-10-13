@@ -55,7 +55,7 @@ export default function PrivacyPage() {
                 <div>
                   <h2 className="font-manrope font-bold text-lg text-studio-deep-dark mb-2">1. Overview</h2>
                   <p className="text-xs md:text-sm leading-relaxed">
-                    Alvision Media (collectively, "we", "us", or "our") operates the official website and provides digital services including influencer marketing, content creation, brand strategy, and software solutions. Your privacy is paramount. By visiting our website or using our services, you consent to the practices described in this Privacy Policy.
+                    Alvision Media (operated by S Sanath as a sole proprietorship, GSTIN: 37GNDPS8576K1ZY; collectively, "we", "us", or "our") operates the official website and provides digital services including influencer marketing, content creation, brand strategy, and software solutions. Your privacy is paramount. By visiting our website or using our services, you consent to the practices described in this Privacy Policy.
                   </p>
                 </div>
               </div>

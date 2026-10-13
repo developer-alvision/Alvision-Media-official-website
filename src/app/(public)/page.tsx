@@ -13,7 +13,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 import RevealText from '@/components/RevealText';
 import Magnetic from '@/components/Magnetic';
 import ScrollTextReveal from '@/components/ScrollTextReveal';
-import HorizontalGallery from '@/components/HorizontalGallery';
+import ClientGoals from '@/components/ClientGoals';
 import CoveringPanels from '@/components/CoveringPanels';
 
 export default function HomePage() {
@@ -190,11 +190,9 @@ export default function HomePage() {
       <CoveringPanels />
 
       {/* ===================================================
-          05. HORIZONTAL PROJECT GALLERY (PINNED SCROLL)
+          04. CLIENT GOALS
          =================================================== */}
-      <section id="our-work">
-        <HorizontalGallery />
-      </section>
+      <ClientGoals />
 
       {/* ===================================================
           05. CLIENTS / TRUSTED BY SECTION

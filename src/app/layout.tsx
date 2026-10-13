@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   title: "Alvision Media | Premium Digital Studio & Creator Network",
   description: "Stories that travel beyond screens. We create content, campaigns, and experiences that audiences remember.",
   keywords: ["Digital Studio", "Media House", "Content Production", "Influencer Campaigns", "Social Media Strategy", "Performance Marketing"],
-  authors: [{ name: "Alvision Media" }],
+  authors: [{ name: "S Sanath" }, { name: "Alvision Media" }],
+  creator: "S Sanath",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
